@@ -30,6 +30,14 @@ class F1Spider(scrapy.Spider):
     
     def parse_url(self, response): 
         fullurl = response.url
+        if "latest" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent)})
+        elif "racing" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_racing, headers={"User-Agent" : random.choice(self.user_agent)})
+        elif "results" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_results, headers={"User-Agent" : random.choice(self.user_agent)})
+        elif "drivers" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent)})
+        elif "teams" in fullurl:
+            yield response.follow(fullurl, callback=self.parse_teams, headers={"User-Agent" : random.choice(self.user_agent)})        
         
-        
-_
