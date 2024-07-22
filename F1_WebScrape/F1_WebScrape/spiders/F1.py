@@ -26,31 +26,33 @@ class F1Spider(scrapy.Spider):
         
         for sideurl in primary_sideurl:
             fullurl = str(baseurl) + str(sideurl)
-            yield response.follow(fullurl, callback=self.parse_url, headers={"User-Agent": random.choice(self.user_agent_list)})
+            yield response.follow(fullurl, callback=self.parse_url, headers={"User-Agent": random.choice(self.user_agent_list)}, dont_filter=True)
     
     
     def parse_url(self, response): 
         fullurl = response.url
-        if "latest" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent_list)})
-        elif "racing" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_racing, headers={"User-Agent" : random.choice(self.user_agent_list)})
-        elif "results" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_results, headers={"User-Agent" : random.choice(self.user_agent_list)})
-        elif "drivers" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent_list)})
-        elif "teams" in fullurl:
-            yield response.follow(fullurl, callback=self.parse_teams, headers={"User-Agent" : random.choice(self.user_agent_list)})        
+        # print (fullurl)
+        # print ("Hello World")
+        if "/en/latest" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent_list)}, dont_filter=True)
+        if "/en/racing" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_racing, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        if "/results" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        if "en/drivers" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        if "en/teams" in fullurl:
+            yield response.follow(fullurl, callback=self.parse_teams, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)        
     
     
     def parse_latest(self, response):
         top_stories = response.xpath('//*[@id="maincontent"]/section[1]/section[2]/fieldset/section')
         top_stories_list = top_stories.css("ul.grid li a div div p ::text").getall()
-        top_stories_links = top_stories_list.css("ul.grid li a ::attr(href)").getall()
+        top_stories_urls = top_stories.css("ul.grid li a ::attr(href)").getall()
         story_item = Stories()
         
-        for i in range(0, len(top_stories_links)): 
+        for i in range(0, len(top_stories_urls)): 
             story_item['story_name'] = top_stories_list[i]
-            story_item['story_url'] = top_stories_links[i]
-        yield story_item
+            story_item['story_url'] = top_stories_urls[i]
+            yield story_item
             

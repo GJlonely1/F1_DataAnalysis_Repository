@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = "F1_WebScrape.spiders"
 #USER_AGENT = "F1_WebScrape (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 FEEDS = {
     'F1.json' : {'format' : 'json'},
@@ -50,15 +50,15 @@ FEEDS = {
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-#SPIDER_MIDDLEWARES = {
-#    "F1_WebScrape.middlewares.F1WebscrapeSpiderMiddleware": 543,
-#}
+SPIDER_MIDDLEWARES = {
+   "F1_WebScrape.middlewares.F1WebscrapeSpiderMiddleware": 543,
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    "F1_WebScrape.middlewares.F1WebscrapeDownloaderMiddleware": 543,
-#}
+DOWNLOADER_MIDDLEWARES = {
+   "F1_WebScrape.middlewares.F1WebscrapeDownloaderMiddleware": 543,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
