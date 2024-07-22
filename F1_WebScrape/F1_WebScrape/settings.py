@@ -19,6 +19,12 @@ NEWSPIDER_MODULE = "F1_WebScrape.spiders"
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+FEEDS = {
+    'nba_players.json' : {'format' : 'json'},
+    'nba_players.csv' : {'format' : 'csv'}
+}
+
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
