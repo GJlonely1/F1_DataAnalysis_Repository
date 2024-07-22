@@ -10,3 +10,10 @@ class F1WebscrapeItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
+
+
+class Stories(scrapy.Item): 
+    story_name = scrapy.Field() 
+    story_url = scrapy.Field() 
+
+

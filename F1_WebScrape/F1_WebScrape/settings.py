@@ -20,8 +20,8 @@ NEWSPIDER_MODULE = "F1_WebScrape.spiders"
 ROBOTSTXT_OBEY = True
 
 FEEDS = {
-    'nba_players.json' : {'format' : 'json'},
-    'nba_players.csv' : {'format' : 'csv'}
+    'F1.json' : {'format' : 'json'},
+    'F1.csv' : {'format' : 'csv'}
 }
 
 

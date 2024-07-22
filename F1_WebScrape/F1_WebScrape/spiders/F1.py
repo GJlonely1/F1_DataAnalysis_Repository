@@ -1,5 +1,6 @@
 import scrapy
 import random 
+from F1_WebScrape.items import Stories
 
 
 class F1Spider(scrapy.Spider):
@@ -24,20 +25,32 @@ class F1Spider(scrapy.Spider):
             primary_sideurl.append(link)
         
         for sideurl in primary_sideurl:
-            fullurl = baseurl + sideurl
+            fullurl = str(baseurl) + str(sideurl)
             yield response.follow(fullurl, callback=self.parse_url, headers={"User-Agent": random.choice(self.user_agent_list)})
     
     
     def parse_url(self, response): 
         fullurl = response.url
         if "latest" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent)})
+            yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent_list)})
         elif "racing" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_racing, headers={"User-Agent" : random.choice(self.user_agent)})
+            yield response.follow(fullurl, callback=self.parse_racing, headers={"User-Agent" : random.choice(self.user_agent_list)})
         elif "results" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_results, headers={"User-Agent" : random.choice(self.user_agent)})
+            yield response.follow(fullurl, callback=self.parse_results, headers={"User-Agent" : random.choice(self.user_agent_list)})
         elif "drivers" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent)})
+            yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent_list)})
         elif "teams" in fullurl:
-            yield response.follow(fullurl, callback=self.parse_teams, headers={"User-Agent" : random.choice(self.user_agent)})        
+            yield response.follow(fullurl, callback=self.parse_teams, headers={"User-Agent" : random.choice(self.user_agent_list)})        
+    
+    
+    def parse_latest(self, response):
+        top_stories = response.xpath('//*[@id="maincontent"]/section[1]/section[2]/fieldset/section')
+        top_stories_list = top_stories.css("ul.grid li a div div p ::text").getall()
+        top_stories_links = top_stories_list.css("ul.grid li a ::attr(href)").getall()
+        story_item = Stories()
         
+        for i in range(0, len(top_stories_links)): 
+            story_item['story_name'] = top_stories_list[i]
+            story_item['story_url'] = top_stories_links[i]
+        yield story_item
+            
