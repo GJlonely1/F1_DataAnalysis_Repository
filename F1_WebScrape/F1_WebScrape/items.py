@@ -15,5 +15,6 @@ class F1WebscrapeItem(scrapy.Item):
 class Stories(scrapy.Item): 
     story_name = scrapy.Field() 
     story_url = scrapy.Field() 
+    story_content = scrapy.Field()
 
 

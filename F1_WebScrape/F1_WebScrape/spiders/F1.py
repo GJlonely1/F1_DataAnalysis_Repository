@@ -54,5 +54,25 @@ class F1Spider(scrapy.Spider):
         for i in range(0, len(top_stories_urls)): 
             story_item['story_name'] = top_stories_list[i]
             story_item['story_url'] = top_stories_urls[i]
+            yield response.follow(top_stories_urls[i], callback=self.parse_top_news_content, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
             yield story_item
-            
+        
+        more_news_section = response.xpath('//*[@id="maincontent"]/section[1]/section[3]/section/div/h2')
+        latest_news_url = more_news_section.css('a ::attr(href)').get() 
+        yield response.follow(latest_news_url, callback=self.parse_latest_news_content, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+    
+    
+    def parse_top_news_content(self, response):
+        news_content_structure = response.xpath('//*[@id="maincontent"]/section[2]/section/article/section[1]/div')
+        content_list = news_content_structure.css("p ::text").getall() 
+        story_item = Stories()
+        content_string = ''
+        for content in content_list: 
+            content_string += content 
+        story_item['story_content'] = content_string
+        yield story_item
+    
+    def parse_latest_news_content(self, response):
+        # Blocked News Content, we may need to use Selenium Request instead 
+        pass
+    
