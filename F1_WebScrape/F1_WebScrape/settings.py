@@ -24,12 +24,18 @@ FEEDS = {
     'F1.csv' : {'format' : 'csv'}
 }
 
+from shutil import which
+
+SELENIUM_DRIVER_NAME = 'chrome'
+# SELENIUM_DRIVER_EXECUTABLE_PATH = None
+SELENIUM_DRIVER_ARGUMENTS = ['--headless']  # '--headless' if using headless mode
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
-# See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
+# See https://docs.scrapy.org/en/latest/topics/settngs.html#download-delay
 # See also autothrottle settings and docs
 #DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
@@ -58,6 +64,8 @@ SPIDER_MIDDLEWARES = {
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
    "F1_WebScrape.middlewares.F1WebscrapeDownloaderMiddleware": 543,
+   'scrapy_selenium.SeleniumMiddleware': 800
+
 }
 
 # Enable or disable extensions

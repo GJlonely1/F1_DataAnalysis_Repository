@@ -1,6 +1,16 @@
 import scrapy
 import random 
+from time import sleep
+from random import randint 
 from F1_WebScrape.items import Stories
+from scrapy_selenium import SeleniumRequest
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class F1Spider(scrapy.Spider):
@@ -59,7 +69,7 @@ class F1Spider(scrapy.Spider):
         
         more_news_section = response.xpath('//*[@id="maincontent"]/section[1]/section[3]/section/div/h2')
         latest_news_url = more_news_section.css('a ::attr(href)').get() 
-        yield response.follow(latest_news_url, callback=self.parse_latest_news_content, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        yield SeleniumRequest(url=latest_news_url, callback=self.parse_latest_news, wait_time=10)
     
     
     def parse_top_news_content(self, response):
@@ -72,7 +82,64 @@ class F1Spider(scrapy.Spider):
         story_item['story_content'] = content_string
         yield story_item
     
+    def parse_latest_news(self, response):
+        url = response.url
+        options = webdriver.ChromeOptions()
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        driver.get(url=url)
+        sleep(randint(1, 10))
+
+        # Wait for the cookie consent popup and handle it
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="notice"]/div[3]/button[2]'))
+            )
+            accept_button = driver.find_element(By.XPATH, '//*[@id="notice"]/div[3]/button[2]')
+            accept_button.click()
+            sleep(randint(1, 10)) # Wait for random seconds to ensure the popup is closed
+        except Exception as e:
+            self.logger.info(f"No cookie consent popup found: {e}")
+        
+        
+        latest_news = driver.find_elements(By.XPATH, '//*[@id="maincontent"]/div[3]/ul/li')
+        for news in latest_news:
+            latest_news_item = Stories()
+            latest_news_item['story_name'] = news.find_element(By.CSS_SELECTOR, 'a figcaption p').text
+            news_url = news.find_element(By.CSS_SELECTOR, 'a').get_attribute('href')
+            latest_news_item['story_url'] = news_url
+            yield latest_news_item
+            yield SeleniumRequest(url=news_url, callback=self.parse_latest_news_content)
+
+    
     def parse_latest_news_content(self, response):
-        # Blocked News Content, we may need to use Selenium Request instead 
-        pass
+        url = response.url
+        options = webdriver.ChromeOptions()
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        driver.get(url=url)
+        
+                # Wait for the cookie consent popup and handle it
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'button[title="ACCEPT ALL"]'))
+            )
+            accept_button = driver.find_element(By.CSS_SELECTOR, 'button[title="ACCEPT ALL"]')
+            accept_button.click()
+            sleep(randint(1, 10)) # Wait for random seconds to ensure the popup is closed
+        except Exception as e:
+            self.logger.info(f"No cookie consent popup found: {e}")
+        
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="maincontent"]/section[2]/section/article'))
+            )
+            sleep(randint(1, 10)) 
+            news_content_elements = driver.find_elements(By.CSS_SELECTOR, 'div p')
+            story_item = Stories()
+            content_string = ' '.join([element.text for element in news_content_elements])
+            story_item['story_content'] = content_string
+            yield story_item
+        except Exception as e:
+            self.logger.info(f"No news content found: {e}")
+        
+        
     
