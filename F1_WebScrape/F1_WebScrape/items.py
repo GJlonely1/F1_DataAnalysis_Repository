@@ -17,4 +17,9 @@ class Stories(scrapy.Item):
     story_url = scrapy.Field() 
     story_content = scrapy.Field()
 
-
+class RacingSchedule(scrapy.Item): 
+    race_round = scrapy.Field()
+    race_url = scrapy.Field()
+    race_date = scrapy.Field()
+    location = scrapy.Field()
+    race_fullname = scrapy.Field()
