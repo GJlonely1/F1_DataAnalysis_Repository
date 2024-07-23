@@ -23,3 +23,12 @@ class RacingSchedule(scrapy.Item):
     race_date = scrapy.Field()
     location = scrapy.Field()
     race_fullname = scrapy.Field()
+
+class OverallSingleSeasonRaceResults(scrapy.Item):
+    year = scrapy.Field() 
+    grand_prix = scrapy.Field()
+    date = scrapy.Field()
+    race_winner = scrapy.Field()
+    car = scrapy.Field()
+    laps = scrapy.Field()
+    time = scrapy.Field()
