@@ -43,14 +43,12 @@ class F1Spider(scrapy.Spider):
     
     def parse_url(self, response): 
         fullurl = response.url
-        # print (fullurl)
-        # print ("Hello World")
         if "/en/latest" in fullurl: 
             yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent_list)}, dont_filter=True)
         elif "/en/racing" in fullurl: 
             yield SeleniumRequest(url=fullurl, callback=self.parse_racing, wait_time=10)
-        # elif "/results" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        elif "en/results" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_overall_season_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
         # elif "en/drivers" in fullurl: 
         #     yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
         # elif "en/teams" in fullurl:
@@ -148,6 +146,7 @@ class F1Spider(scrapy.Spider):
         url = response.url
         options = webdriver.ChromeOptions()
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        # driver = self.setup_driver()
         driver.get(url=url)
 
         try:
@@ -177,6 +176,7 @@ class F1Spider(scrapy.Spider):
         current_url = response.url
         options = webdriver.ChromeOptions()
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        # driver = self.setup_driver()
         driver.get(url=current_url)
         sleep(randint(2,10))
         # Wait for the cookie consent popup and handle it
@@ -220,7 +220,7 @@ class F1Spider(scrapy.Spider):
             self.logger.info(f"No racing info found or an error occurred: {e}")
             
     
-    def parse_results(self, response): 
+    def parse_overall_season_results(self, response): 
         year_elements_structure = response.xpath('/html/body/div[1]/main/article/div/div[2]/div[1]/div[1]/ul')
         # Returns a list of <Selector> e.g. 2024, 2023, 2022, etc. 
         year_elements = year_elements_structure.css("li") 
@@ -236,4 +236,23 @@ class F1Spider(scrapy.Spider):
         base_url = 'https://www.formula1.com/en/results.html'
         # Need to create an f-string that will be iterated over the three variables here. Create a self.parse function 
         
+        
+        overall_race_results_structure = response.xpath('/html/body/div[1]/main/article/div/div[2]/div[2]/div/div[2]/table/tbody')
+        overall_race_results_elements = overall_race_results_structure.css("tr")
+        season_results = OverallSingleSeasonRaceResults() 
+        season_results['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        for indiv_race_results in overall_race_results_elements: 
+            race_fields_unfiltered = indiv_race_results.css("td ::text").getall()
+            race_fields_filtered = [field for field in race_fields_unfiltered if field.replace('\n', '').replace(' ', '') != '']
+            season_results['grand_prix'] = race_fields_filtered[0]
+            season_results['date'] = race_fields_filtered[1]
+            season_results['race_winner'] = race_fields_filtered[2] + race_fields_filtered[3] + "," + race_fields_filtered[4]
+            season_results['car'] = race_fields_filtered[-3]
+            season_results['laps'] = race_fields_filtered[-2]
+            season_results['time'] = race_fields_filtered[-1]
+            yield season_results                    
+                
+            
+            
+            
         
