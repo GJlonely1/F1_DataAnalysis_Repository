@@ -43,12 +43,12 @@ class F1Spider(scrapy.Spider):
     
     def parse_url(self, response): 
         fullurl = response.url
-        if "/en/latest" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent_list)}, dont_filter=True)
-        elif "/en/racing" in fullurl: 
+        # if "/en/latest" in fullurl: 
+        #     yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent_list)}, dont_filter=True)
+        if "/en/racing" in fullurl: 
             yield SeleniumRequest(url=fullurl, callback=self.parse_racing, wait_time=10)
         elif "en/results" in fullurl: 
-            yield response.follow(fullurl, callback=self.parse_overall_season_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            yield response.follow(fullurl, callback=self.parse_current_season_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
         # elif "en/drivers" in fullurl: 
         #     yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
         # elif "en/teams" in fullurl:
@@ -69,7 +69,7 @@ class F1Spider(scrapy.Spider):
         
         more_news_section = response.xpath('//*[@id="maincontent"]/section[1]/section[3]/section/div/h2')
         latest_news_url = more_news_section.css('a ::attr(href)').get() 
-        yield SeleniumRequest(url=latest_news_url, callback=self.parse_latest_news, wait_time=10)
+        # yield SeleniumRequest(url=latest_news_url, callback=self.parse_latest_news, wait_time=10)
     
     
     def parse_top_news_content(self, response):
@@ -82,95 +82,95 @@ class F1Spider(scrapy.Spider):
         story_item['story_content'] = content_string
         yield story_item
     
-    def parse_latest_news(self, response):
-        url = response.url
-        options = webdriver.ChromeOptions()
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-        driver.get(url=url)
-        sleep(randint(1, 5))
-        # Wait for the cookie consent popup and handle it
-        try:
-            wait = WebDriverWait(driver, 10)
-            accept_element = wait.until(
-                EC.presence_of_element_located((By.XPATH, '//*[@id="notice"]/div[3]/button[2]'))
-            )
-            actions = ActionChains(driver)
-            actions.click(accept_element).perform()
-            sleep(randint(1, 5)) # Wait for random seconds to ensure the popup is closed
-        except Exception as e:
-            self.logger.info(f"No cookie consent popup found: {e}")
+    # def parse_latest_news(self, response):
+    #     url = response.url
+    #     options = webdriver.ChromeOptions()
+    #     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+    #     driver.get(url=url)
+    #     sleep(randint(1, 5))
+    #     # Wait for the cookie consent popup and handle it
+    #     try:
+    #         wait = WebDriverWait(driver, 10)
+    #         accept_element = wait.until(
+    #             EC.presence_of_element_located((By.XPATH, '//*[@id="notice"]/div[3]/button[2]'))
+    #         )
+    #         actions = ActionChains(driver)
+    #         actions.click(accept_element).perform()
+    #         sleep(randint(1, 5)) # Wait for random seconds to ensure the popup is closed
+    #     except Exception as e:
+    #         self.logger.info(f"No cookie consent popup found: {e}")
     
         
-        # Scroll and click 'Load More' button
-        while True:
-            try:
-                current_url = driver.current_url
-            # Randomly scroll down the page
-                scroll_position = random.randint(1000, 2000)  # Random scroll length
-                driver.execute_script(f"window.scrollBy(0, {scroll_position});")
-                sleep(random.randint(2, 5))  # Wait for the page to load
+    #     # Scroll and click 'Load More' button
+    #     while True:
+    #         try:
+    #             current_url = driver.current_url
+    #         # Randomly scroll down the page
+    #             scroll_position = random.randint(1000, 2000)  # Random scroll length
+    #             driver.execute_script(f"window.scrollBy(0, {scroll_position});")
+    #             sleep(random.randint(2, 5))  # Wait for the page to load
 
-                # Wait for the 'Load More' button to be visible and clickable
-                load_more_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="maincontent"]/section[3]/a')))
+    #             # Wait for the 'Load More' button to be visible and clickable
+    #             load_more_button = wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="maincontent"]/section[3]/a')))
 
-                # Check if the 'Load More' button is displayed
-                if load_more_button.is_displayed():
-                    # Click the 'Load More' button
-                    actions = ActionChains(driver)
-                    actions.move_to_element(load_more_button).click().perform()
-                    self.logger.info("Clicked 'Load More' button")
-                    sleep(random.randint(2, 5))  # Wait for more content to load
+    #             # Check if the 'Load More' button is displayed
+    #             if load_more_button.is_displayed():
+    #                 # Click the 'Load More' button
+    #                 actions = ActionChains(driver)
+    #                 actions.move_to_element(load_more_button).click().perform()
+    #                 self.logger.info("Clicked 'Load More' button")
+    #                 sleep(random.randint(2, 5))  # Wait for more content to load
                     
-                    # Wait for the URL to change
-                    WebDriverWait(driver, 10).until(lambda d: d.current_url != current_url)
-                    self.logger.info(f"URL changed to: {driver.current_url}")
-                else:
-                    self.logger.info("No more 'Load More' button displayed")
-                    break
+    #                 # Wait for the URL to change
+    #                 WebDriverWait(driver, 10).until(lambda d: d.current_url != current_url)
+    #                 self.logger.info(f"URL changed to: {driver.current_url}")
+    #             else:
+    #                 self.logger.info("No more 'Load More' button displayed")
+    #                 break
 
-            except Exception as e:
-                self.logger.info(f"No more 'Load More' button found or an error occurred: {e}")
-                break
+    #         except Exception as e:
+    #             self.logger.info(f"No more 'Load More' button found or an error occurred: {e}")
+    #             break
         
-        latest_news = driver.find_elements(By.XPATH, '//*[@id="maincontent"]/div[3]/ul/li')
-        for news in latest_news:
-            latest_news_item = Stories()
-            latest_news_item['story_name'] = news.find_element(By.CSS_SELECTOR, 'a figcaption p').text
-            news_url = news.find_element(By.CSS_SELECTOR, 'a').get_attribute('href')
-            latest_news_item['story_url'] = news_url
-            yield latest_news_item
-            yield SeleniumRequest(url=news_url, callback=self.parse_latest_news_content)
+    #     latest_news = driver.find_elements(By.XPATH, '//*[@id="maincontent"]/div[3]/ul/li')
+    #     for news in latest_news:
+    #         latest_news_item = Stories()
+    #         latest_news_item['story_name'] = news.find_element(By.CSS_SELECTOR, 'a figcaption p').text
+    #         news_url = news.find_element(By.CSS_SELECTOR, 'a').get_attribute('href')
+    #         latest_news_item['story_url'] = news_url
+    #         yield latest_news_item
+    #         yield SeleniumRequest(url=news_url, callback=self.parse_latest_news_content)
         
 
-    def parse_latest_news_content(self, response):
-        url = response.url
-        options = webdriver.ChromeOptions()
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-        # driver = self.setup_driver()
-        driver.get(url=url)
+    # def parse_latest_news_content(self, response):
+    #     url = response.url
+    #     options = webdriver.ChromeOptions()
+    #     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+    #     # driver = self.setup_driver()
+    #     driver.get(url=url)
 
-        try:
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.CSS_SELECTOR, 'button[title="ACCEPT ALL"]'))
-            )
-            accept_button = driver.find_element(By.CSS_SELECTOR, 'button[title="ACCEPT ALL"]')
-            accept_button.click()
-            sleep(randint(2, 5)) # Wait for random seconds to ensure the popup is closed
-        except Exception as e:
-            self.logger.info(f"No cookie consent popup found: {e}")
+    #     try:
+    #         WebDriverWait(driver, 10).until(
+    #             EC.presence_of_element_located((By.CSS_SELECTOR, 'button[title="ACCEPT ALL"]'))
+    #         )
+    #         accept_button = driver.find_element(By.CSS_SELECTOR, 'button[title="ACCEPT ALL"]')
+    #         accept_button.click()
+    #         sleep(randint(2, 5)) # Wait for random seconds to ensure the popup is closed
+    #     except Exception as e:
+    #         self.logger.info(f"No cookie consent popup found: {e}")
         
-        try:
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, '//*[@id="maincontent"]/section[2]/section/article'))
-            )
-            sleep(randint(1, 5)) 
-            news_content_elements = driver.find_elements(By.CSS_SELECTOR, 'div p')
-            story_item = Stories()
-            content_string = ' '.join([element.text for element in news_content_elements])
-            story_item['story_content'] = content_string
-            yield story_item
-        except Exception as e:
-            self.logger.info(f"No news content found: {e}")
+    #     try:
+    #         WebDriverWait(driver, 10).until(
+    #             EC.presence_of_element_located((By.XPATH, '//*[@id="maincontent"]/section[2]/section/article'))
+    #         )
+    #         sleep(randint(1, 5)) 
+    #         news_content_elements = driver.find_elements(By.CSS_SELECTOR, 'div p')
+    #         story_item = Stories()
+    #         content_string = ' '.join([element.text for element in news_content_elements])
+    #         story_item['story_content'] = content_string
+    #         yield story_item
+    #     except Exception as e:
+    #         self.logger.info(f"No news content found: {e}")
     
     def parse_racing(self, response):
         current_url = response.url
@@ -181,13 +181,12 @@ class F1Spider(scrapy.Spider):
         sleep(randint(2,10))
         # Wait for the cookie consent popup and handle it
         try:
-            wait = WebDriverWait(driver, 10)
-            accept_element = wait.until(
+            WebDriverWait(driver, 10).wait.until(
                 EC.presence_of_element_located((By.XPATH, '//*[@id="notice"]/div[3]/button[2]'))
             )
-            actions = ActionChains(driver)
-            actions.click(accept_element).perform()
-            sleep(randint(1, 5)) # Wait for random seconds to ensure the popup is closed
+            accept_button = driver.find_element(By.XPATH, '//*[@id="notice"]/div[3]/button[2]')
+            accept_button.click()
+            sleep(randint(3, 8)) # Wait for random seconds to ensure the popup is closed
         except Exception as e:
             self.logger.info(f"No cookie consent popup found: {e}")
         
@@ -220,24 +219,27 @@ class F1Spider(scrapy.Spider):
             self.logger.info(f"No racing info found or an error occurred: {e}")
             
     
-    def parse_overall_season_results(self, response): 
-        year_elements_structure = response.xpath('/html/body/div[1]/main/article/div/div[2]/div[1]/div[1]/ul')
-        # Returns a list of <Selector> e.g. 2024, 2023, 2022, etc. 
+    def parse_current_season_results(self, response):         
+        base_url = 'https://www.formula1.com'
+        year_elements_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[1]/div/ul')
+        # Returns a list of Years <Selector> e.g. 2024, 2023, 2022, etc. 
         year_elements = year_elements_structure.css("li") 
-        
-        results_type_structure = response.xpath('/html/body/div[1]/main/article/div/div[2]/div[1]/div[2]/ul')
+        years_sideurl_list = year_elements.css("a ::attr(href)").getall()
+        # years_text_list = year_elements.css("a ::text").getall()
+        for indiv_sideurl in years_sideurl_list[1:]:
+            official_year_season_results_url = str(base_url) + str(indiv_sideurl)
+            yield response.follow(official_year_season_results_url, callback=self.parse_past_season_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            
+        results_type_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[2]/div/ul')
         # Returns a list of results type <Selector> e.g. Races, Drivers, Teams, DHL Fastest Lap Awards 
         results_type_elements = results_type_structure.css("li")
         
-        race_location_structure = response.xpath('/html/body/div[1]/main/article/div/div[2]/div[1]/div[3]/ul')
+        race_location_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
         # Returns a list of race_locations <Selector> e.g. All, Bahrain, Hungary, etc.
         race_location_elements = race_location_structure.css("li")
-        
-        base_url = 'https://www.formula1.com/en/results.html'
+    
         # Need to create an f-string that will be iterated over the three variables here. Create a self.parse function 
-        
-        
-        overall_race_results_structure = response.xpath('/html/body/div[1]/main/article/div/div[2]/div[2]/div/div[2]/table/tbody')
+        overall_race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
         overall_race_results_elements = overall_race_results_structure.css("tr")
         season_results = OverallSingleSeasonRaceResults() 
         season_results['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
@@ -246,13 +248,28 @@ class F1Spider(scrapy.Spider):
             race_fields_filtered = [field for field in race_fields_unfiltered if field.replace('\n', '').replace(' ', '') != '']
             season_results['grand_prix'] = race_fields_filtered[0]
             season_results['date'] = race_fields_filtered[1]
-            season_results['race_winner'] = race_fields_filtered[2] + race_fields_filtered[3] + "," + race_fields_filtered[4]
+            season_results['race_winner'] = f"{race_fields_filtered[2]} {race_fields_filtered[4]}"
             season_results['car'] = race_fields_filtered[-3]
             season_results['laps'] = race_fields_filtered[-2]
             season_results['time'] = race_fields_filtered[-1]
             yield season_results                    
-                
+        
+
             
-            
+    def parse_past_season_results(self, response): 
+        overall_race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        overall_race_results_elements = overall_race_results_structure.css("tr")
+        season_results = OverallSingleSeasonRaceResults() 
+        season_results['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        for indiv_race_results in overall_race_results_elements: 
+            race_fields_unfiltered = indiv_race_results.css("td ::text").getall()
+            race_fields_filtered = [field for field in race_fields_unfiltered if field.replace('\n', '').replace(' ', '') != '']
+            season_results['grand_prix'] = race_fields_filtered[0]
+            season_results['date'] = race_fields_filtered[1]
+            season_results['race_winner'] = f"{race_fields_filtered[2]} {race_fields_filtered[4]}"
+            season_results['car'] = race_fields_filtered[-3]
+            season_results['laps'] = race_fields_filtered[-2]
+            season_results['time'] = race_fields_filtered[-1]
+            yield season_results
             
         
