@@ -121,6 +121,7 @@ class IndividualRaceResultsPipeline:
         
             # Write to CSV
             self.csv_writer.writerow([
+                item.get('year', ''),
                 item.get('race_fullname', ''),
                 item.get('race_date', ''),
                 item.get('race_circuit', ''),

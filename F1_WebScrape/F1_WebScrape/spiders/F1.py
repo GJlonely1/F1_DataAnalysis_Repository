@@ -275,7 +275,8 @@ class F1Spider(scrapy.Spider):
         for indiv_sideurl in years_sideurl_list[1:]:
             official_year_season_results_url = str(base_url) + str(indiv_sideurl)
             yield response.follow(official_year_season_results_url, callback=self.parse_past_season_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
-            
+        
+        # this only applies to 2024, the structure is different for each year. 
         results_type_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[2]/div/ul')
         # Returns a list of results type <Selector> e.g. Races, Drivers, Teams, DHL Fastest Lap Awards 
         results_type_elements = results_type_structure.css("li")
@@ -285,7 +286,7 @@ class F1Spider(scrapy.Spider):
         race_location_sideurl_list = race_location_structure.css("li a::attr(href)").getall()
         for indiv_location in race_location_sideurl_list[1:]: 
             official_race_location_url = str(base_url) + str(indiv_location)
-            yield response.follow(official_race_location_url, callback=self.parse_individual_race_result, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            yield response.follow(official_race_location_url, callback=self.parse_current_season_individual_race_result, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
     
         # Need to create an f-string that will be iterated over the three variables here. Create a self.parse function 
         overall_race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
@@ -302,10 +303,13 @@ class F1Spider(scrapy.Spider):
             season_results['laps'] = race_fields_filtered[-2]
             season_results['time'] = race_fields_filtered[-1]
             yield season_results                    
-        
+    
+    # Logic: In each year, the race locations may not be the same. I initially thought retrieving race_locations from 2024 and fixing the years will result in responses.
+    # Redirection successful, but we need to account for varying years and varying locations hence urls will be different. Need to vary that. 
 
-            
     def parse_past_season_results(self, response): 
+        base_url = 'https://www.formula1.com'
+        # e.g. "https://www.formula1.com/en/results/2024/races", "https://www.formula1.com/en/results/2023/races"
         overall_race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
         overall_race_results_elements = overall_race_results_structure.css("tr")
         season_results = OverallSingleSeasonRaceResults() 
@@ -320,8 +324,14 @@ class F1Spider(scrapy.Spider):
             season_results['laps'] = race_fields_filtered[-2]
             season_results['time'] = race_fields_filtered[-1]
             yield season_results
+        
+        race_location_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
+        race_location_sideurl_list = race_location_structure.css("li a::attr(href)").getall()
+        for indiv_location_url in race_location_sideurl_list[1:]:
+            official_race_location_url = f"{base_url}{indiv_location_url}"
+            yield response.follow(official_race_location_url, callback=self.past_seasons_individual_race_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
             
-    def parse_individual_race_result(self, response): 
+    def parse_current_season_individual_race_result(self, response): 
         race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[2]/table/tbody')
         race_results_element = race_results_structure.css("tr")
 
@@ -329,8 +339,9 @@ class F1Spider(scrapy.Spider):
         race_types_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[1]/ul')
         race_types_sideurl_list = race_types_structure.css("li a ::attr(href)").getall()
         base_url = 'https://www.formula1.com'
-        
+
         race_results = IndividualRaceResults()
+        race_results['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()[-4:]
         race_results['race_fullname'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
         race_results['race_date'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()
         race_results['race_circuit'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[2]/text()').get()
@@ -346,4 +357,27 @@ class F1Spider(scrapy.Spider):
             race_results['time_or_retired'] = stats_filtered_list[-2]
             race_results['points'] = stats_filtered_list[-1]
             yield race_results
-            sleep(randint(1,3))
+            sleep(randint(0,1))
+    
+    def past_seasons_individual_race_results(self, response): 
+        race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[2]/table/tbody')
+        race_results_element = race_results_structure.css("tr")
+
+        race_results = IndividualRaceResults()
+        race_results['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()[-4:]
+        race_results['race_fullname'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        race_results['race_date'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()
+        race_results['race_circuit'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[2]/text()').get()
+        for indiv_position in race_results_element: 
+            stats_unfiltered_list = indiv_position.css("td ::text").getall() 
+            stats_filtered_list =[elem for elem in stats_unfiltered_list if elem != '\xa0']
+            race_results['race_type'] =  response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[1]/ul/li[2]/a/text()').get()
+            race_results['position'] = stats_filtered_list[0]
+            race_results['car_number'] = stats_filtered_list[1]
+            race_results['driver'] = f"{stats_filtered_list[2]} {stats_filtered_list[3], {stats_filtered_list[4]}}"
+            race_results['car'] = stats_filtered_list[-4]
+            race_results['laps'] = stats_filtered_list[-3]
+            race_results['time_or_retired'] = stats_filtered_list[-2]
+            race_results['points'] = stats_filtered_list[-1]
+            yield race_results
+            sleep(randint(0,1))

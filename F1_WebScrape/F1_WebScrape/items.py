@@ -34,6 +34,7 @@ class OverallSingleSeasonRaceResults(scrapy.Item):
     time = scrapy.Field()
 
 class IndividualRaceResults(scrapy.Item):
+    year = scrapy.Field()
     race_fullname = scrapy.Field()
     race_date = scrapy.Field()
     race_circuit = scrapy.Field()
