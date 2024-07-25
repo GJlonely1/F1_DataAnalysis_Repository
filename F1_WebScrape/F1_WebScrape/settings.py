@@ -57,6 +57,7 @@ FEEDS = {
    },
 }
 ITEM_PIPELINES = {
+   'F1_WebScrape.pipelines.CustomFilePipeline': 300,
    'F1_WebScrape.pipelines.AllNewsPipeline': 1,
    'F1_WebScrape.pipelines.PastPresentSeasonResultsPipeline': 2,
    'F1_WebScrape.pipelines.RaceSchedulePipeline' : 3, 

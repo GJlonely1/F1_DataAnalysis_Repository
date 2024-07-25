@@ -9,6 +9,51 @@ from itemadapter import ItemAdapter
 from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults
 import json 
 import csv
+import os
+
+class CustomFilePipeline:
+    def open_spider(self, spider):
+        self.files = {}
+        self.exporters = {}
+
+    def close_spider(self, spider):
+        for exporter in self.exporters.values():
+            exporter.finish_exporting()
+        for file in self.files.values():
+            file.close()
+
+    def _initialize_exporter(self, file_format, file_path):
+        if file_format == 'json':
+            file = open(file_path, 'w', encoding='utf8')
+            exporter = json.JSONEncoder()
+        elif file_format == 'csv':
+            file = open(file_path, 'w', encoding='utf8', newline='')
+            exporter = csv.writer(file)
+        else:
+            raise ValueError(f"Unsupported file format: {file_format}")
+        
+        self.files[file_path] = file
+        self.exporters[file_path] = exporter
+
+    def process_item(self, item, spider):
+        item_type = type(item).__name__.lower()
+        file_formats = ['json', 'csv']
+        
+        for file_format in file_formats:
+            file_path = f'{item_type}.{file_format}'
+            if file_path not in self.files:
+                self._initialize_exporter(file_format, file_path)
+            
+            exporter = self.exporters[file_path]
+            if file_format == 'json':
+                json.dump(dict(item), self.files[file_path], ensure_ascii=False)
+                self.files[file_path].write('\n')
+            elif file_format == 'csv':
+                if os.stat(file_path).st_size == 0:
+                    exporter.writerow(item.keys())
+                exporter.writerow(item.values())
+        
+        return item
 
 class F1WebscrapePipeline:
     def process_item(self, item, spider):
