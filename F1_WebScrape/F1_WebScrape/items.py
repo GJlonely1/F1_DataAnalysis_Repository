@@ -32,3 +32,16 @@ class OverallSingleSeasonRaceResults(scrapy.Item):
     car = scrapy.Field()
     laps = scrapy.Field()
     time = scrapy.Field()
+
+class IndividualRaceResults(scrapy.Item):
+    race_fullname = scrapy.Field()
+    race_date = scrapy.Field()
+    race_circuit = scrapy.Field()
+    race_type = scrapy.Field()
+    position = scrapy.Field()
+    car_number = scrapy.Field() 
+    driver = scrapy.Field()
+    car = scrapy.Field()
+    laps = scrapy.Field() 
+    time_or_retired = scrapy.Field() 
+    points = scrapy.Field() 

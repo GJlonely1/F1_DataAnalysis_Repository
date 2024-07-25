@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults
 import json 
 import csv
 
@@ -95,5 +95,42 @@ class RaceSchedulePipeline:
                 item.get('race_date', ''),
                 item.get('location', ''),
                 item.get('race_fullname', ''),
+            ])
+        return item
+
+class IndividualRaceResultsPipeline:
+    def open_spider(self, spider):
+        self.json_file = open('individual_race_results.json', 'w')
+        self.csv_file = open('individual_race_results.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+
+    def process_item(self, item, spider):
+        if isinstance(item, IndividualRaceResults):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('race_fullname', ''),
+                item.get('race_date', ''),
+                item.get('race_circuit', ''),
+                item.get('race_type', ''),
+                item.get('position', ''),
+                item.get('car_number', ''),
+                item.get('driver', ''),
+                item.get('car', ''),
+                item.get('laps', ''),
+                item.get('time_or_retired', ''),
+                item.get('points', ''),
             ])
         return item

@@ -44,13 +44,23 @@ FEEDS = {
       'format': 'csv',
       'overwrite': True,
       'encoding': 'utf8',
-   }
-
+   },
+   'individual_race_results.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'individual_race_results.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
 }
 ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.AllNewsPipeline': 1,
    'F1_WebScrape.pipelines.PastPresentSeasonResultsPipeline': 2,
    'F1_WebScrape.pipelines.RaceSchedulePipeline' : 3, 
+   'F1_WebScrape.pipelines.IndividualRaceResultsPipeline' : 4
 }
 
 
