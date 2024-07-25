@@ -3,7 +3,7 @@ import random
 import logging 
 from time import sleep
 from random import randint 
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps
 from scrapy_selenium import SeleniumRequest
 
 from selenium import webdriver
@@ -302,7 +302,8 @@ class F1Spider(scrapy.Spider):
             season_results['car'] = race_fields_filtered[-3]
             season_results['laps'] = race_fields_filtered[-2]
             season_results['time'] = race_fields_filtered[-1]
-            yield season_results                    
+            yield season_results          
+        # sleep(randint(1,2))          
     
     # Logic: In each year, the race locations may not be the same. I initially thought retrieving race_locations from 2024 and fixing the years will result in responses.
     # Redirection successful, but we need to account for varying years and varying locations hence urls will be different. Need to vary that. 
@@ -319,11 +320,12 @@ class F1Spider(scrapy.Spider):
             race_fields_filtered = [field for field in race_fields_unfiltered if field.replace('\n', '').replace(' ', '') != '']
             season_results['grand_prix'] = race_fields_filtered[0]
             season_results['date'] = race_fields_filtered[1]
-            season_results['race_winner'] = f"{race_fields_filtered[2]} {race_fields_filtered[4]}"
+            season_results['race_winner'] = race_fields_filtered[2] + ' ' + race_fields_filtered[4]
             season_results['car'] = race_fields_filtered[-3]
             season_results['laps'] = race_fields_filtered[-2]
             season_results['time'] = race_fields_filtered[-1]
             yield season_results
+        # sleep(randint(1,2))
         
         race_location_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
         race_location_sideurl_list = race_location_structure.css("li a::attr(href)").getall()
@@ -340,22 +342,22 @@ class F1Spider(scrapy.Spider):
         race_types_sideurl_list = race_types_structure.css("li a ::attr(href)").getall()
         base_url = 'https://www.formula1.com'
 
-        # for race_type_url in race_types_sideurl_list[1:]: 
-        #     race_category_fullurl = f"{base_url}{race_type_url}"
-        #     if "fastest-laps" in race_category_fullurl:
-        #         yield response.follow(race_category_fullurl, callback=self.parse_current_season_fastest_laps, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True) 
-        #     elif "pit-stop-summary" in race_category_fullurl: 
-        #         yield response.follow(race_category_fullurl, callback=self.parse_current_season_pit_stop_summary, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
-        #     elif "starting-grid" in race_category_fullurl: 
-        #         yield response.follow(race_category_fullurl, callback=self.parse_current_season_starting_grid, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
-        #     elif "qualifying" in race_category_fullurl:
-        #         yield response.follow(race_category_fullurl, callback=self.parse_current_season_qualifying_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
-        #     elif "practice/3" in race_category_fullurl:
-        #         yield response.follow(race_category_fullurl, callback=self.parse_current_season_practice3_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
-        #     elif "practice/2" in race_category_fullurl:
-        #         yield response.follow(race_category_fullurl, callback=self.parse_current_season_practice2_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
-        #     elif "practice/1" in race_category_fullurl:
-        #         yield response.follow(race_category_fullurl, callback=self.parse_current_season_practice1_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        for race_type_url in race_types_sideurl_list[1:]: 
+            race_category_fullurl = f"{base_url}{race_type_url}"
+            if "fastest-laps" in race_category_fullurl:
+                yield response.follow(race_category_fullurl, callback=self.parse_current_season_fastest_laps, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True) 
+            elif "pit-stop-summary" in race_category_fullurl: 
+                yield response.follow(race_category_fullurl, callback=self.parse_current_season_pit_stop_summary, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            # elif "starting-grid" in race_category_fullurl: 
+            #     yield response.follow(race_category_fullurl, callback=self.parse_current_season_starting_grid, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            # elif "qualifying" in race_category_fullurl:
+            #     yield response.follow(race_category_fullurl, callback=self.parse_current_season_qualifying_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            # elif "practice/3" in race_category_fullurl:
+            #     yield response.follow(race_category_fullurl, callback=self.parse_current_season_practice3_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            # elif "practice/2" in race_category_fullurl:
+            #     yield response.follow(race_category_fullurl, callback=self.parse_current_season_practice2_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            # elif "practice/1" in race_category_fullurl:
+            #     yield response.follow(race_category_fullurl, callback=self.parse_current_season_practice1_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
                 
         race_results = IndividualRaceResults()
         race_results['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()[-4:]
@@ -368,13 +370,13 @@ class F1Spider(scrapy.Spider):
             race_results['race_type'] =  response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[1]/ul/li[2]/a/text()').get()
             race_results['position'] = stats_filtered_list[0]
             race_results['car_number'] = stats_filtered_list[1]
-            race_results['driver'] = f"{stats_filtered_list[2]} {stats_filtered_list[3], {stats_filtered_list[4]}}"
+            race_results['driver'] = stats_filtered_list[2] + ' ' + stats_filtered_list[3]
             race_results['car'] = stats_filtered_list[-4]
             race_results['laps'] = stats_filtered_list[-3]
             race_results['time_or_retired'] = stats_filtered_list[-2]
             race_results['points'] = stats_filtered_list[-1]
             yield race_results
-            # sleep(randint(0,1))
+        # sleep(randint(1,2))
     
     def past_seasons_individual_race_results(self, response): 
         race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[2]/table/tbody')
@@ -391,10 +393,35 @@ class F1Spider(scrapy.Spider):
             race_results['race_type'] =  response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[1]/ul/li[2]/a/text()').get()
             race_results['position'] = stats_filtered_list[0]
             race_results['car_number'] = stats_filtered_list[1]
-            race_results['driver'] = f"{stats_filtered_list[2]} {stats_filtered_list[3], {stats_filtered_list[4]}}"
+            race_results['driver'] = stats_filtered_list[2] + ' ' + stats_filtered_list[3]
             race_results['car'] = stats_filtered_list[-4]
             race_results['laps'] = stats_filtered_list[-3]
             race_results['time_or_retired'] = stats_filtered_list[-2]
             race_results['points'] = stats_filtered_list[-1]
             yield race_results
-            # sleep(randint(0,1))
+        # sleep(randint(1,2))
+    
+    def parse_current_season_fastest_laps(self, response): 
+        fastest_laps_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[2]/table/tbody')
+        fastest_laps_element = fastest_laps_structure.css("tr")
+
+        fastest_lap_results = IndividualRaceFastestLaps()
+        fastest_lap_results['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()[-4:]
+        fastest_lap_results['race_fullname'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        fastest_lap_results['race_date'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()
+        fastest_lap_results['race_circuit'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[2]/text()').get()
+
+        for indiv_driver_row in fastest_laps_element: 
+            stats_unfiltered_list = indiv_driver_row.css("td ::text").getall()
+            stats_filtered_list = [elem for elem in stats_unfiltered_list if elem != '\xa0']
+            fastest_lap_results['race_type'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[1]/ul/li[3]/a/text()').get()
+            fastest_lap_results['position'] = stats_filtered_list[0]
+            fastest_lap_results['car_number'] = stats_filtered_list[1]
+            fastest_lap_results['driver'] = stats_filtered_list[2] + " " + stats_filtered_list[3]
+            fastest_lap_results['car'] = stats_filtered_list[5]
+            fastest_lap_results['fastest_lap_number'] = stats_filtered_list[-4]
+            fastest_lap_results['time_of_day'] = stats_filtered_list[-3]
+            fastest_lap_results['fastest_time'] = stats_filtered_list[-2]
+            fastest_lap_results['average_speed'] = stats_filtered_list[-1]
+            yield fastest_lap_results
+        # sleep(randint(1,2))

@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps
 import json 
 import csv
 import os
@@ -178,5 +178,44 @@ class IndividualRaceResultsPipeline:
                 item.get('laps', ''),
                 item.get('time_or_retired', ''),
                 item.get('points', ''),
+            ])
+        return item
+
+class IndividualRaceFastestLapsPipeline: 
+    def open_spider(self, spider):
+        self.json_file = open('individual_race_fastest_laps.json', 'w')
+        self.csv_file = open('individual_race_fastest_laps.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+    
+    def process_item(self, item, spider):
+        if isinstance(item, IndividualRaceFastestLaps):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('year', ''),
+                item.get('race_fullname', ''),
+                item.get('race_date', ''),
+                item.get('race_circuit', ''),
+                item.get('race_type', ''),
+                item.get('position', ''),
+                item.get('car_number', ''),
+                item.get('driver', ''),
+                item.get('car', ''),
+                item.get('fastest_lap_number', ''),
+                item.get('time_of_day', ''),
+                item.get('fastest_time', ''),
+                item.get('average_speed', ''),
             ])
         return item

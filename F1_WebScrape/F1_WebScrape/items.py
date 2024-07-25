@@ -46,3 +46,18 @@ class IndividualRaceResults(scrapy.Item):
     laps = scrapy.Field() 
     time_or_retired = scrapy.Field() 
     points = scrapy.Field() 
+
+class IndividualRaceFastestLaps(scrapy.Item): 
+    year = scrapy.Field()
+    race_fullname = scrapy.Field()
+    race_date = scrapy.Field()
+    race_circuit = scrapy.Field() 
+    race_type = scrapy.Field()
+    position = scrapy.Field()
+    car_number = scrapy.Field() 
+    driver = scrapy.Field()
+    car = scrapy.Field()
+    fastest_lap_number = scrapy.Field() 
+    time_of_day = scrapy.Field() 
+    fastest_time = scrapy.Field()
+    average_speed = scrapy.Field( )
