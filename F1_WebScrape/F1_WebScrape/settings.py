@@ -20,9 +20,39 @@ NEWSPIDER_MODULE = "F1_WebScrape.spiders"
 ROBOTSTXT_OBEY = False
 
 FEEDS = {
-    'F1.json' : {'format' : 'json'},
-    'F1.csv' : {'format' : 'csv'}
+   'all_news.json': {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'past_present_season_results.json': {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'past_present_season_results.csv': {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'race_schedule.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   }, 
+   'race_schedule.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   }
+
 }
+ITEM_PIPELINES = {
+   'F1_WebScrape.pipelines.AllNewsPipeline': 1,
+   'F1_WebScrape.pipelines.PastPresentSeasonResultsPipeline': 2,
+   'F1_WebScrape.pipelines.RaceSchedulePipeline' : 3, 
+}
+
 
 from shutil import which
 
