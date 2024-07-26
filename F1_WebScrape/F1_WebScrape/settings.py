@@ -95,6 +95,36 @@ FEEDS = {
       'overwrite': True,
       'encoding': 'utf8',
    }, 
+   'practice3_results.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'practice3_results.csv' : { 
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'practice2_results.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'practice2_results.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'practice1_results.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'practice1_results.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
 }
 ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.CustomFilePipeline': 300,
@@ -106,6 +136,9 @@ ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.IndividualRacePitStopSummaryPipeline' : 6,
    'F1_WebScrape.pipelines.StartingGridPipeline' : 7,
    'F1_WebScrape.pipelines.QualificationResultsPipeline' : 8,
+   'F1_WebScrape.pipelines.Practice3Pipeline' : 9,
+   'F1_WebScrape.pipelines.Practice2Pipeline' : 10,
+   'F1_WebScrape.pipelines.Practice1Pipeline' : 11,
 }
 
 
