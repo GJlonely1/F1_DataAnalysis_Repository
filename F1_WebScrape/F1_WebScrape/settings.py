@@ -64,7 +64,37 @@ FEEDS = {
       'format': 'csv',
       'overwrite': True,
       'encoding': 'utf8',
-   }
+   }, 
+   'individual_race_pitstop_summary.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   }, 
+   'individual_race_pitstop_summary.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   }, 
+   'indiv_race_starting_grid.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'indiv_race_starting_grid.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'race_qualification_results.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   }, 
+   'race_qualification_results.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   }, 
 }
 ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.CustomFilePipeline': 300,
@@ -72,7 +102,10 @@ ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.PastPresentSeasonResultsPipeline': 2,
    'F1_WebScrape.pipelines.RaceSchedulePipeline' : 3, 
    'F1_WebScrape.pipelines.IndividualRaceResultsPipeline' : 4,
-   'F1_WebScrape.pipelines.IndividualRaceFastestLapsPipeline' : 5
+   'F1_WebScrape.pipelines.IndividualRaceFastestLapsPipeline' : 5,
+   'F1_WebScrape.pipelines.IndividualRacePitStopSummaryPipeline' : 6,
+   'F1_WebScrape.pipelines.StartingGridPipeline' : 7,
+   'F1_WebScrape.pipelines.QualificationResultsPipeline' : 8,
 }
 
 

@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps, DriverPitStopSummary, StartingGrid, Qualifying
 import json 
 import csv
 import os
@@ -217,5 +217,119 @@ class IndividualRaceFastestLapsPipeline:
                 item.get('time_of_day', ''),
                 item.get('fastest_time', ''),
                 item.get('average_speed', ''),
+            ])
+        return item
+
+class IndividualRacePitStopSummaryPipeline: 
+    def open_spider(self, spider):
+        self.json_file = open('individual_race_pitstop_summary.json', 'w')
+        self.csv_file = open('individual_race_pitstop_summary.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+    
+    def process_item(self, item, spider):
+        if isinstance(item, DriverPitStopSummary):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('year', ''),
+                item.get('race_fullname', ''),
+                item.get('race_date', ''),
+                item.get('race_circuit', ''),
+                item.get('race_type', ''),
+                item.get('pitstop_count', ''),
+                item.get('car_number', ''),
+                item.get('driver', ''),
+                item.get('car', ''),
+                item.get('pit_stop_lap_number', ''),
+                item.get('time_of_day_for_pitstop', ''),
+                item.get('pit_stop_duration', ''),
+                item.get('total_pitstop_duration', ''),
+            ])
+        return item
+    
+class StartingGridPipeline:
+    def open_spider(self, spider):
+        self.json_file = open('indiv_race_starting_grid.json', 'w')
+        self.csv_file = open('indiv_race_starting_grid.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+    
+    def process_item(self, item, spider):
+        if isinstance(item, StartingGrid):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('year', ''),
+                item.get('race_fullname', ''),
+                item.get('race_date', ''),
+                item.get('race_circuit', ''),
+                item.get('race_type', ''),
+                item.get('position', ''),
+                item.get('car_number', ''),
+                item.get('driver', ''),
+                item.get('car', ''),
+                item.get('qualifying_time', ''),
+            ])
+        return item
+    
+class QualificationResultsPipeline: 
+    def open_spider(self, spider):
+        self.json_file = open('race_qualification_results.json', 'w')
+        self.csv_file = open('race_qualification_results.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+    
+    def process_item(self, item, spider):
+        if isinstance(item, Qualifying):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('year', ''),
+                item.get('race_fullname', ''),
+                item.get('race_date', ''),
+                item.get('race_circuit', ''),
+                item.get('race_type', ''),
+                item.get('position', ''),
+                item.get('car_number', ''),
+                item.get('driver', ''),
+                item.get('car', ''),
+                item.get('Q1_time', ''),
+                item.get('Q2_time', ''),
+                item.get('Q3_time', ''),
+                item.get('total_laps_completed', ''),
             ])
         return item
