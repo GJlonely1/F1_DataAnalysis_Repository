@@ -139,3 +139,18 @@ class Practice1 (scrapy.Item):
     fastest_time = scrapy.Field()
     gap_from_1stPosition = scrapy.Field()
     total_laps_completed = scrapy.Field()
+
+class DriverStandings(scrapy.Item): 
+    year = scrapy.Field()
+    position = scrapy.Field()
+    driver = scrapy.Field()
+    nationality = scrapy.Field()
+    car = scrapy.Field()
+    total_points = scrapy.Field()
+
+class ConstructorStandings (scrapy.Item): 
+    year = scrapy.Field()
+    position = scrapy.Field()
+    team = scrapy.Field()
+    total_points = scrapy.Field()
+    

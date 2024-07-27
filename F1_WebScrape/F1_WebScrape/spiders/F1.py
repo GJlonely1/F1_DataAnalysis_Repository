@@ -3,7 +3,7 @@ import random
 import logging 
 from time import sleep
 from random import randint 
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps,DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps,DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings
 from scrapy_selenium import SeleniumRequest
 
 from selenium import webdriver
@@ -280,6 +280,15 @@ class F1Spider(scrapy.Spider):
         results_type_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[2]/div/ul')
         # Returns a list of results type <Selector> e.g. Races, Drivers, Teams, DHL Fastest Lap Awards 
         results_type_elements = results_type_structure.css("li")
+        for indiv_type in results_type_elements[1:]: 
+            categories_sideurl = indiv_type.css("a ::attr(href)").get() 
+            official_category_url = base_url + categories_sideurl
+            if '/drivers' in official_category_url: 
+                yield response.follow(official_category_url, callback=self.parse_current_season_driver_standings, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            elif '/team' in official_category_url: 
+                yield response.follow(official_category_url, callback=self.parse_current_season_team_standings, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            # elif '/fastest-laps' in official_category_url:
+            #     yield response.follow(official_category_url, callback=self.parse_current_season_fastest_laps, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
         
         race_location_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
         # Returns a list of race_locations <Selector> e.g. All, Bahrain, Hungary, etc.
@@ -332,6 +341,19 @@ class F1Spider(scrapy.Spider):
         for indiv_location_url in race_location_sideurl_list[1:]:
             official_race_location_url = f"{base_url}{indiv_location_url}"
             yield response.follow(official_race_location_url, callback=self.past_seasons_individual_race_results,headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+
+        race_categories_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[2]/div/ul')
+        race_categories_elements = race_categories_structure.css("li")
+        for indiv_category_elem in race_categories_elements[1:]:
+            indiv_category_sideurl = indiv_category_elem.css("a ::attr(href)").get()
+            official_race_category_url = f"{base_url}{indiv_category_sideurl}"
+            if '/drivers' in official_race_category_url: 
+                yield response.follow(official_race_category_url, callback=self.parse_past_seasons_driver_standings, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            elif '/team' in official_race_category_url: 
+                yield response.follow(official_race_category_url, callback=self.parse_past_seasons_team_standings, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            # elif '/fastest-laps' in official_category_url:
+            #     yield response.follow(official_category_url, callback=self.parse_past_seasons_fastest_laps, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        
         
     def parse_current_season_individual_race_result(self, response): 
         race_results_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[3]/div[2]/table/tbody')
@@ -764,3 +786,44 @@ class F1Spider(scrapy.Spider):
             yield practice1_results
             
         sleep(random.uniform(0, 1))
+        
+    # Need to implement for past_seasons_driver_standings as well. 
+    def parse_current_season_driver_standings (self, response): 
+        driver_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        driver_standings_elements = driver_standings_structure.css("tr")
+        
+        driver_standings = DriverStandings()
+        driver_standings['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        for indiv_driver_row in driver_standings_elements: 
+            stats_unfiltered_list = indiv_driver_row.css("td ::text").getall()
+            stats_filtered_list = [elem for elem in stats_unfiltered_list if elem != '\xa0']
+            driver_standings['position'] = stats_filtered_list[0]
+            driver_standings['driver'] = stats_filtered_list[1] + " " + stats_filtered_list[2]
+            driver_standings['nationality'] = stats_filtered_list[-3]
+            driver_standings['car'] = stats_filtered_list[-2]
+            driver_standings['total_points'] = stats_filtered_list[-1]
+            yield driver_standings
+        
+    def parse_past_seasons_driver_standings (self, response): 
+        driver_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        driver_standings_elements = driver_standings_structure.css("tr")
+        
+        driver_standings = DriverStandings()
+        driver_standings['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        for indiv_driver_row in driver_standings_elements: 
+            stats_unfiltered_list = indiv_driver_row.css("td ::text").getall()
+            stats_filtered_list = [elem for elem in stats_unfiltered_list if elem != '\xa0']
+            driver_standings['position'] = stats_filtered_list[0]
+            driver_standings['driver'] = stats_filtered_list[1] + " " + stats_filtered_list[2]
+            driver_standings['nationality'] = stats_filtered_list[-3]
+            driver_standings['car'] = stats_filtered_list[-2]
+            driver_standings['total_points'] = stats_filtered_list[-1]
+            yield driver_standings
+        
+        sleep(random.uniform(0, 1))
+    
+    def parse_current_season_team_standings (self, response): 
+        pass
+    
+    def parse_past_seasons_team_standings (self, response):
+        pass
