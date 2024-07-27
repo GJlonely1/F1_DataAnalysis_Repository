@@ -823,7 +823,29 @@ class F1Spider(scrapy.Spider):
         sleep(random.uniform(0, 1))
     
     def parse_current_season_team_standings (self, response): 
-        pass
-    
+        constructor_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        constructor_standings_elements = constructor_standings_structure.css("tr")
+        
+        constructor_standings = ConstructorStandings()
+        constructor_standings['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        for indiv_team_row in constructor_standings_elements: 
+            stats_list = indiv_team_row.css("td ::text").getall()
+            constructor_standings['position'] = stats_list[0]
+            constructor_standings['team'] = stats_list[1]
+            constructor_standings['total_points'] = stats_list[-1]
+            yield constructor_standings
+                
     def parse_past_seasons_team_standings (self, response):
-        pass
+        constructor_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        constructor_standings_elements = constructor_standings_structure.css("tr")
+        
+        constructor_standings = ConstructorStandings()
+        constructor_standings['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
+        for indiv_team_row in constructor_standings_elements: 
+            stats_list = indiv_team_row.css("td ::text").getall()
+            constructor_standings['position'] = stats_list[0]
+            constructor_standings['team'] = stats_list[1]
+            constructor_standings['total_points'] = stats_list[-1]
+            yield constructor_standings
+        
+        sleep(random.uniform(0, 1))
