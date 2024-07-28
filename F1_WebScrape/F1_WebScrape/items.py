@@ -169,4 +169,17 @@ class TeamRaceStandingsProgression (scrapy.Item):
     grand_prix = scrapy.Field()
     race_date = scrapy.Field()
     points = scrapy.Field()
+
+class DriverInformation (scrapy.Item):
+    name = scrapy.Field()
+    team_name = scrapy.Field()
+    country = scrapy.Field()
+    podiums = scrapy.Field()
+    lifetime_points = scrapy.Field()
+    grand_prix_participated = scrapy.Field()
+    world_driver_championships = scrapy.Field()
+    highest_race_finish = scrapy.Field()
+    highest_grid_position = scrapy.Field()
+    date_of_birth = scrapy.Field()
+    place_of_birth = scrapy.Field()
     

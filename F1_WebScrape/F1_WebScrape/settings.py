@@ -164,7 +164,17 @@ FEEDS = {
       'format': 'csv',
       'overwrite': True,
       'encoding': 'utf8',
-   }
+   },
+   'Driver_Information.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'Driver_Information.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
 }
 ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.CustomFilePipeline': 300,
@@ -183,6 +193,7 @@ ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.ConstructorStandingsPipeline' : 13,
    'F1_WebScrape.pipelines.DriverRaceStandingsProgressionPipeline' : 14,
    'F1_WebScrape.pipelines.ConstructorRaceStandingsProgressionPipeline' : 15,
+   'F1_WebScrape.pipelines.DriverInformationPipeline' : 16,
 }
 
 

@@ -3,7 +3,7 @@ import random
 import logging 
 from time import sleep
 from random import randint 
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps,DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings, DriverRaceStandingsProgression, TeamRaceStandingsProgression
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps,DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings, DriverRaceStandingsProgression, TeamRaceStandingsProgression, DriverInformation
 from scrapy_selenium import SeleniumRequest
 
 from selenium import webdriver
@@ -52,8 +52,8 @@ class F1Spider(scrapy.Spider):
         #     yield SeleniumRequest(url=fullurl, callback=self.parse_racing, wait_time=10)
         elif "en/results" in fullurl: 
             yield response.follow(fullurl, callback=self.parse_current_season_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
-        # elif "en/drivers" in fullurl: 
-        #     yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        elif "en/drivers" in fullurl: 
+            yield response.follow(fullurl, callback=self.parse_drivers, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
         # elif "en/teams" in fullurl:
         #     yield response.follow(fullurl, callback=self.parse_teams, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)        
     
@@ -967,3 +967,30 @@ class F1Spider(scrapy.Spider):
             yield team_race_standings_progression
 
         sleep(random.uniform(0, 1))
+    
+    def parse_drivers (self, response): 
+        base_url = 'https://www.formula1.com'
+        driver_cards_structure = response.xpath('//*[@id="maincontent"]/main/div/div/div[4]')
+        driver_cards_sideurls = driver_cards_structure.css("a ::attr(href)").getall()
+        for indiv_driver_sideurl in driver_cards_sideurls: 
+            driver_sideurl = f"{base_url}{indiv_driver_sideurl}"
+            yield response.follow(driver_sideurl, callback=self.get_current_season_individual_driver_information, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+    
+    def get_current_season_individual_driver_information (self, response): 
+        driver_information_table = response.xpath('//*[@id="maincontent"]/main/div/div/div[1]/div/div[2]/dl')
+        driver_information_list = driver_information_table.css("dd ::text").getall()
+        
+        driver_information = DriverInformation()
+        driver_information['name'] = response.xpath('//*[@id="maincontent"]/main/div/div/div[1]/figure/figcaption/div/h1/text()').get()
+        driver_information['team_name'] = driver_information_list[0]
+        driver_information['country'] = driver_information_list[1]
+        driver_information['podiums'] = driver_information_list[2]
+        driver_information['lifetime_points'] = driver_information_list[3]
+        driver_information['grand_prix_participated'] = driver_information_list[4]
+        driver_information['world_driver_championships'] = driver_information_list[5]
+        driver_information['highest_race_finish'] = driver_information_list[-4]
+        driver_information['highest_grid_position'] = driver_information_list[-3]
+        driver_information['date_of_birth'] = driver_information_list[-2]
+        driver_information['place_of_birth'] = driver_information_list[-1]
+        yield driver_information
+    

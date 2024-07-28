@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps, DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings, DriverRaceStandingsProgression, TeamRaceStandingsProgression
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps, DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings, DriverRaceStandingsProgression, TeamRaceStandingsProgression, DriverInformation
 import json 
 import csv
 import os
@@ -564,5 +564,42 @@ class ConstructorRaceStandingsProgressionPipeline:
                 item.get('grand_prix', ''),
                 item.get('race_date', ''),
                 item.get('points', ''),
+            ])
+        return item
+
+class DriverInformationPipeline: 
+    def open_spider(self, spider):
+        self.json_file = open('Driver_Information.json', 'w')
+        self.csv_file = open('Driver_Information.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+        
+    def process_item(self, item, spider):
+        if isinstance(item, DriverInformation):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('name', ''),
+                item.get('team_name', ''),
+                item.get('country', ''),
+                item.get('podiums', ''),
+                item.get('lifetime_points', ''),
+                item.get('grand_prix_participated', ''),
+                item.get('world_driver_championships', ''),
+                item.get('highest_race_finish', ''),
+                item.get('highest_grid_position', ''),
+                item.get('date_of_birth', ''),
+                item.get('place_of_birth', ''),
             ])
         return item
