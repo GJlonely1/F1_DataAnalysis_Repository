@@ -145,6 +145,26 @@ FEEDS = {
       'overwrite': True,
       'encoding': 'utf8',
    },
+   'Driver_Race_Standings_Progression.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'Driver_Race_Standings_Progression.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'Constructor_Race_Standings_Progression.json' : {
+      'format': 'json',
+      'overwrite': True,
+      'encoding': 'utf8',
+   },
+   'Constructor_Race_Standings_Progression.csv' : {
+      'format': 'csv',
+      'overwrite': True,
+      'encoding': 'utf8',
+   }
 }
 ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.CustomFilePipeline': 300,
@@ -161,6 +181,8 @@ ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.Practice1Pipeline' : 11,
    'F1_WebScrape.pipelines.DriverStandingsPipeline' : 12,
    'F1_WebScrape.pipelines.ConstructorStandingsPipeline' : 13,
+   'F1_WebScrape.pipelines.DriverRaceStandingsProgressionPipeline' : 14,
+   'F1_WebScrape.pipelines.ConstructorRaceStandingsProgressionPipeline' : 15,
 }
 
 

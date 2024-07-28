@@ -153,4 +153,20 @@ class ConstructorStandings (scrapy.Item):
     position = scrapy.Field()
     team = scrapy.Field()
     total_points = scrapy.Field()
+
+class DriverRaceStandingsProgression (scrapy.Item):
+    year = scrapy.Field()
+    name = scrapy.Field()
+    grand_prix = scrapy.Field()
+    race_date = scrapy.Field()
+    car = scrapy.Field()
+    race_position = scrapy.Field()
+    points = scrapy.Field()
+
+class TeamRaceStandingsProgression (scrapy.Item):
+    year = scrapy.Field()
+    team_name = scrapy.Field()
+    grand_prix = scrapy.Field()
+    race_date = scrapy.Field()
+    points = scrapy.Field()
     

@@ -6,7 +6,7 @@
 
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps, DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps, DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings, DriverRaceStandingsProgression, TeamRaceStandingsProgression
 import json 
 import csv
 import os
@@ -500,5 +500,69 @@ class ConstructorStandingsPipeline:
                 item.get('position', ''),
                 item.get('team', ''),
                 item.get('total_points', ''),
+            ])
+        return item
+
+class DriverRaceStandingsProgressionPipeline: 
+    def open_spider(self, spider):
+        self.json_file = open('Driver_Race_Standings_Progression.json', 'w')
+        self.csv_file = open('Driver_Race_Standings_Progression.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+    
+    def process_item(self, item, spider):
+        if isinstance(item, DriverRaceStandingsProgression):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('year', ''),
+                item.get('name', ''),
+                item.get('grand_prix', ''),
+                item.get('race_date', ''),
+                item.get('car', ''),
+                item.get('race_position', ''),
+                item.get('points', ''),
+            ])
+        return item
+
+class ConstructorRaceStandingsProgressionPipeline:
+    def open_spider(self, spider):
+        self.json_file = open('Constructor_Race_Standings_Progression.json', 'w')
+        self.csv_file = open('Constructor_Race_Standings_Progression.csv', 'w', newline='')
+        self.csv_writer = csv.writer(self.csv_file)
+        self.json_file.write('[')
+        self.first_item = True
+    
+    def close_spider(self, spider):
+        self.json_file.write(']')
+        self.json_file.close()
+        self.csv_file.close()
+    
+    def process_item(self, item, spider):
+        if isinstance(item, TeamRaceStandingsProgression):
+            if not self.first_item: 
+                self.json_file.write(',')
+            # Write to JSON
+            json.dump(dict(item), self.json_file, ensure_ascii=False)
+            self.first_item = False
+        
+            # Write to CSV
+            self.csv_writer.writerow([
+                item.get('year', ''),
+                item.get('team_name', ''),
+                item.get('grand_prix', ''),
+                item.get('race_date', ''),
+                item.get('points', ''),
             ])
         return item

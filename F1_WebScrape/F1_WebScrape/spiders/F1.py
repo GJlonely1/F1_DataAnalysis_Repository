@@ -3,7 +3,7 @@ import random
 import logging 
 from time import sleep
 from random import randint 
-from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps,DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings
+from F1_WebScrape.items import Stories, RacingSchedule, OverallSingleSeasonRaceResults, IndividualRaceResults, IndividualRaceFastestLaps,DriverPitStopSummary, StartingGrid, Qualifying, Practice3, Practice2, Practice1, DriverStandings, ConstructorStandings, DriverRaceStandingsProgression, TeamRaceStandingsProgression
 from scrapy_selenium import SeleniumRequest
 
 from selenium import webdriver
@@ -787,8 +787,8 @@ class F1Spider(scrapy.Spider):
             
         sleep(random.uniform(0, 1))
         
-    # Need to implement for past_seasons_driver_standings as well. 
     def parse_current_season_driver_standings (self, response): 
+        base_url = 'https://www.formula1.com'
         driver_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
         driver_standings_elements = driver_standings_structure.css("tr")
         
@@ -804,7 +804,15 @@ class F1Spider(scrapy.Spider):
             driver_standings['total_points'] = stats_filtered_list[-1]
             yield driver_standings
         
+        drivers_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
+        drivers_elements = drivers_structure.css("li")
+        for driver in drivers_elements[1:]: 
+            driver_sideurl = driver.css("a ::attr(href)").get()
+            official_driver_compiled_standings_url = f"{base_url}{driver_sideurl}"
+            yield response.follow(official_driver_compiled_standings_url, callback=self.parse_driver_current_season_standings_progression, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+        
     def parse_past_seasons_driver_standings (self, response): 
+        base_url = 'https://www.formula1.com'
         driver_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
         driver_standings_elements = driver_standings_structure.css("tr")
         
@@ -821,8 +829,16 @@ class F1Spider(scrapy.Spider):
             yield driver_standings
         
         sleep(random.uniform(0, 1))
+        
+        drivers_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
+        drivers_elements = drivers_structure.css("li")
+        for driver in drivers_elements[1:]: 
+            driver_sideurl = driver.css("a ::attr(href)").get()
+            official_driver_compiled_standings_url = f"{base_url}{driver_sideurl}"
+            yield response.follow(official_driver_compiled_standings_url, callback=self.parse_driver_past_seasons_standings_progression, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
     
     def parse_current_season_team_standings (self, response): 
+        base_url = 'https://www.formula1.com'
         constructor_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
         constructor_standings_elements = constructor_standings_structure.css("tr")
         
@@ -834,8 +850,17 @@ class F1Spider(scrapy.Spider):
             constructor_standings['team'] = stats_list[1]
             constructor_standings['total_points'] = stats_list[-1]
             yield constructor_standings
+        
+        teams_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
+        teams_elements = teams_structure.css("li")
+        for team in teams_elements[1:]: 
+            team_sideurl = team.css("a ::attr(href)").get()
+            official_team_race_standings_url = f"{base_url}{team_sideurl}"
+            yield response.follow(official_team_race_standings_url, callback=self.get_team_current_season_standings_progression, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            
                 
     def parse_past_seasons_team_standings (self, response):
+        base_url = 'https://www.formula1.com'
         constructor_standings_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
         constructor_standings_elements = constructor_standings_structure.css("tr")
         
@@ -848,4 +873,97 @@ class F1Spider(scrapy.Spider):
             constructor_standings['total_points'] = stats_list[-1]
             yield constructor_standings
         
+        sleep(random.uniform(0, 1))
+    
+        teams_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[1]/details[3]/div/ul')
+        teams_elements = teams_structure.css("li")
+        for team in teams_elements[1:]: 
+            team_sideurl = team.css("a ::attr(href)").get()
+            official_team_race_standings_url = f"{base_url}{team_sideurl}"
+            yield response.follow(official_team_race_standings_url, callback=self.get_team_past_seasons_standings_progression, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
+            
+    def parse_driver_current_season_standings_progression (self, response): 
+        driver_race_progression_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        driver_race_progression_elements = driver_race_progression_structure.css("tr")
+        
+        driver_race_standings_progression = DriverRaceStandingsProgression()
+        driver_race_standings_progression['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()[:4]
+        title_list = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get().split(' ')
+        retrieved_name_list_DT = [elem for elem in title_list if elem!= 'Standings:' and elem != 'Driver' and elem.isdigit() == False]
+        driver_race_standings_progression['name'] = ' '.join(retrieved_name_list_DT)
+        for indiv_race in driver_race_progression_elements: 
+            stats_list = indiv_race.css("td ::text").getall()
+            driver_race_standings_progression['grand_prix'] = stats_list[0]
+            driver_race_standings_progression['race_date'] = stats_list[1]
+            driver_race_standings_progression['car'] = stats_list[2]
+            
+            if len(stats_list) == 4: 
+                driver_race_standings_progression['race_position'] = stats_list[-1]
+                driver_race_standings_progression['points'] = '0'
+            elif len(stats_list) == 5:
+                driver_race_standings_progression['race_position'] = stats_list[-2]
+                driver_race_standings_progression['points'] = stats_list[-1]
+            
+            yield driver_race_standings_progression
+        
+    def parse_driver_past_seasons_standings_progression (self, response):
+        driver_race_progression_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        driver_race_progression_elements = driver_race_progression_structure.css("tr")
+        
+        driver_race_standings_progression = DriverRaceStandingsProgression()
+        driver_race_standings_progression['year'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()[:4]
+        title_list = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get().split()
+        retrieved_name_list_DT = [elem for elem in title_list if elem!= 'Standings:' and elem != 'Driver' and elem.isdigit() == False]
+        driver_race_standings_progression['name'] = ' '.join(retrieved_name_list_DT)
+        for indiv_race in driver_race_progression_elements: 
+            stats_list = indiv_race.css("td ::text").getall()
+            driver_race_standings_progression['grand_prix'] = stats_list[0]
+            driver_race_standings_progression['race_date'] = stats_list[1]
+            driver_race_standings_progression['car'] = stats_list[2]
+            
+            if len(stats_list) == 4: 
+                driver_race_standings_progression['race_position'] = stats_list[-1]
+                driver_race_standings_progression['points'] = '0'
+            elif len(stats_list) == 5:
+                driver_race_standings_progression['race_position'] = stats_list[-2]
+                driver_race_standings_progression['points'] = stats_list[-1]
+            
+            yield driver_race_standings_progression
+        
+        sleep(random.uniform(0, 1))
+        
+    def get_team_current_season_standings_progression (self, response): 
+        team_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        team_elements = team_structure.css("tr")
+        
+        team_race_standings_progression = TeamRaceStandingsProgression()
+        title_list = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get().split()
+        retrieved_team_name_list_DT = [elem for elem in title_list if elem!= 'Standings:' and elem != 'Constructor' and elem.isdigit() == False]
+        team_race_standings_progression['year'] = title_list[0]
+        team_race_standings_progression['team_name'] = " ".join(retrieved_team_name_list_DT)
+        
+        for indiv_race in team_elements: 
+            stats_list = indiv_race.css("td ::text").getall()
+            team_race_standings_progression['grand_prix'] = stats_list[0]
+            team_race_standings_progression['race_date'] = stats_list[1]
+            team_race_standings_progression['points'] = stats_list[-1]
+            yield team_race_standings_progression
+
+    def get_team_past_seasons_standings_progression (self, response): 
+        team_structure = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/table/tbody')
+        team_elements = team_structure.css("tr")
+        
+        team_race_standings_progression = TeamRaceStandingsProgression()
+        title_list = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get().split()
+        retrieved_team_name_list_DT = [elem for elem in title_list if elem!= 'Standings:' and elem != 'Constructor' and elem.isdigit() == False]
+        team_race_standings_progression['year'] = title_list[0]
+        team_race_standings_progression['team_name'] = " ".join(retrieved_team_name_list_DT)
+        
+        for indiv_race in team_elements: 
+            stats_list = indiv_race.css("td ::text").getall()
+            team_race_standings_progression['grand_prix'] = stats_list[0]
+            team_race_standings_progression['race_date'] = stats_list[1]
+            team_race_standings_progression['points'] = stats_list[-1]
+            yield team_race_standings_progression
+
         sleep(random.uniform(0, 1))
