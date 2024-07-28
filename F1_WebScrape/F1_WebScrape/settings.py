@@ -180,7 +180,7 @@ ITEM_PIPELINES = {
    'F1_WebScrape.pipelines.CustomFilePipeline': 300,
    'F1_WebScrape.pipelines.AllNewsPipeline': 1,
    'F1_WebScrape.pipelines.PastPresentSeasonResultsPipeline': 2,
-   'F1_WebScrape.pipelines.RaceSchedulePipeline' : 3, 
+   'F1_WebScrape.pipelines.RaceSchedulePipeline': 3, 
    'F1_WebScrape.pipelines.IndividualRaceResultsPipeline' : 4,
    'F1_WebScrape.pipelines.IndividualRaceFastestLapsPipeline' : 5,
    'F1_WebScrape.pipelines.IndividualRacePitStopSummaryPipeline' : 6,

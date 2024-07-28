@@ -48,8 +48,8 @@ class F1Spider(scrapy.Spider):
         fullurl = response.url
         if "/en/latest" in fullurl: 
             yield response.follow(fullurl, callback=self.parse_latest, headers={"User-Agent": random.choice(self.user_agent_list)}, dont_filter=True)
-        # elif "/en/racing" in fullurl: 
-        #     yield SeleniumRequest(url=fullurl, callback=self.parse_racing, wait_time=10)
+        elif "/en/racing" in fullurl: 
+            yield SeleniumRequest(url=fullurl, callback=self.parse_racing, wait_time=10)
         elif "en/results" in fullurl: 
             yield response.follow(fullurl, callback=self.parse_current_season_results, headers={"User-Agent" : random.choice(self.user_agent_list)}, dont_filter=True)
         elif "en/drivers" in fullurl: 
@@ -72,7 +72,7 @@ class F1Spider(scrapy.Spider):
         
         more_news_section = response.xpath('//*[@id="maincontent"]/section[1]/section[3]/section/div/h2')
         latest_news_url = more_news_section.css('a ::attr(href)').get() 
-        # yield SeleniumRequest(url=latest_news_url, callback=self.parse_latest_news, wait_time=10)
+        yield SeleniumRequest(url=latest_news_url, callback=self.parse_latest_news, wait_time=10)
     
     
     def parse_top_news_content(self, response):
@@ -85,184 +85,184 @@ class F1Spider(scrapy.Spider):
         story_item['story_content'] = content_string
         yield story_item
     
-    # def parse_latest_news(self, response):
-    #     url = response.url
-    #     options = webdriver.ChromeOptions()
-    #     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-    #     driver.get(url=url)
-    #     sleep(randint(1, 5))
-    #     # Wait for the cookie consent popup and handle it
-    #     try:
-    #     # Switch to iframe if necessary
-    #         WebDriverWait(driver, 20).until(
-    #             EC.presence_of_element_located((By.CSS_SELECTOR, 'iframe'))
-    #         )
-    #         iframe = driver.find_element(By.CSS_SELECTOR, 'iframe')
-    #         driver.switch_to.frame(iframe)
+    def parse_latest_news(self, response):
+        url = response.url
+        options = webdriver.ChromeOptions()
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        driver.get(url=url)
+        sleep(randint(1, 5))
+        # Wait for the cookie consent popup and handle it
+        try:
+        # Switch to iframe if necessary
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'iframe'))
+            )
+            iframe = driver.find_element(By.CSS_SELECTOR, 'iframe')
+            driver.switch_to.frame(iframe)
 
-    #         # Wait for the accept button to be clickable
-    #         accept_button = WebDriverWait(driver, 20).until(
-    #             EC.element_to_be_clickable((By.CSS_SELECTOR, '//button[@title="ACCEPT ALL"]'))
-    #         )
-    #         accept_button.click()
-    #         logger.info("Accepted Cookie Consent Popup")
-    #         sleep(randint(3, 8))  # Wait for random seconds to ensure the popup is closed
-    #         driver.switch_to.default_content()  # Switch back to the main content
+            # Wait for the accept button to be clickable
+            accept_button = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, '//button[@title="ACCEPT ALL"]'))
+            )
+            accept_button.click()
+            logger.info("Accepted Cookie Consent Popup")
+            sleep(randint(3, 8))  # Wait for random seconds to ensure the popup is closed
+            driver.switch_to.default_content()  # Switch back to the main content
 
-    #     except Exception as e:
-    #         self.logger.info(f"No cookie consent popup found or unable to click: {e}")
-    #     driver.switch_to.default_content()  
+        except Exception as e:
+            self.logger.info(f"No cookie consent popup found or unable to click: {e}")
+        driver.switch_to.default_content()  
 
-    #     # Scroll and click 'Load More' button
-    #     while True:
-    #         try:
-    #             current_url = driver.current_url
-    #         # Randomly scroll down the page
-    #             scroll_position = random.randint(1000, 2000)  # Random scroll length
-    #             driver.execute_script(f"window.scrollBy(0, {scroll_position});")
-    #             current_position = scroll_position
-    #             sleep(random.randint(2, 5))  # Wait for the page to load
+        # Scroll and click 'Load More' button
+        while True:
+            try:
+                current_url = driver.current_url
+            # Randomly scroll down the page
+                scroll_position = random.randint(1000, 2000)  # Random scroll length
+                driver.execute_script(f"window.scrollBy(0, {scroll_position});")
+                current_position = scroll_position
+                sleep(random.randint(2, 5))  # Wait for the page to load
 
-    #             # Need to fix Load More button - Illegal selector was being used. 
-    #             load_more_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="maincontent"]/section[3]/a')))
-    #             load_more_button.click()
-    #             driver.execute_script(f"window.scrollBy({current_position},{scroll_position});")
-    #             # # Check if the 'Load More' button is displayed
-    #             # if load_more_button.is_displayed():
-    #             #     # Click the 'Load More' button
-    #             #     actions = ActionChains(driver)
-    #             #     actions.move_to_element(load_more_button).click().perform()
-    #             #     self.logger.info("Clicked 'Load More' button")
-    #             sleep(random.randint(2, 5))  # Wait for more content to load
+                # Need to fix Load More button - Illegal selector was being used. 
+                load_more_button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="maincontent"]/section[3]/a')))
+                load_more_button.click()
+                driver.execute_script(f"window.scrollBy({current_position},{scroll_position});")
+                # # Check if the 'Load More' button is displayed
+                # if load_more_button.is_displayed():
+                #     # Click the 'Load More' button
+                #     actions = ActionChains(driver)
+                #     actions.move_to_element(load_more_button).click().perform()
+                #     self.logger.info("Clicked 'Load More' button")
+                sleep(random.randint(2, 5))  # Wait for more content to load
                     
-    #             # Wait for the URL to change
-    #             WebDriverWait(driver, 10).until(lambda d: d.current_url != current_url)
-    #             self.logger.info(f"URL changed to: {driver.current_url}")
-    #             # else:
-    #             #     self.logger.info("No more 'Load More' button displayed")
-    #                 # break
-    #         except Exception as e:
-    #             self.logger.info(f"No more 'Load More' button found or an error occurred: {e}")
-    #             break
+                # Wait for the URL to change
+                WebDriverWait(driver, 10).until(lambda d: d.current_url != current_url)
+                self.logger.info(f"URL changed to: {driver.current_url}")
+                # else:
+                #     self.logger.info("No more 'Load More' button displayed")
+                    # break
+            except Exception as e:
+                self.logger.info(f"No more 'Load More' button found or an error occurred: {e}")
+                break
         
-    #     latest_news = driver.find_elements(By.XPATH, '//*[@id="maincontent"]/div[3]/ul/li')
-    #     for news in latest_news:
-    #         latest_news_item = Stories()
-    #         latest_news_item['story_name'] = news.find_element(By.CSS_SELECTOR, 'a figcaption p').text
-    #         news_url = news.find_element(By.CSS_SELECTOR, 'a').get_attribute('href')
-    #         latest_news_item['story_url'] = news_url
-    #         yield latest_news_item
-    #         yield SeleniumRequest(url=news_url, callback=self.parse_latest_news_content)
+        latest_news = driver.find_elements(By.XPATH, '//*[@id="maincontent"]/div[3]/ul/li')
+        for news in latest_news:
+            latest_news_item = Stories()
+            latest_news_item['story_name'] = news.find_element(By.CSS_SELECTOR, 'a figcaption p').text
+            news_url = news.find_element(By.CSS_SELECTOR, 'a').get_attribute('href')
+            latest_news_item['story_url'] = news_url
+            yield latest_news_item
+            yield SeleniumRequest(url=news_url, callback=self.parse_latest_news_content)
         
 
-    # def parse_latest_news_content(self, response):
-    #     url = response.url
-    #     options = webdriver.ChromeOptions()
-    #     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-    #     # driver = self.setup_driver()
-    #     driver.get(url=url)
+    def parse_latest_news_content(self, response):
+        url = response.url
+        options = webdriver.ChromeOptions()
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        # driver = self.setup_driver()
+        driver.get(url=url)
 
-    #     try:
-    #     # Switch to iframe if necessary
-    #         WebDriverWait(driver, 20).until(
-    #             EC.presence_of_element_located((By.CSS_SELECTOR, 'iframe'))
-    #         )
-    #         iframe = driver.find_element(By.CSS_SELECTOR, 'iframe')
-    #         driver.switch_to.frame(iframe)
+        try:
+        # Switch to iframe if necessary
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'iframe'))
+            )
+            iframe = driver.find_element(By.CSS_SELECTOR, 'iframe')
+            driver.switch_to.frame(iframe)
 
-    #         # Wait for the accept button to be clickable
-    #         accept_button = WebDriverWait(driver, 20).until(
-    #             EC.element_to_be_clickable((By.CSS_SELECTOR, '//button[@title="ACCEPT ALL"]'))
-    #         )
-    #         accept_button.click()
-    #         logger.info("Accepted Cookie Consent Popup")
-    #         sleep(randint(3, 8))  # Wait for random seconds to ensure the popup is closed
-    #         driver.switch_to.default_content()  # Switch back to the main content
+            # Wait for the accept button to be clickable
+            accept_button = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, '//button[@title="ACCEPT ALL"]'))
+            )
+            accept_button.click()
+            logger.info("Accepted Cookie Consent Popup")
+            sleep(randint(3, 8))  # Wait for random seconds to ensure the popup is closed
+            driver.switch_to.default_content()  # Switch back to the main content
 
-    #     except Exception as e:
-    #         self.logger.info(f"No cookie consent popup found or unable to click: {e}")
-    #     driver.switch_to.default_content()
+        except Exception as e:
+            self.logger.info(f"No cookie consent popup found or unable to click: {e}")
+        driver.switch_to.default_content()
         
-    #     try:
-    #         WebDriverWait(driver, 10).until(
-    #             EC.presence_of_element_located((By.XPATH, '//*[@id="maincontent"]/section[2]/section/article'))
-    #         )
-    #         sleep(randint(1, 5)) 
-    #         news_content_elements = driver.find_elements(By.CSS_SELECTOR, 'div p')
-    #         story_item = Stories()
-    #         content_string = ' '.join([element.text for element in news_content_elements])
-    #         story_item['story_content'] = content_string
-    #         yield story_item
-    #     except Exception as e:
-    #         self.logger.info(f"No news content found: {e}")
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="maincontent"]/section[2]/section/article'))
+            )
+            sleep(randint(1, 5)) 
+            news_content_elements = driver.find_elements(By.CSS_SELECTOR, 'div p')
+            story_item = Stories()
+            content_string = ' '.join([element.text for element in news_content_elements])
+            story_item['story_content'] = content_string
+            yield story_item
+        except Exception as e:
+            self.logger.info(f"No news content found: {e}")
 
-    # def parse_racing(self, response):
-    #     current_url = response.url
-    #     options = webdriver.ChromeOptions()
-    #     options.add_argument('--no-sandbox')
-    #     options.add_argument('--disable-dev-shm-usage')
-    #     options.add_argument('--disable-gpu')
-    #     # options.add_argument('--headless')  # Run headless for stability in some environments
-    #     driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
-    #     driver.get(url=current_url)
-    #     sleep(randint(4,8))
+    def parse_racing(self, response):
+        current_url = response.url
+        options = webdriver.ChromeOptions()
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument('--disable-gpu')
+        # options.add_argument('--headless')  # Run headless for stability in some environments
+        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
+        driver.get(url=current_url)
+        sleep(randint(4,8))
 
-    #     # Wait for the cookie consent popup and handle it --
-    #     try:
-    #     # Switch to iframe if necessary
-    #         WebDriverWait(driver, 20).until(
-    #             EC.presence_of_element_located((By.CSS_SELECTOR, 'iframe'))
-    #         )
-    #         iframe = driver.find_element(By.CSS_SELECTOR, 'iframe')
-    #         driver.switch_to.frame(iframe)
+        # Wait for the cookie consent popup and handle it --
+        try:
+        # Switch to iframe if necessary
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, 'iframe'))
+            )
+            iframe = driver.find_element(By.CSS_SELECTOR, 'iframe')
+            driver.switch_to.frame(iframe)
 
-    #         # Wait for the accept button to be clickable
-    #         accept_button = WebDriverWait(driver, 20).until(
-    #             EC.element_to_be_clickable((By.CSS_SELECTOR, '//button[@title="ACCEPT ALL"]'))
-    #         )
-    #         accept_button.click()
-    #         logger.info("Accepted Cookie Consent Popup")
-    #         sleep(randint(3, 8))  # Wait for random seconds to ensure the popup is closed
-    #         driver.switch_to.default_content()  # Switch back to the main content
+            # Wait for the accept button to be clickable
+            accept_button = WebDriverWait(driver, 20).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, '//button[@title="ACCEPT ALL"]'))
+            )
+            accept_button.click()
+            logger.info("Accepted Cookie Consent Popup")
+            sleep(randint(3, 8))  # Wait for random seconds to ensure the popup is closed
+            driver.switch_to.default_content()  # Switch back to the main content
 
-    #     except Exception as e:
-    #         self.logger.info(f"No cookie consent popup found or unable to click: {e}")
-    #     driver.switch_to.default_content()
-    #     try: 
-    #         main_content_visible = WebDriverWait(driver, 10).until(
-    #             EC.visibility_of_element_located((By.XPATH, '//*[@id="maincontent"]/div/div[1]/div[2]/div/div'))
-    #         )
-    #         sleep(randint(2,5))
-    #         main_content_present = WebDriverWait(driver, 10).until(
-    #             EC.presence_of_element_located((By.XPATH, '//*[@id="maincontent"]/div/div[1]/div[2]/div/div'))
-    #         )
+        except Exception as e:
+            self.logger.info(f"No cookie consent popup found or unable to click: {e}")
+        driver.switch_to.default_content()
+        try: 
+            main_content_visible = WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.XPATH, '//*[@id="maincontent"]/div/div[1]/div[2]/div/div'))
+            )
+            sleep(randint(2,5))
+            main_content_present = WebDriverWait(driver, 10).until(
+                EC.presence_of_element_located((By.XPATH, '//*[@id="maincontent"]/div/div[1]/div[2]/div/div'))
+            )
 
-    #         racing_structure_list = driver.find_elements(By.CSS_SELECTOR, '.outline-offset-4.outline-scienceBlue.group.outline-0.focus-visible\\:outline-2')
-    #         for indiv_race in racing_structure_list: 
-    #             race_schedule = RacingSchedule()
-    #             race_schedule['race_round'] = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset legend p').text
-    #             # After retrieving race_url, we want to perhaps view the top 3 race winners. I have not figured out the actual use case for the url yet.
-    #             race_schedule['race_url'] = indiv_race.get_attribute('href')
+            racing_structure_list = driver.find_elements(By.CSS_SELECTOR, '.outline-offset-4.outline-scienceBlue.group.outline-0.focus-visible\\:outline-2')
+            for indiv_race in racing_structure_list: 
+                race_schedule = RacingSchedule()
+                race_schedule['race_round'] = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset legend p').text
+                # After retrieving race_url, we want to perhaps view the top 3 race winners. I have not figured out the actual use case for the url yet.
+                race_schedule['race_url'] = indiv_race.get_attribute('href')
 
-    #             race_date_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div p span').text + " " + indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div.gap-xxs p span').text         
-    #             location_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div p.f1-heading').text
-    #             fullname_element = indiv_race.find_element(By.CSS_SELECTOR,'fieldset div div div.min-h-0 p').text
-    #             if location_element and fullname_element and race_date_element: 
-    #                 race_schedule['race_date'] = race_date_element
-    #                 race_schedule['location'] = location_element
-    #                 race_schedule['race_fullname'] = fullname_element
-    #             else: 
-    #                 race_date_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div div div p span').text + " " + indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div div div div span span').text
-    #                 location_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div p').text
-    #                 fullname_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div div p').text
-    #                 race_schedule['race_date'] = race_date_element
-    #                 race_schedule['location'] = location_element
-    #                 race_schedule['race_fullname'] = fullname_element
-    #             yield race_schedule
-    #     except Exception as e:
-    #         self.logger.info(f"No racing info found or an error occurred: {e}")
-    #     finally:
-    #         driver.quit()
+                race_date_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div p span').text + " " + indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div.gap-xxs p span').text         
+                location_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div p.f1-heading').text
+                fullname_element = indiv_race.find_element(By.CSS_SELECTOR,'fieldset div div div.min-h-0 p').text
+                if location_element and fullname_element and race_date_element: 
+                    race_schedule['race_date'] = race_date_element
+                    race_schedule['location'] = location_element
+                    race_schedule['race_fullname'] = fullname_element
+                else: 
+                    race_date_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div div div p span').text + " " + indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div div div div span span').text
+                    location_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div p').text
+                    fullname_element = indiv_race.find_element(By.CSS_SELECTOR, 'fieldset div div div div div p').text
+                    race_schedule['race_date'] = race_date_element
+                    race_schedule['location'] = location_element
+                    race_schedule['race_fullname'] = fullname_element
+                yield race_schedule
+        except Exception as e:
+            self.logger.info(f"No racing info found or an error occurred: {e}")
+        finally:
+            driver.quit()
             
     
     def parse_current_season_results(self, response):         
@@ -499,7 +499,7 @@ class F1Spider(scrapy.Spider):
         driver_pitstop_summary['race_fullname'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
         driver_pitstop_summary['race_date'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()
         driver_pitstop_summary['race_circuit'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[2]/text()').get()
-       
+    
         for indiv_driver_row in pit_stop_summary_elements:
             stats_unfiltered_list = indiv_driver_row.css("td ::text").getall()
             stats_filtered_list = [elem for elem in stats_unfiltered_list if elem != '\xa0']
@@ -522,7 +522,7 @@ class F1Spider(scrapy.Spider):
         driver_pitstop_summary['race_fullname'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[1]/h1/text()').get()
         driver_pitstop_summary['race_date'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[1]/text()').get()
         driver_pitstop_summary['race_circuit'] = response.xpath('//*[@id="maincontent"]/div/div[2]/main/div[2]/div[2]/div/div[2]/p[2]/text()').get()
-       
+
         for indiv_driver_row in pit_stop_summary_elements:
             stats_unfiltered_list = indiv_driver_row.css("td ::text").getall()
             stats_filtered_list = [elem for elem in stats_unfiltered_list if elem != '\xa0']
