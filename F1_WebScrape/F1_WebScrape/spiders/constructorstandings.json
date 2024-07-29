@@ -1,147 +1,403 @@
-{"year": "1995 Constructor Standings", "position": "1", "team": "Benetton Renault", "total_points": "137"}
-{"year": "1995 Constructor Standings", "position": "2", "team": "Williams Renault", "total_points": "112"}
-{"year": "1995 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "73"}
-{"year": "1995 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "30"}
-{"year": "1995 Constructor Standings", "position": "5", "team": "Ligier Mugen Honda", "total_points": "24"}
-{"year": "1995 Constructor Standings", "position": "6", "team": "Jordan Peugeot", "total_points": "21"}
-{"year": "1995 Constructor Standings", "position": "7", "team": "Sauber Ford", "total_points": "18"}
-{"year": "1995 Constructor Standings", "position": "8", "team": "Footwork Hart", "total_points": "5"}
-{"year": "1995 Constructor Standings", "position": "9", "team": "Tyrrell Yamaha", "total_points": "5"}
-{"year": "1995 Constructor Standings", "position": "10", "team": "Minardi Ford", "total_points": "1"}
-{"year": "1999 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "128"}
-{"year": "1999 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "124"}
-{"year": "1999 Constructor Standings", "position": "3", "team": "Jordan Mugen Honda", "total_points": "61"}
-{"year": "1999 Constructor Standings", "position": "4", "team": "Stewart Ford", "total_points": "36"}
-{"year": "1999 Constructor Standings", "position": "5", "team": "Williams Supertec", "total_points": "35"}
-{"year": "1999 Constructor Standings", "position": "6", "team": "Benetton Playlife", "total_points": "16"}
-{"year": "1999 Constructor Standings", "position": "7", "team": "Prost Peugeot", "total_points": "9"}
-{"year": "1999 Constructor Standings", "position": "8", "team": "Sauber Petronas", "total_points": "5"}
-{"year": "1999 Constructor Standings", "position": "9", "team": "Minardi Ford", "total_points": "1"}
-{"year": "1999 Constructor Standings", "position": "10", "team": "Arrows", "total_points": "1"}
-{"year": "2000 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "170"}
-{"year": "2000 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "152"}
-{"year": "2000 Constructor Standings", "position": "3", "team": "Williams BMW", "total_points": "36"}
-{"year": "2000 Constructor Standings", "position": "4", "team": "Benetton Playlife", "total_points": "20"}
-{"year": "2000 Constructor Standings", "position": "5", "team": "BAR Honda", "total_points": "20"}
-{"year": "2000 Constructor Standings", "position": "6", "team": "Jordan Mugen Honda", "total_points": "17"}
-{"year": "2000 Constructor Standings", "position": "7", "team": "Arrows Supertec", "total_points": "7"}
-{"year": "2000 Constructor Standings", "position": "8", "team": "Sauber Petronas", "total_points": "6"}
-{"year": "2000 Constructor Standings", "position": "9", "team": "Jaguar Cosworth", "total_points": "4"}
-{"year": "2001 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "179"}
-{"year": "2001 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "102"}
-{"year": "2001 Constructor Standings", "position": "3", "team": "Williams BMW", "total_points": "80"}
-{"year": "2001 Constructor Standings", "position": "4", "team": "Sauber Petronas", "total_points": "21"}
-{"year": "2001 Constructor Standings", "position": "5", "team": "Jordan Honda", "total_points": "19"}
-{"year": "2001 Constructor Standings", "position": "6", "team": "BAR Honda", "total_points": "17"}
-{"year": "2001 Constructor Standings", "position": "7", "team": "Benetton Renault", "total_points": "10"}
-{"year": "2001 Constructor Standings", "position": "8", "team": "Jaguar Cosworth", "total_points": "9"}
-{"year": "2001 Constructor Standings", "position": "9", "team": "Prost Acer", "total_points": "4"}
-{"year": "2001 Constructor Standings", "position": "10", "team": "Arrows Asiatech", "total_points": "1"}
-{"year": "1998 Constructor Standings", "position": "1", "team": "McLaren Mercedes", "total_points": "156"}
-{"year": "1998 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "133"}
-{"year": "1998 Constructor Standings", "position": "3", "team": "Williams Mecachrome", "total_points": "38"}
-{"year": "1998 Constructor Standings", "position": "4", "team": "Jordan Mugen Honda", "total_points": "34"}
-{"year": "1998 Constructor Standings", "position": "5", "team": "Benetton Playlife", "total_points": "33"}
-{"year": "1998 Constructor Standings", "position": "6", "team": "Sauber Petronas", "total_points": "10"}
-{"year": "1998 Constructor Standings", "position": "7", "team": "Arrows", "total_points": "6"}
-{"year": "1998 Constructor Standings", "position": "8", "team": "Stewart Ford", "total_points": "5"}
-{"year": "1998 Constructor Standings", "position": "9", "team": "Prost Peugeot", "total_points": "1"}
-{"year": "1997 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "123"}
-{"year": "1997 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "102"}
-{"year": "1997 Constructor Standings", "position": "3", "team": "Benetton Renault", "total_points": "67"}
-{"year": "1997 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "63"}
-{"year": "1997 Constructor Standings", "position": "5", "team": "Jordan Peugeot", "total_points": "33"}
-{"year": "1997 Constructor Standings", "position": "6", "team": "Prost Mugen Honda", "total_points": "21"}
-{"year": "1997 Constructor Standings", "position": "7", "team": "Sauber Petronas", "total_points": "16"}
-{"year": "1997 Constructor Standings", "position": "8", "team": "Arrows Yamaha", "total_points": "9"}
-{"year": "1997 Constructor Standings", "position": "9", "team": "Stewart Ford", "total_points": "6"}
-{"year": "1997 Constructor Standings", "position": "10", "team": "Tyrrell Ford", "total_points": "2"}
-{"year": "1996 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "175"}
-{"year": "1996 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "70"}
-{"year": "1996 Constructor Standings", "position": "3", "team": "Benetton Renault", "total_points": "68"}
-{"year": "1996 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "49"}
-{"year": "1996 Constructor Standings", "position": "5", "team": "Jordan Peugeot", "total_points": "22"}
-{"year": "1996 Constructor Standings", "position": "6", "team": "Ligier Mugen Honda", "total_points": "15"}
-{"year": "1996 Constructor Standings", "position": "7", "team": "Sauber Ford", "total_points": "11"}
-{"year": "1996 Constructor Standings", "position": "8", "team": "Tyrrell Yamaha", "total_points": "5"}
-{"year": "1996 Constructor Standings", "position": "9", "team": "Footwork Hart", "total_points": "1"}
-{"year": "1993 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "168"}
-{"year": "1993 Constructor Standings", "position": "2", "team": "McLaren Ford", "total_points": "84"}
-{"year": "1993 Constructor Standings", "position": "3", "team": "Benetton Ford", "total_points": "72"}
-{"year": "1993 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "28"}
-{"year": "1993 Constructor Standings", "position": "5", "team": "Ligier Renault", "total_points": "23"}
-{"year": "1993 Constructor Standings", "position": "6", "team": "Lotus Ford", "total_points": "12"}
-{"year": "1993 Constructor Standings", "position": "6", "team": "Sauber", "total_points": "12"}
-{"year": "1993 Constructor Standings", "position": "8", "team": "Minardi Ford", "total_points": "7"}
-{"year": "1993 Constructor Standings", "position": "9", "team": "Footwork Mugen Honda", "total_points": "4"}
-{"year": "1993 Constructor Standings", "position": "10", "team": "Larrousse Lamborghini", "total_points": "3"}
-{"year": "1993 Constructor Standings", "position": "10", "team": "Jordan Hart", "total_points": "3"}
-{"year": "2023 Constructor Standings", "position": "1", "team": "Red Bull Racing Honda RBPT", "total_points": "860"}
-{"year": "2023 Constructor Standings", "position": "2", "team": "Mercedes", "total_points": "409"}
-{"year": "2023 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "406"}
-{"year": "1994 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "118"}
-{"year": "2023 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "302"}
-{"year": "2023 Constructor Standings", "position": "5", "team": "Aston Martin Aramco Mercedes", "total_points": "280"}
-{"year": "2023 Constructor Standings", "position": "6", "team": "Alpine Renault", "total_points": "120"}
-{"year": "1994 Constructor Standings", "position": "2", "team": "Benetton Ford", "total_points": "103"}
-{"year": "1994 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "71"}
-{"year": "1994 Constructor Standings", "position": "4", "team": "McLaren Peugeot", "total_points": "42"}
-{"year": "2023 Constructor Standings", "position": "7", "team": "Williams Mercedes", "total_points": "28"}
-{"year": "2023 Constructor Standings", "position": "8", "team": "AlphaTauri Honda RBPT", "total_points": "25"}
-{"year": "2023 Constructor Standings", "position": "9", "team": "Alfa Romeo Ferrari", "total_points": "16"}
-{"year": "1994 Constructor Standings", "position": "5", "team": "Jordan Hart", "total_points": "28"}
-{"year": "1994 Constructor Standings", "position": "6", "team": "Ligier Renault", "total_points": "13"}
-{"year": "2023 Constructor Standings", "position": "10", "team": "Haas Ferrari", "total_points": "12"}
-{"year": "1994 Constructor Standings", "position": "6", "team": "Tyrrell Yamaha", "total_points": "13"}
-{"year": "1994 Constructor Standings", "position": "8", "team": "Sauber Mercedes", "total_points": "12"}
-{"year": "1994 Constructor Standings", "position": "9", "team": "Footwork Ford", "total_points": "9"}
-{"year": "1994 Constructor Standings", "position": "10", "team": "Minardi Ford", "total_points": "5"}
-{"year": "1994 Constructor Standings", "position": "11", "team": "Larrousse Ford", "total_points": "2"}
-{"year": "1988 Constructor Standings", "position": "1", "team": "McLaren Honda", "total_points": "199"}
-{"year": "1988 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "65"}
-{"year": "1988 Constructor Standings", "position": "3", "team": "Benetton Ford", "total_points": "39"}
-{"year": "1988 Constructor Standings", "position": "4", "team": "Arrows Megatron", "total_points": "23"}
-{"year": "1988 Constructor Standings", "position": "5", "team": "Lotus Honda", "total_points": "23"}
-{"year": "1988 Constructor Standings", "position": "6", "team": "March Judd", "total_points": "22"}
-{"year": "1988 Constructor Standings", "position": "7", "team": "Williams Judd", "total_points": "20"}
-{"year": "1988 Constructor Standings", "position": "8", "team": "Tyrrell Ford", "total_points": "5"}
-{"year": "1988 Constructor Standings", "position": "9", "team": "Rial Ford", "total_points": "3"}
-{"year": "1988 Constructor Standings", "position": "10", "team": "Minardi Ford", "total_points": "1"}
-{"year": "1992 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "164"}
-{"year": "1992 Constructor Standings", "position": "2", "team": "McLaren Honda", "total_points": "99"}
-{"year": "1992 Constructor Standings", "position": "3", "team": "Benetton Ford", "total_points": "91"}
-{"year": "1992 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "21"}
-{"year": "1992 Constructor Standings", "position": "5", "team": "Lotus Ford", "total_points": "13"}
-{"year": "1992 Constructor Standings", "position": "6", "team": "Tyrrell Ilmor", "total_points": "8"}
-{"year": "1992 Constructor Standings", "position": "7", "team": "Footwork Mugen Honda", "total_points": "6"}
-{"year": "1992 Constructor Standings", "position": "8", "team": "Ligier Renault", "total_points": "6"}
-{"year": "1992 Constructor Standings", "position": "9", "team": "March Ilmor", "total_points": "3"}
-{"year": "1992 Constructor Standings", "position": "10", "team": "Dallara Ferrari", "total_points": "2"}
-{"year": "1992 Constructor Standings", "position": "11", "team": "Jordan Yamaha", "total_points": "1"}
-{"year": "1992 Constructor Standings", "position": "12", "team": "Minardi Lamborghini", "total_points": "1"}
-{"year": "1992 Constructor Standings", "position": "13", "team": "Venturi Lamborghini", "total_points": "1"}
+{"year": "2005 Constructor Standings", "position": "1", "team": "Renault", "total_points": "191"}
+{"year": "2005 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "182"}
+{"year": "2006 Constructor Standings", "position": "1", "team": "Renault", "total_points": "206"}
+{"year": "2006 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "201"}
+{"year": "2005 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "100"}
+{"year": "2005 Constructor Standings", "position": "4", "team": "Toyota", "total_points": "88"}
+{"year": "2005 Constructor Standings", "position": "5", "team": "Williams BMW", "total_points": "66"}
+{"year": "2005 Constructor Standings", "position": "6", "team": "BAR Honda", "total_points": "38"}
+{"year": "2005 Constructor Standings", "position": "7", "team": "RBR Cosworth", "total_points": "34"}
+{"year": "2006 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "110"}
+{"year": "2006 Constructor Standings", "position": "4", "team": "Honda", "total_points": "86"}
+{"year": "2005 Constructor Standings", "position": "8", "team": "Sauber Petronas", "total_points": "20"}
+{"year": "2005 Constructor Standings", "position": "9", "team": "Jordan Toyota", "total_points": "12"}
+{"year": "2005 Constructor Standings", "position": "10", "team": "Minardi Cosworth", "total_points": "7"}
+{"year": "2006 Constructor Standings", "position": "5", "team": "Sauber BMW", "total_points": "36"}
+{"year": "2006 Constructor Standings", "position": "6", "team": "Toyota", "total_points": "35"}
+{"year": "2006 Constructor Standings", "position": "7", "team": "RBR Ferrari", "total_points": "16"}
+{"year": "2006 Constructor Standings", "position": "8", "team": "Williams Cosworth", "total_points": "11"}
+{"year": "2006 Constructor Standings", "position": "9", "team": "STR Cosworth", "total_points": "1"}
+{"year": "2006 Constructor Standings", "position": "10", "team": "MF1 Toyota", "total_points": "0"}
+{"year": "2006 Constructor Standings", "position": "11", "team": "Super Aguri Honda", "total_points": "0"}
+{"year": "2017 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "668"}
+{"year": "2017 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "522"}
+{"year": "2017 Constructor Standings", "position": "3", "team": "Red Bull Racing TAG Heuer", "total_points": "368"}
+{"year": "2017 Constructor Standings", "position": "4", "team": "Force India Mercedes", "total_points": "187"}
+{"year": "2017 Constructor Standings", "position": "5", "team": "Williams Mercedes", "total_points": "83"}
+{"year": "2017 Constructor Standings", "position": "6", "team": "Renault", "total_points": "57"}
+{"year": "2017 Constructor Standings", "position": "7", "team": "Toro Rosso", "total_points": "53"}
+{"year": "2017 Constructor Standings", "position": "8", "team": "Haas Ferrari", "total_points": "47"}
+{"year": "2017 Constructor Standings", "position": "9", "team": "McLaren Honda", "total_points": "30"}
+{"year": "2017 Constructor Standings", "position": "10", "team": "Sauber Ferrari", "total_points": "5"}
+{"year": "2016 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "765"}
+{"year": "2016 Constructor Standings", "position": "2", "team": "Red Bull Racing TAG Heuer", "total_points": "468"}
+{"year": "2016 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "398"}
+{"year": "2016 Constructor Standings", "position": "4", "team": "Force India Mercedes", "total_points": "173"}
+{"year": "2016 Constructor Standings", "position": "5", "team": "Williams Mercedes", "total_points": "138"}
+{"year": "2016 Constructor Standings", "position": "6", "team": "McLaren Honda", "total_points": "76"}
+{"year": "2016 Constructor Standings", "position": "7", "team": "Toro Rosso Ferrari", "total_points": "63"}
+{"year": "2016 Constructor Standings", "position": "8", "team": "Haas Ferrari", "total_points": "29"}
+{"year": "2016 Constructor Standings", "position": "9", "team": "Renault", "total_points": "8"}
+{"year": "2016 Constructor Standings", "position": "10", "team": "Sauber Ferrari", "total_points": "2"}
+{"year": "2016 Constructor Standings", "position": "11", "team": "MRT Mercedes", "total_points": "1"}
+{"year": "2018 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "655"}
+{"year": "2018 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "571"}
+{"year": "2018 Constructor Standings", "position": "3", "team": "Red Bull Racing TAG Heuer", "total_points": "419"}
+{"year": "2018 Constructor Standings", "position": "4", "team": "Renault", "total_points": "122"}
+{"year": "2018 Constructor Standings", "position": "5", "team": "Haas Ferrari", "total_points": "93"}
+{"year": "2018 Constructor Standings", "position": "6", "team": "McLaren Renault", "total_points": "62"}
+{"year": "2018 Constructor Standings", "position": "7", "team": "Force India Mercedes", "total_points": "52"}
+{"year": "2018 Constructor Standings", "position": "8", "team": "Sauber Ferrari", "total_points": "48"}
+{"year": "2018 Constructor Standings", "position": "9", "team": "Scuderia Toro Rosso Honda", "total_points": "33"}
+{"year": "2018 Constructor Standings", "position": "10", "team": "Williams Mercedes", "total_points": "7"}
+{"year": "2018 Constructor Standings", "position": "EX", "team": "Force India Sahara", "total_points": "0"}
+{"year": "2015 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "703"}
+{"year": "2015 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "428"}
+{"year": "2015 Constructor Standings", "position": "3", "team": "Williams Mercedes", "total_points": "257"}
+{"year": "2015 Constructor Standings", "position": "4", "team": "Red Bull Racing Renault", "total_points": "187"}
+{"year": "2015 Constructor Standings", "position": "5", "team": "Force India Mercedes", "total_points": "136"}
+{"year": "2015 Constructor Standings", "position": "6", "team": "Lotus Mercedes", "total_points": "78"}
+{"year": "2015 Constructor Standings", "position": "7", "team": "STR Renault", "total_points": "67"}
+{"year": "2015 Constructor Standings", "position": "8", "team": "Sauber Ferrari", "total_points": "36"}
+{"year": "2015 Constructor Standings", "position": "9", "team": "McLaren Honda", "total_points": "27"}
+{"year": "2015 Constructor Standings", "position": "10", "team": "Marussia Ferrari", "total_points": "0"}
+{"year": "2014 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "701"}
+{"year": "2014 Constructor Standings", "position": "2", "team": "Red Bull Racing Renault", "total_points": "405"}
+{"year": "2014 Constructor Standings", "position": "3", "team": "Williams Mercedes", "total_points": "320"}
+{"year": "2012 Constructor Standings", "position": "1", "team": "Red Bull Racing Renault", "total_points": "460"}
+{"year": "2012 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "400"}
+{"year": "2014 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "216"}
+{"year": "2014 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "181"}
+{"year": "2014 Constructor Standings", "position": "6", "team": "Force India Mercedes", "total_points": "155"}
+{"year": "2014 Constructor Standings", "position": "7", "team": "STR Renault", "total_points": "30"}
+{"year": "2014 Constructor Standings", "position": "8", "team": "Lotus Renault", "total_points": "10"}
+{"year": "2012 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "378"}
+{"year": "2014 Constructor Standings", "position": "9", "team": "Marussia Ferrari", "total_points": "2"}
+{"year": "2014 Constructor Standings", "position": "10", "team": "Sauber Ferrari", "total_points": "0"}
+{"year": "2014 Constructor Standings", "position": "11", "team": "Caterham Renault", "total_points": "0"}
+{"year": "2012 Constructor Standings", "position": "4", "team": "Lotus Renault", "total_points": "303"}
+{"year": "2012 Constructor Standings", "position": "5", "team": "Mercedes", "total_points": "142"}
+{"year": "2012 Constructor Standings", "position": "6", "team": "Sauber Ferrari", "total_points": "126"}
+{"year": "2012 Constructor Standings", "position": "7", "team": "Force India Mercedes", "total_points": "109"}
+{"year": "2012 Constructor Standings", "position": "8", "team": "Williams Renault", "total_points": "76"}
+{"year": "2012 Constructor Standings", "position": "9", "team": "STR Ferrari", "total_points": "26"}
+{"year": "2012 Constructor Standings", "position": "10", "team": "Caterham Renault", "total_points": "0"}
+{"year": "2012 Constructor Standings", "position": "11", "team": "Marussia Cosworth", "total_points": "0"}
+{"year": "2012 Constructor Standings", "position": "12", "team": "HRT Cosworth", "total_points": "0"}
+{"year": "2013 Constructor Standings", "position": "1", "team": "Red Bull Racing Renault", "total_points": "596"}
+{"year": "2013 Constructor Standings", "position": "2", "team": "Mercedes", "total_points": "360"}
+{"year": "2013 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "354"}
+{"year": "2013 Constructor Standings", "position": "4", "team": "Lotus Renault", "total_points": "315"}
+{"year": "2013 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "122"}
+{"year": "2013 Constructor Standings", "position": "6", "team": "Force India Mercedes", "total_points": "77"}
+{"year": "2013 Constructor Standings", "position": "7", "team": "Sauber Ferrari", "total_points": "57"}
+{"year": "2013 Constructor Standings", "position": "8", "team": "STR Ferrari", "total_points": "33"}
+{"year": "2013 Constructor Standings", "position": "9", "team": "Williams Renault", "total_points": "5"}
+{"year": "2013 Constructor Standings", "position": "10", "team": "Marussia Cosworth", "total_points": "0"}
+{"year": "2013 Constructor Standings", "position": "11", "team": "Caterham Renault", "total_points": "0"}
+{"year": "2010 Constructor Standings", "position": "1", "team": "RBR Renault", "total_points": "498"}
+{"year": "2010 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "454"}
+{"year": "2010 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "396"}
+{"year": "2010 Constructor Standings", "position": "4", "team": "Mercedes", "total_points": "214"}
+{"year": "2010 Constructor Standings", "position": "5", "team": "Renault", "total_points": "163"}
+{"year": "2010 Constructor Standings", "position": "6", "team": "Williams Cosworth", "total_points": "69"}
+{"year": "2010 Constructor Standings", "position": "7", "team": "Force India Mercedes", "total_points": "68"}
+{"year": "2010 Constructor Standings", "position": "8", "team": "Sauber Ferrari", "total_points": "44"}
+{"year": "2010 Constructor Standings", "position": "9", "team": "STR Ferrari", "total_points": "13"}
+{"year": "2010 Constructor Standings", "position": "10", "team": "Lotus Cosworth", "total_points": "0"}
+{"year": "2010 Constructor Standings", "position": "11", "team": "HRT Cosworth", "total_points": "0"}
+{"year": "2010 Constructor Standings", "position": "12", "team": "Virgin Cosworth", "total_points": "0"}
+{"year": "2011 Constructor Standings", "position": "1", "team": "Red Bull Racing Renault", "total_points": "650"}
+{"year": "2011 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "497"}
+{"year": "2011 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "375"}
+{"year": "2011 Constructor Standings", "position": "4", "team": "Mercedes", "total_points": "165"}
+{"year": "2011 Constructor Standings", "position": "5", "team": "Renault", "total_points": "73"}
+{"year": "2011 Constructor Standings", "position": "6", "team": "Force India Mercedes", "total_points": "69"}
+{"year": "2011 Constructor Standings", "position": "7", "team": "Sauber Ferrari", "total_points": "44"}
+{"year": "2011 Constructor Standings", "position": "8", "team": "STR Ferrari", "total_points": "41"}
+{"year": "2011 Constructor Standings", "position": "9", "team": "Williams Cosworth", "total_points": "5"}
+{"year": "2011 Constructor Standings", "position": "10", "team": "Lotus Renault", "total_points": "0"}
+{"year": "2011 Constructor Standings", "position": "11", "team": "HRT Cosworth", "total_points": "0"}
+{"year": "2011 Constructor Standings", "position": "12", "team": "Virgin Cosworth", "total_points": "0"}
+{"year": "2009 Constructor Standings", "position": "1", "team": "Brawn Mercedes", "total_points": "172"}
+{"year": "2009 Constructor Standings", "position": "2", "team": "RBR Renault", "total_points": "153.5"}
+{"year": "2009 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "71"}
+{"year": "2009 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "70"}
+{"year": "2009 Constructor Standings", "position": "5", "team": "Toyota", "total_points": "59.5"}
+{"year": "2009 Constructor Standings", "position": "6", "team": "Sauber BMW", "total_points": "36"}
+{"year": "2009 Constructor Standings", "position": "7", "team": "Williams Toyota", "total_points": "34.5"}
+{"year": "2009 Constructor Standings", "position": "8", "team": "Renault", "total_points": "26"}
+{"year": "2009 Constructor Standings", "position": "9", "team": "Force India Mercedes", "total_points": "13"}
+{"year": "2009 Constructor Standings", "position": "10", "team": "STR Ferrari", "total_points": "8"}
+{"year": "2007 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "204"}
+{"year": "2007 Constructor Standings", "position": "2", "team": "Sauber BMW", "total_points": "101"}
+{"year": "2007 Constructor Standings", "position": "3", "team": "Renault", "total_points": "51"}
+{"year": "2007 Constructor Standings", "position": "4", "team": "Williams Toyota", "total_points": "33"}
+{"year": "2007 Constructor Standings", "position": "5", "team": "Red Bull Renault", "total_points": "24"}
+{"year": "2007 Constructor Standings", "position": "6", "team": "Toyota", "total_points": "13"}
+{"year": "2007 Constructor Standings", "position": "7", "team": "STR Ferrari", "total_points": "8"}
+{"year": "2007 Constructor Standings", "position": "8", "team": "Honda", "total_points": "6"}
+{"year": "2007 Constructor Standings", "position": "9", "team": "Super Aguri Honda", "total_points": "4"}
+{"year": "2007 Constructor Standings", "position": "10", "team": "Spyker Ferrari", "total_points": "1"}
+{"year": "2007 Constructor Standings", "position": "EX", "team": "McLaren Mercedes", "total_points": "0"}
+{"year": "2008 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "172"}
+{"year": "2008 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "151"}
+{"year": "2008 Constructor Standings", "position": "3", "team": "Sauber BMW", "total_points": "135"}
+{"year": "2008 Constructor Standings", "position": "4", "team": "Renault", "total_points": "80"}
+{"year": "2008 Constructor Standings", "position": "5", "team": "Toyota", "total_points": "56"}
+{"year": "2008 Constructor Standings", "position": "6", "team": "STR Ferrari", "total_points": "39"}
+{"year": "2008 Constructor Standings", "position": "7", "team": "Red Bull Renault", "total_points": "29"}
+{"year": "2008 Constructor Standings", "position": "8", "team": "Williams Toyota", "total_points": "26"}
+{"year": "2008 Constructor Standings", "position": "9", "team": "Honda", "total_points": "14"}
+{"year": "2008 Constructor Standings", "position": "10", "team": "Force India Ferrari", "total_points": "0"}
+{"year": "2008 Constructor Standings", "position": "11", "team": "Super Aguri Honda", "total_points": "0"}
+{"year": "2004 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "262"}
+{"year": "2004 Constructor Standings", "position": "2", "team": "BAR Honda", "total_points": "119"}
+{"year": "2004 Constructor Standings", "position": "3", "team": "Renault", "total_points": "105"}
+{"year": "2004 Constructor Standings", "position": "4", "team": "Williams BMW", "total_points": "88"}
+{"year": "2004 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "69"}
+{"year": "2004 Constructor Standings", "position": "6", "team": "Sauber Petronas", "total_points": "34"}
+{"year": "2004 Constructor Standings", "position": "7", "team": "Jaguar Cosworth", "total_points": "10"}
+{"year": "2004 Constructor Standings", "position": "8", "team": "Toyota", "total_points": "9"}
+{"year": "2004 Constructor Standings", "position": "9", "team": "Jordan Ford", "total_points": "5"}
+{"year": "2004 Constructor Standings", "position": "10", "team": "Minardi Cosworth", "total_points": "1"}
+{"year": "2024 Constructor Standings", "position": "1", "team": "Red Bull Racing Honda RBPT", "total_points": "408"}
+{"year": "2024 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "366"}
+{"year": "2024 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "345"}
+{"year": "2024 Constructor Standings", "position": "4", "team": "Mercedes", "total_points": "266"}
+{"year": "2024 Constructor Standings", "position": "5", "team": "Aston Martin Aramco Mercedes", "total_points": "73"}
+{"year": "2024 Constructor Standings", "position": "6", "team": "RB Honda RBPT", "total_points": "34"}
+{"year": "2024 Constructor Standings", "position": "7", "team": "Haas Ferrari", "total_points": "27"}
+{"year": "2024 Constructor Standings", "position": "8", "team": "Alpine Renault", "total_points": "11"}
+{"year": "2024 Constructor Standings", "position": "9", "team": "Williams Mercedes", "total_points": "4"}
+{"year": "2024 Constructor Standings", "position": "10", "team": "Kick Sauber Ferrari", "total_points": "0"}
+{"year": "1963 Constructor Standings", "position": "1", "team": "Lotus Climax", "total_points": "54"}
+{"year": "1963 Constructor Standings", "position": "2", "team": "BRM", "total_points": "36"}
+{"year": "1963 Constructor Standings", "position": "3", "team": "Brabham Climax", "total_points": "28"}
+{"year": "1963 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "26"}
+{"year": "1963 Constructor Standings", "position": "5", "team": "Cooper Climax", "total_points": "25"}
+{"year": "1963 Constructor Standings", "position": "6", "team": "BRP BRM", "total_points": "6"}
+{"year": "1963 Constructor Standings", "position": "7", "team": "Porsche", "total_points": "5"}
+{"year": "1963 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "4"}
+{"year": "1962 Constructor Standings", "position": "1", "team": "BRM", "total_points": "42"}
+{"year": "1962 Constructor Standings", "position": "2", "team": "Lotus Climax", "total_points": "36"}
+{"year": "1962 Constructor Standings", "position": "3", "team": "Cooper Climax", "total_points": "29"}
+{"year": "1962 Constructor Standings", "position": "4", "team": "Lola Climax", "total_points": "19"}
+{"year": "1962 Constructor Standings", "position": "5", "team": "Porsche", "total_points": "18"}
+{"year": "1962 Constructor Standings", "position": "5", "team": "Ferrari", "total_points": "18"}
+{"year": "1962 Constructor Standings", "position": "7", "team": "Brabham Climax", "total_points": "6"}
+{"year": "1962 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "1"}
+{"year": "1961 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "40"}
+{"year": "1961 Constructor Standings", "position": "2", "team": "Lotus Climax", "total_points": "32"}
+{"year": "1961 Constructor Standings", "position": "3", "team": "Porsche", "total_points": "22"}
+{"year": "1961 Constructor Standings", "position": "4", "team": "Cooper Climax", "total_points": "14"}
+{"year": "1961 Constructor Standings", "position": "5", "team": "BRM Climax", "total_points": "7"}
+{"year": "1960 Constructor Standings", "position": "1", "team": "Cooper Climax", "total_points": "48"}
+{"year": "1960 Constructor Standings", "position": "2", "team": "Lotus Climax", "total_points": "34"}
+{"year": "1960 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "26"}
+{"year": "1960 Constructor Standings", "position": "4", "team": "BRM", "total_points": "8"}
+{"year": "1960 Constructor Standings", "position": "5", "team": "Cooper Maserati", "total_points": "3"}
+{"year": "1960 Constructor Standings", "position": "5", "team": "Cooper Castellotti", "total_points": "3"}
+{"year": "1959 Constructor Standings", "position": "1", "team": "Cooper Climax", "total_points": "40"}
+{"year": "1959 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "32"}
+{"year": "1959 Constructor Standings", "position": "3", "team": "BRM", "total_points": "18"}
+{"year": "1959 Constructor Standings", "position": "4", "team": "Lotus Climax", "total_points": "5"}
+{"year": "1958 Constructor Standings", "position": "1", "team": "Vanwall", "total_points": "48"}
+{"year": "1958 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "40"}
+{"year": "1958 Constructor Standings", "position": "3", "team": "Cooper Climax", "total_points": "31"}
+{"year": "1958 Constructor Standings", "position": "4", "team": "BRM", "total_points": "18"}
+{"year": "1958 Constructor Standings", "position": "5", "team": "Maserati", "total_points": "6"}
+{"year": "1958 Constructor Standings", "position": "6", "team": "Lotus Climax", "total_points": "3"}
+{"year": "1972 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "61"}
+{"year": "1972 Constructor Standings", "position": "2", "team": "Tyrrell Ford", "total_points": "51"}
+{"year": "1972 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "47"}
+{"year": "1972 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "33"}
+{"year": "1972 Constructor Standings", "position": "5", "team": "Surtees Ford", "total_points": "18"}
+{"year": "1972 Constructor Standings", "position": "6", "team": "March Ford", "total_points": "15"}
+{"year": "1972 Constructor Standings", "position": "7", "team": "BRM", "total_points": "14"}
+{"year": "1972 Constructor Standings", "position": "8", "team": "Matra", "total_points": "12"}
+{"year": "1972 Constructor Standings", "position": "9", "team": "Brabham Ford", "total_points": "7"}
+{"year": "1975 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "72.5"}
+{"year": "1975 Constructor Standings", "position": "2", "team": "Brabham Ford", "total_points": "54"}
+{"year": "1975 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "53"}
+{"year": "1977 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "95"}
+{"year": "1977 Constructor Standings", "position": "2", "team": "Lotus Ford", "total_points": "62"}
+{"year": "1977 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "60"}
+{"year": "1975 Constructor Standings", "position": "4", "team": "Hesketh Ford", "total_points": "33"}
+{"year": "1975 Constructor Standings", "position": "5", "team": "Tyrrell Ford", "total_points": "25"}
+{"year": "1975 Constructor Standings", "position": "6", "team": "Shadow Ford", "total_points": "9.5"}
+{"year": "1975 Constructor Standings", "position": "7", "team": "Lotus Ford", "total_points": "9"}
+{"year": "1975 Constructor Standings", "position": "8", "team": "March Ford", "total_points": "7.5"}
+{"year": "1977 Constructor Standings", "position": "4", "team": "Wolf Ford", "total_points": "55"}
+{"year": "1977 Constructor Standings", "position": "5", "team": "Brabham Alfa Romeo", "total_points": "27"}
+{"year": "1977 Constructor Standings", "position": "5", "team": "Tyrrell Ford", "total_points": "27"}
+{"year": "1977 Constructor Standings", "position": "7", "team": "Shadow Ford", "total_points": "23"}
+{"year": "1978 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "86"}
+{"year": "1978 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "58"}
+{"year": "1975 Constructor Standings", "position": "9", "team": "Frank Williams Racing Cars/Williams", "total_points": "6"}
+{"year": "1975 Constructor Standings", "position": "10", "team": "Parnelli Ford", "total_points": "5"}
+{"year": "1975 Constructor Standings", "position": "11", "team": "Hill Ford", "total_points": "3"}
+{"year": "1975 Constructor Standings", "position": "12", "team": "Penske Ford", "total_points": "2"}
+{"year": "1977 Constructor Standings", "position": "8", "team": "Ligier Matra", "total_points": "18"}
+{"year": "1977 Constructor Standings", "position": "9", "team": "Fittipaldi Ford", "total_points": "11"}
+{"year": "1977 Constructor Standings", "position": "10", "team": "Ensign Ford", "total_points": "10"}
+{"year": "1977 Constructor Standings", "position": "11", "team": "Surtees Ford", "total_points": "6"}
+{"year": "1977 Constructor Standings", "position": "12", "team": "Penske Ford", "total_points": "1"}
+{"year": "1978 Constructor Standings", "position": "3", "team": "Brabham Alfa Romeo", "total_points": "53"}
+{"year": "1978 Constructor Standings", "position": "4", "team": "Tyrrell Ford", "total_points": "38"}
+{"year": "1978 Constructor Standings", "position": "5", "team": "Wolf Ford", "total_points": "24"}
+{"year": "1978 Constructor Standings", "position": "6", "team": "Ligier Matra", "total_points": "19"}
+{"year": "1978 Constructor Standings", "position": "7", "team": "Fittipaldi Ford", "total_points": "17"}
+{"year": "1975 Constructor Standings", "position": "13", "team": "Ensign Ford", "total_points": "1"}
+{"year": "1978 Constructor Standings", "position": "8", "team": "McLaren Ford", "total_points": "15"}
+{"year": "1978 Constructor Standings", "position": "9", "team": "Williams Ford", "total_points": "11"}
+{"year": "1978 Constructor Standings", "position": "9", "team": "Arrows Ford", "total_points": "11"}
+{"year": "1978 Constructor Standings", "position": "11", "team": "Shadow Ford", "total_points": "6"}
+{"year": "1978 Constructor Standings", "position": "12", "team": "Renault", "total_points": "3"}
+{"year": "1978 Constructor Standings", "position": "13", "team": "Surtees Ford", "total_points": "1"}
+{"year": "1978 Constructor Standings", "position": "13", "team": "Ensign Ford", "total_points": "1"}
+{"year": "1979 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "113"}
+{"year": "1979 Constructor Standings", "position": "2", "team": "Williams Ford", "total_points": "75"}
+{"year": "1979 Constructor Standings", "position": "3", "team": "Ligier Ford", "total_points": "61"}
+{"year": "1979 Constructor Standings", "position": "4", "team": "Lotus Ford", "total_points": "39"}
+{"year": "1979 Constructor Standings", "position": "5", "team": "Tyrrell Ford", "total_points": "28"}
+{"year": "1979 Constructor Standings", "position": "6", "team": "Renault", "total_points": "26"}
+{"year": "1979 Constructor Standings", "position": "7", "team": "McLaren Ford", "total_points": "15"}
+{"year": "1979 Constructor Standings", "position": "8", "team": "Brabham Ford", "total_points": "7"}
+{"year": "1979 Constructor Standings", "position": "9", "team": "Arrows Ford", "total_points": "5"}
+{"year": "1979 Constructor Standings", "position": "10", "team": "Shadow Ford", "total_points": "3"}
+{"year": "1979 Constructor Standings", "position": "11", "team": "ATS Ford", "total_points": "2"}
+{"year": "1979 Constructor Standings", "position": "12", "team": "Fittipaldi Ford", "total_points": "1"}
+{"year": "1976 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "83"}
+{"year": "1976 Constructor Standings", "position": "2", "team": "McLaren Ford", "total_points": "74"}
+{"year": "1976 Constructor Standings", "position": "3", "team": "Tyrrell Ford", "total_points": "71"}
+{"year": "1976 Constructor Standings", "position": "4", "team": "Lotus Ford", "total_points": "29"}
+{"year": "1976 Constructor Standings", "position": "5", "team": "Penske Ford", "total_points": "20"}
+{"year": "1976 Constructor Standings", "position": "5", "team": "Ligier Matra", "total_points": "20"}
+{"year": "1976 Constructor Standings", "position": "7", "team": "March Ford", "total_points": "19"}
+{"year": "1976 Constructor Standings", "position": "8", "team": "Shadow Ford", "total_points": "10"}
+{"year": "1976 Constructor Standings", "position": "9", "team": "Brabham Alfa Romeo", "total_points": "9"}
+{"year": "1976 Constructor Standings", "position": "10", "team": "Surtees Ford", "total_points": "7"}
+{"year": "1976 Constructor Standings", "position": "11", "team": "Fittipaldi Ford", "total_points": "3"}
+{"year": "1976 Constructor Standings", "position": "12", "team": "Ensign Ford", "total_points": "2"}
+{"year": "1976 Constructor Standings", "position": "13", "team": "Parnelli Ford", "total_points": "1"}
+{"year": "1974 Constructor Standings", "position": "1", "team": "McLaren Ford", "total_points": "73"}
+{"year": "1974 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "65"}
+{"year": "1974 Constructor Standings", "position": "3", "team": "Tyrrell Ford", "total_points": "52"}
+{"year": "1974 Constructor Standings", "position": "4", "team": "Lotus Ford", "total_points": "42"}
+{"year": "1974 Constructor Standings", "position": "5", "team": "Brabham Ford", "total_points": "35"}
+{"year": "1974 Constructor Standings", "position": "6", "team": "Hesketh Ford", "total_points": "15"}
+{"year": "1974 Constructor Standings", "position": "7", "team": "BRM", "total_points": "10"}
+{"year": "1974 Constructor Standings", "position": "8", "team": "Shadow Ford", "total_points": "7"}
+{"year": "1974 Constructor Standings", "position": "9", "team": "March Ford", "total_points": "6"}
+{"year": "1974 Constructor Standings", "position": "10", "team": "Iso Marlboro Ford", "total_points": "4"}
+{"year": "1974 Constructor Standings", "position": "11", "team": "Surtees Ford", "total_points": "3"}
+{"year": "1974 Constructor Standings", "position": "12", "team": "Lola Ford", "total_points": "1"}
+{"year": "1973 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "92"}
+{"year": "1973 Constructor Standings", "position": "2", "team": "Tyrrell Ford", "total_points": "82"}
+{"year": "1973 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "58"}
+{"year": "1973 Constructor Standings", "position": "4", "team": "Brabham Ford", "total_points": "22"}
+{"year": "1973 Constructor Standings", "position": "5", "team": "March Ford", "total_points": "14"}
+{"year": "1973 Constructor Standings", "position": "6", "team": "Ferrari", "total_points": "12"}
+{"year": "1973 Constructor Standings", "position": "6", "team": "BRM", "total_points": "12"}
+{"year": "1973 Constructor Standings", "position": "8", "team": "Shadow Ford", "total_points": "9"}
+{"year": "1973 Constructor Standings", "position": "9", "team": "Surtees Ford", "total_points": "7"}
+{"year": "1973 Constructor Standings", "position": "10", "team": "Iso Marlboro Ford", "total_points": "2"}
+{"year": "1973 Constructor Standings", "position": "11", "team": "Tecno", "total_points": "1"}
+{"year": "1966 Constructor Standings", "position": "1", "team": "Brabham Repco", "total_points": "42"}
+{"year": "1966 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "31"}
+{"year": "1966 Constructor Standings", "position": "3", "team": "Cooper Maserati", "total_points": "30"}
+{"year": "1966 Constructor Standings", "position": "4", "team": "BRM", "total_points": "22"}
+{"year": "1966 Constructor Standings", "position": "5", "team": "Lotus BRM", "total_points": "13"}
+{"year": "1966 Constructor Standings", "position": "6", "team": "Lotus Climax", "total_points": "8"}
+{"year": "1965 Constructor Standings", "position": "1", "team": "Lotus Climax", "total_points": "54"}
+{"year": "1965 Constructor Standings", "position": "2", "team": "BRM", "total_points": "45"}
+{"year": "1965 Constructor Standings", "position": "3", "team": "Brabham Climax", "total_points": "27"}
+{"year": "1966 Constructor Standings", "position": "7", "team": "Eagle Climax", "total_points": "4"}
+{"year": "1966 Constructor Standings", "position": "8", "team": "Honda", "total_points": "3"}
+{"year": "1966 Constructor Standings", "position": "9", "team": "McLaren Ford", "total_points": "2"}
+{"year": "1966 Constructor Standings", "position": "10", "team": "Brabham BRM", "total_points": "1"}
+{"year": "1966 Constructor Standings", "position": "10", "team": "McLaren Serenissima", "total_points": "1"}
+{"year": "1966 Constructor Standings", "position": "10", "team": "Brabham Climax", "total_points": "1"}
+{"year": "1965 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "26"}
+{"year": "1965 Constructor Standings", "position": "5", "team": "Cooper Climax", "total_points": "14"}
+{"year": "1965 Constructor Standings", "position": "6", "team": "Honda", "total_points": "11"}
+{"year": "1965 Constructor Standings", "position": "7", "team": "Brabham BRM", "total_points": "5"}
+{"year": "1965 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "2"}
+{"year": "1970 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "59"}
+{"year": "1970 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "52"}
+{"year": "1970 Constructor Standings", "position": "3", "team": "March Ford", "total_points": "48"}
+{"year": "1970 Constructor Standings", "position": "4", "team": "Brabham Ford", "total_points": "35"}
+{"year": "1970 Constructor Standings", "position": "4", "team": "McLaren Ford", "total_points": "35"}
+{"year": "1970 Constructor Standings", "position": "6", "team": "BRM", "total_points": "23"}
+{"year": "1970 Constructor Standings", "position": "6", "team": "Matra", "total_points": "23"}
+{"year": "1970 Constructor Standings", "position": "8", "team": "Surtees Ford", "total_points": "3"}
+{"year": "1964 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "45"}
+{"year": "1964 Constructor Standings", "position": "2", "team": "BRM", "total_points": "42"}
+{"year": "1964 Constructor Standings", "position": "3", "team": "Lotus Climax", "total_points": "37"}
+{"year": "1964 Constructor Standings", "position": "4", "team": "Brabham Climax", "total_points": "30"}
+{"year": "1964 Constructor Standings", "position": "5", "team": "Cooper Climax", "total_points": "16"}
+{"year": "1964 Constructor Standings", "position": "6", "team": "Brabham BRM", "total_points": "7"}
+{"year": "1964 Constructor Standings", "position": "7", "team": "BRP BRM", "total_points": "5"}
+{"year": "1964 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "3"}
+{"year": "1971 Constructor Standings", "position": "1", "team": "Tyrrell Ford", "total_points": "73"}
+{"year": "1971 Constructor Standings", "position": "2", "team": "BRM", "total_points": "36"}
+{"year": "1971 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "33"}
+{"year": "1971 Constructor Standings", "position": "3", "team": "March Ford", "total_points": "33"}
+{"year": "1971 Constructor Standings", "position": "5", "team": "Lotus Ford", "total_points": "21"}
+{"year": "1971 Constructor Standings", "position": "6", "team": "McLaren Ford", "total_points": "10"}
+{"year": "1971 Constructor Standings", "position": "7", "team": "Matra", "total_points": "9"}
+{"year": "1971 Constructor Standings", "position": "8", "team": "Surtees Ford", "total_points": "8"}
+{"year": "1971 Constructor Standings", "position": "9", "team": "Brabham Ford", "total_points": "5"}
+{"year": "1969 Constructor Standings", "position": "1", "team": "Matra Ford", "total_points": "66"}
+{"year": "1969 Constructor Standings", "position": "2", "team": "Brabham Ford", "total_points": "49"}
+{"year": "1969 Constructor Standings", "position": "3", "team": "Lotus Ford", "total_points": "47"}
+{"year": "1969 Constructor Standings", "position": "4", "team": "McLaren Ford", "total_points": "38"}
+{"year": "1969 Constructor Standings", "position": "5", "team": "Ferrari", "total_points": "7"}
+{"year": "1969 Constructor Standings", "position": "5", "team": "BRM", "total_points": "7"}
+{"year": "1967 Constructor Standings", "position": "1", "team": "Brabham Repco", "total_points": "63"}
+{"year": "1967 Constructor Standings", "position": "2", "team": "Lotus Ford", "total_points": "44"}
+{"year": "1967 Constructor Standings", "position": "3", "team": "Cooper Maserati", "total_points": "28"}
+{"year": "1967 Constructor Standings", "position": "4", "team": "Honda", "total_points": "20"}
+{"year": "1967 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "20"}
+{"year": "1967 Constructor Standings", "position": "6", "team": "BRM", "total_points": "17"}
+{"year": "1967 Constructor Standings", "position": "7", "team": "Eagle Weslake", "total_points": "13"}
+{"year": "1967 Constructor Standings", "position": "8", "team": "Cooper Climax", "total_points": "6"}
+{"year": "1967 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "6"}
+{"year": "1967 Constructor Standings", "position": "10", "team": "McLaren BRM", "total_points": "3"}
+{"year": "1967 Constructor Standings", "position": "11", "team": "Brabham Climax", "total_points": "2"}
+{"year": "1968 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "62"}
+{"year": "1968 Constructor Standings", "position": "2", "team": "McLaren Ford", "total_points": "49"}
+{"year": "1968 Constructor Standings", "position": "3", "team": "Matra Ford", "total_points": "45"}
+{"year": "1968 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "32"}
+{"year": "1968 Constructor Standings", "position": "5", "team": "BRM", "total_points": "28"}
+{"year": "1968 Constructor Standings", "position": "6", "team": "Honda", "total_points": "14"}
+{"year": "1968 Constructor Standings", "position": "6", "team": "Cooper BRM", "total_points": "14"}
+{"year": "1968 Constructor Standings", "position": "8", "team": "Brabham Repco", "total_points": "10"}
+{"year": "1968 Constructor Standings", "position": "9", "team": "Matra", "total_points": "8"}
+{"year": "1968 Constructor Standings", "position": "10", "team": "Mclaren BRM", "total_points": "3"}
 {"year": "1990 Constructor Standings", "position": "1", "team": "McLaren Honda", "total_points": "121"}
 {"year": "1990 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "110"}
 {"year": "1990 Constructor Standings", "position": "3", "team": "Benetton Ford", "total_points": "71"}
+{"year": "1984 Constructor Standings", "position": "1", "team": "McLaren TAG", "total_points": "143.5"}
+{"year": "1984 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "57.5"}
+{"year": "1984 Constructor Standings", "position": "3", "team": "Lotus Renault", "total_points": "47"}
 {"year": "1990 Constructor Standings", "position": "4", "team": "Williams Renault", "total_points": "57"}
 {"year": "1990 Constructor Standings", "position": "5", "team": "Tyrrell Ford", "total_points": "16"}
 {"year": "1990 Constructor Standings", "position": "6", "team": "Lola Lamborghini", "total_points": "11"}
+{"year": "1984 Constructor Standings", "position": "4", "team": "Brabham BMW", "total_points": "38"}
+{"year": "1984 Constructor Standings", "position": "5", "team": "Renault", "total_points": "34"}
+{"year": "1984 Constructor Standings", "position": "6", "team": "Williams Honda", "total_points": "25.5"}
+{"year": "1984 Constructor Standings", "position": "7", "team": "Toleman Hart", "total_points": "16"}
+{"year": "1984 Constructor Standings", "position": "8", "team": "Alfa Romeo", "total_points": "11"}
+{"year": "1984 Constructor Standings", "position": "9", "team": "Arrows BMW", "total_points": "3"}
 {"year": "1990 Constructor Standings", "position": "7", "team": "Leyton House Judd", "total_points": "7"}
 {"year": "1990 Constructor Standings", "position": "8", "team": "Lotus Lamborghini", "total_points": "3"}
 {"year": "1990 Constructor Standings", "position": "9", "team": "Arrows Ford", "total_points": "2"}
 {"year": "1990 Constructor Standings", "position": "10", "team": "Brabham Judd", "total_points": "2"}
-{"year": "1991 Constructor Standings", "position": "1", "team": "McLaren Honda", "total_points": "139"}
-{"year": "1991 Constructor Standings", "position": "2", "team": "Williams Renault", "total_points": "125"}
-{"year": "1991 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "55.5"}
-{"year": "1991 Constructor Standings", "position": "4", "team": "Benetton Ford", "total_points": "38.5"}
-{"year": "1991 Constructor Standings", "position": "5", "team": "Jordan Ford", "total_points": "13"}
-{"year": "1991 Constructor Standings", "position": "6", "team": "Tyrrell Honda", "total_points": "12"}
-{"year": "1991 Constructor Standings", "position": "7", "team": "Minardi Ferrari", "total_points": "6"}
-{"year": "1991 Constructor Standings", "position": "8", "team": "Dallara Judd", "total_points": "5"}
-{"year": "1991 Constructor Standings", "position": "9", "team": "Lotus Judd", "total_points": "3"}
-{"year": "1991 Constructor Standings", "position": "9", "team": "Brabham Yamaha", "total_points": "3"}
-{"year": "1991 Constructor Standings", "position": "11", "team": "Lola Ford", "total_points": "2"}
-{"year": "1991 Constructor Standings", "position": "12", "team": "Leyton House Ilmor", "total_points": "1"}
+{"year": "1984 Constructor Standings", "position": "10", "team": "Ligier Renault", "total_points": "3"}
+{"year": "1984 Constructor Standings", "position": "11", "team": "Arrows Ford", "total_points": "3"}
+{"year": "1984 Constructor Standings", "position": "12", "team": "Osella Alfa Romeo", "total_points": "2"}
 {"year": "1989 Constructor Standings", "position": "1", "team": "McLaren Honda", "total_points": "141"}
 {"year": "1989 Constructor Standings", "position": "2", "team": "Williams Renault", "total_points": "77"}
 {"year": "1989 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "59"}
@@ -158,126 +414,16 @@
 {"year": "1989 Constructor Standings", "position": "13", "team": "Ligier Ford", "total_points": "3"}
 {"year": "1989 Constructor Standings", "position": "15", "team": "AGS Ford", "total_points": "1"}
 {"year": "1989 Constructor Standings", "position": "15", "team": "Lola Lamborghini", "total_points": "1"}
-{"year": "2024 Constructor Standings", "position": "1", "team": "Red Bull Racing Honda RBPT", "total_points": "389"}
-{"year": "2024 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "338"}
-{"year": "2024 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "322"}
-{"year": "2024 Constructor Standings", "position": "4", "team": "Mercedes", "total_points": "241"}
-{"year": "2024 Constructor Standings", "position": "5", "team": "Aston Martin Aramco Mercedes", "total_points": "69"}
-{"year": "2024 Constructor Standings", "position": "6", "team": "RB Honda RBPT", "total_points": "33"}
-{"year": "2024 Constructor Standings", "position": "7", "team": "Haas Ferrari", "total_points": "27"}
-{"year": "2024 Constructor Standings", "position": "8", "team": "Alpine Renault", "total_points": "9"}
-{"year": "2024 Constructor Standings", "position": "9", "team": "Williams Mercedes", "total_points": "4"}
-{"year": "2024 Constructor Standings", "position": "10", "team": "Kick Sauber Ferrari", "total_points": "0"}
-{"year": "1962 Constructor Standings", "position": "1", "team": "BRM", "total_points": "42"}
-{"year": "1962 Constructor Standings", "position": "2", "team": "Lotus Climax", "total_points": "36"}
-{"year": "1962 Constructor Standings", "position": "3", "team": "Cooper Climax", "total_points": "29"}
-{"year": "1962 Constructor Standings", "position": "4", "team": "Lola Climax", "total_points": "19"}
-{"year": "1961 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "40"}
-{"year": "1962 Constructor Standings", "position": "5", "team": "Porsche", "total_points": "18"}
-{"year": "1962 Constructor Standings", "position": "5", "team": "Ferrari", "total_points": "18"}
-{"year": "1962 Constructor Standings", "position": "7", "team": "Brabham Climax", "total_points": "6"}
-{"year": "1962 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "1"}
-{"year": "1961 Constructor Standings", "position": "2", "team": "Lotus Climax", "total_points": "32"}
-{"year": "1961 Constructor Standings", "position": "3", "team": "Porsche", "total_points": "22"}
-{"year": "1961 Constructor Standings", "position": "4", "team": "Cooper Climax", "total_points": "14"}
-{"year": "1961 Constructor Standings", "position": "5", "team": "BRM Climax", "total_points": "7"}
-{"year": "1968 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "62"}
-{"year": "1968 Constructor Standings", "position": "2", "team": "McLaren Ford", "total_points": "49"}
-{"year": "1968 Constructor Standings", "position": "3", "team": "Matra Ford", "total_points": "45"}
-{"year": "1968 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "32"}
-{"year": "1968 Constructor Standings", "position": "5", "team": "BRM", "total_points": "28"}
-{"year": "1968 Constructor Standings", "position": "6", "team": "Honda", "total_points": "14"}
-{"year": "1968 Constructor Standings", "position": "6", "team": "Cooper BRM", "total_points": "14"}
-{"year": "1968 Constructor Standings", "position": "8", "team": "Brabham Repco", "total_points": "10"}
-{"year": "1968 Constructor Standings", "position": "9", "team": "Matra", "total_points": "8"}
-{"year": "1968 Constructor Standings", "position": "10", "team": "Mclaren BRM", "total_points": "3"}
-{"year": "1967 Constructor Standings", "position": "1", "team": "Brabham Repco", "total_points": "63"}
-{"year": "1967 Constructor Standings", "position": "2", "team": "Lotus Ford", "total_points": "44"}
-{"year": "1967 Constructor Standings", "position": "3", "team": "Cooper Maserati", "total_points": "28"}
-{"year": "1967 Constructor Standings", "position": "4", "team": "Honda", "total_points": "20"}
-{"year": "1967 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "20"}
-{"year": "1967 Constructor Standings", "position": "6", "team": "BRM", "total_points": "17"}
-{"year": "1967 Constructor Standings", "position": "7", "team": "Eagle Weslake", "total_points": "13"}
-{"year": "1967 Constructor Standings", "position": "8", "team": "Cooper Climax", "total_points": "6"}
-{"year": "1967 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "6"}
-{"year": "1967 Constructor Standings", "position": "10", "team": "McLaren BRM", "total_points": "3"}
-{"year": "1967 Constructor Standings", "position": "11", "team": "Brabham Climax", "total_points": "2"}
-{"year": "1966 Constructor Standings", "position": "1", "team": "Brabham Repco", "total_points": "42"}
-{"year": "1966 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "31"}
-{"year": "1966 Constructor Standings", "position": "3", "team": "Cooper Maserati", "total_points": "30"}
-{"year": "1966 Constructor Standings", "position": "4", "team": "BRM", "total_points": "22"}
-{"year": "1966 Constructor Standings", "position": "5", "team": "Lotus BRM", "total_points": "13"}
-{"year": "1966 Constructor Standings", "position": "6", "team": "Lotus Climax", "total_points": "8"}
-{"year": "1966 Constructor Standings", "position": "7", "team": "Eagle Climax", "total_points": "4"}
-{"year": "1966 Constructor Standings", "position": "8", "team": "Honda", "total_points": "3"}
-{"year": "1966 Constructor Standings", "position": "9", "team": "McLaren Ford", "total_points": "2"}
-{"year": "1966 Constructor Standings", "position": "10", "team": "Brabham BRM", "total_points": "1"}
-{"year": "1966 Constructor Standings", "position": "10", "team": "McLaren Serenissima", "total_points": "1"}
-{"year": "1966 Constructor Standings", "position": "10", "team": "Brabham Climax", "total_points": "1"}
-{"year": "1964 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "45"}
-{"year": "1964 Constructor Standings", "position": "2", "team": "BRM", "total_points": "42"}
-{"year": "1964 Constructor Standings", "position": "3", "team": "Lotus Climax", "total_points": "37"}
-{"year": "1964 Constructor Standings", "position": "4", "team": "Brabham Climax", "total_points": "30"}
-{"year": "1964 Constructor Standings", "position": "5", "team": "Cooper Climax", "total_points": "16"}
-{"year": "1964 Constructor Standings", "position": "6", "team": "Brabham BRM", "total_points": "7"}
-{"year": "1964 Constructor Standings", "position": "7", "team": "BRP BRM", "total_points": "5"}
-{"year": "1964 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "3"}
-{"year": "1965 Constructor Standings", "position": "1", "team": "Lotus Climax", "total_points": "54"}
-{"year": "1965 Constructor Standings", "position": "2", "team": "BRM", "total_points": "45"}
-{"year": "1965 Constructor Standings", "position": "3", "team": "Brabham Climax", "total_points": "27"}
-{"year": "1965 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "26"}
-{"year": "1965 Constructor Standings", "position": "5", "team": "Cooper Climax", "total_points": "14"}
-{"year": "1965 Constructor Standings", "position": "6", "team": "Honda", "total_points": "11"}
-{"year": "1965 Constructor Standings", "position": "7", "team": "Brabham BRM", "total_points": "5"}
-{"year": "1965 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "2"}
-{"year": "1963 Constructor Standings", "position": "1", "team": "Lotus Climax", "total_points": "54"}
-{"year": "1963 Constructor Standings", "position": "2", "team": "BRM", "total_points": "36"}
-{"year": "1963 Constructor Standings", "position": "3", "team": "Brabham Climax", "total_points": "28"}
-{"year": "1963 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "26"}
-{"year": "1963 Constructor Standings", "position": "5", "team": "Cooper Climax", "total_points": "25"}
-{"year": "1963 Constructor Standings", "position": "6", "team": "BRP BRM", "total_points": "6"}
-{"year": "1963 Constructor Standings", "position": "7", "team": "Porsche", "total_points": "5"}
-{"year": "1963 Constructor Standings", "position": "8", "team": "Lotus BRM", "total_points": "4"}
-{"year": "1960 Constructor Standings", "position": "1", "team": "Cooper Climax", "total_points": "48"}
-{"year": "1960 Constructor Standings", "position": "2", "team": "Lotus Climax", "total_points": "34"}
-{"year": "1960 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "26"}
-{"year": "1960 Constructor Standings", "position": "4", "team": "BRM", "total_points": "8"}
-{"year": "1960 Constructor Standings", "position": "5", "team": "Cooper Maserati", "total_points": "3"}
-{"year": "1960 Constructor Standings", "position": "5", "team": "Cooper Castellotti", "total_points": "3"}
-{"year": "1958 Constructor Standings", "position": "1", "team": "Vanwall", "total_points": "48"}
-{"year": "1958 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "40"}
-{"year": "1958 Constructor Standings", "position": "3", "team": "Cooper Climax", "total_points": "31"}
-{"year": "1958 Constructor Standings", "position": "4", "team": "BRM", "total_points": "18"}
-{"year": "1958 Constructor Standings", "position": "5", "team": "Maserati", "total_points": "6"}
-{"year": "1958 Constructor Standings", "position": "6", "team": "Lotus Climax", "total_points": "3"}
-{"year": "1959 Constructor Standings", "position": "1", "team": "Cooper Climax", "total_points": "40"}
-{"year": "1959 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "32"}
-{"year": "1959 Constructor Standings", "position": "3", "team": "BRM", "total_points": "18"}
-{"year": "1959 Constructor Standings", "position": "4", "team": "Lotus Climax", "total_points": "5"}
-{"year": "1978 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "86"}
-{"year": "1978 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "58"}
-{"year": "1978 Constructor Standings", "position": "3", "team": "Brabham Alfa Romeo", "total_points": "53"}
-{"year": "1978 Constructor Standings", "position": "4", "team": "Tyrrell Ford", "total_points": "38"}
-{"year": "1978 Constructor Standings", "position": "5", "team": "Wolf Ford", "total_points": "24"}
-{"year": "1978 Constructor Standings", "position": "6", "team": "Ligier Matra", "total_points": "19"}
-{"year": "1978 Constructor Standings", "position": "7", "team": "Fittipaldi Ford", "total_points": "17"}
-{"year": "1978 Constructor Standings", "position": "8", "team": "McLaren Ford", "total_points": "15"}
-{"year": "1978 Constructor Standings", "position": "9", "team": "Williams Ford", "total_points": "11"}
-{"year": "1978 Constructor Standings", "position": "9", "team": "Arrows Ford", "total_points": "11"}
-{"year": "1978 Constructor Standings", "position": "11", "team": "Shadow Ford", "total_points": "6"}
-{"year": "1978 Constructor Standings", "position": "12", "team": "Renault", "total_points": "3"}
-{"year": "1978 Constructor Standings", "position": "13", "team": "Surtees Ford", "total_points": "1"}
-{"year": "1978 Constructor Standings", "position": "13", "team": "Ensign Ford", "total_points": "1"}
-{"year": "1986 Constructor Standings", "position": "1", "team": "Williams Honda", "total_points": "141"}
-{"year": "1986 Constructor Standings", "position": "2", "team": "McLaren TAG", "total_points": "96"}
-{"year": "1986 Constructor Standings", "position": "3", "team": "Lotus Renault", "total_points": "58"}
-{"year": "1986 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "37"}
-{"year": "1986 Constructor Standings", "position": "5", "team": "Ligier Renault", "total_points": "29"}
-{"year": "1986 Constructor Standings", "position": "6", "team": "Benetton BMW", "total_points": "19"}
-{"year": "1986 Constructor Standings", "position": "7", "team": "Tyrrell Renault", "total_points": "11"}
-{"year": "1986 Constructor Standings", "position": "8", "team": "Lola Ford", "total_points": "6"}
-{"year": "1986 Constructor Standings", "position": "9", "team": "Brabham BMW", "total_points": "2"}
-{"year": "1986 Constructor Standings", "position": "10", "team": "Arrows BMW", "total_points": "1"}
+{"year": "1988 Constructor Standings", "position": "1", "team": "McLaren Honda", "total_points": "199"}
+{"year": "1988 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "65"}
+{"year": "1988 Constructor Standings", "position": "3", "team": "Benetton Ford", "total_points": "39"}
+{"year": "1988 Constructor Standings", "position": "4", "team": "Arrows Megatron", "total_points": "23"}
+{"year": "1988 Constructor Standings", "position": "5", "team": "Lotus Honda", "total_points": "23"}
+{"year": "1988 Constructor Standings", "position": "6", "team": "March Judd", "total_points": "22"}
+{"year": "1988 Constructor Standings", "position": "7", "team": "Williams Judd", "total_points": "20"}
+{"year": "1988 Constructor Standings", "position": "8", "team": "Tyrrell Ford", "total_points": "5"}
+{"year": "1988 Constructor Standings", "position": "9", "team": "Rial Ford", "total_points": "3"}
+{"year": "1988 Constructor Standings", "position": "10", "team": "Minardi Ford", "total_points": "1"}
 {"year": "1987 Constructor Standings", "position": "1", "team": "Williams Honda", "total_points": "137"}
 {"year": "1987 Constructor Standings", "position": "2", "team": "McLaren TAG", "total_points": "76"}
 {"year": "1987 Constructor Standings", "position": "3", "team": "Lotus Honda", "total_points": "64"}
@@ -291,6 +437,39 @@
 {"year": "1987 Constructor Standings", "position": "11", "team": "March Ford", "total_points": "1"}
 {"year": "1987 Constructor Standings", "position": "12", "team": "Ligier Megatron", "total_points": "1"}
 {"year": "1987 Constructor Standings", "position": "13", "team": "AGS Ford", "total_points": "1"}
+{"year": "1986 Constructor Standings", "position": "1", "team": "Williams Honda", "total_points": "141"}
+{"year": "1986 Constructor Standings", "position": "2", "team": "McLaren TAG", "total_points": "96"}
+{"year": "1986 Constructor Standings", "position": "3", "team": "Lotus Renault", "total_points": "58"}
+{"year": "1986 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "37"}
+{"year": "1986 Constructor Standings", "position": "5", "team": "Ligier Renault", "total_points": "29"}
+{"year": "1986 Constructor Standings", "position": "6", "team": "Benetton BMW", "total_points": "19"}
+{"year": "1986 Constructor Standings", "position": "7", "team": "Tyrrell Renault", "total_points": "11"}
+{"year": "1986 Constructor Standings", "position": "8", "team": "Lola Ford", "total_points": "6"}
+{"year": "1986 Constructor Standings", "position": "9", "team": "Brabham BMW", "total_points": "2"}
+{"year": "1986 Constructor Standings", "position": "10", "team": "Arrows BMW", "total_points": "1"}
+{"year": "1985 Constructor Standings", "position": "1", "team": "McLaren TAG", "total_points": "90"}
+{"year": "1985 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "82"}
+{"year": "1985 Constructor Standings", "position": "3", "team": "Lotus Renault", "total_points": "71"}
+{"year": "1985 Constructor Standings", "position": "4", "team": "Williams Honda", "total_points": "71"}
+{"year": "1985 Constructor Standings", "position": "5", "team": "Brabham BMW", "total_points": "26"}
+{"year": "1985 Constructor Standings", "position": "6", "team": "Ligier Renault", "total_points": "23"}
+{"year": "1985 Constructor Standings", "position": "7", "team": "Renault", "total_points": "16"}
+{"year": "1985 Constructor Standings", "position": "8", "team": "Arrows BMW", "total_points": "14"}
+{"year": "1985 Constructor Standings", "position": "9", "team": "Tyrrell Ford", "total_points": "4"}
+{"year": "1985 Constructor Standings", "position": "10", "team": "Tyrrell Renault", "total_points": "3"}
+{"year": "1983 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "89"}
+{"year": "1983 Constructor Standings", "position": "2", "team": "Renault", "total_points": "79"}
+{"year": "1983 Constructor Standings", "position": "3", "team": "Brabham BMW", "total_points": "72"}
+{"year": "1983 Constructor Standings", "position": "4", "team": "Williams Ford", "total_points": "36"}
+{"year": "1983 Constructor Standings", "position": "5", "team": "McLaren Ford", "total_points": "34"}
+{"year": "1983 Constructor Standings", "position": "6", "team": "Alfa Romeo", "total_points": "18"}
+{"year": "1983 Constructor Standings", "position": "7", "team": "Tyrrell Ford", "total_points": "12"}
+{"year": "1983 Constructor Standings", "position": "8", "team": "Lotus Renault", "total_points": "11"}
+{"year": "1983 Constructor Standings", "position": "9", "team": "Toleman Hart", "total_points": "10"}
+{"year": "1983 Constructor Standings", "position": "10", "team": "Arrows Ford", "total_points": "4"}
+{"year": "1983 Constructor Standings", "position": "11", "team": "Williams Honda", "total_points": "2"}
+{"year": "1983 Constructor Standings", "position": "12", "team": "Theodore Ford", "total_points": "1"}
+{"year": "1983 Constructor Standings", "position": "13", "team": "Lotus Ford", "total_points": "1"}
 {"year": "1982 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "74"}
 {"year": "1982 Constructor Standings", "position": "2", "team": "McLaren Ford", "total_points": "69"}
 {"year": "1982 Constructor Standings", "position": "3", "team": "Renault", "total_points": "62"}
@@ -305,41 +484,6 @@
 {"year": "1982 Constructor Standings", "position": "12", "team": "ATS Ford", "total_points": "4"}
 {"year": "1982 Constructor Standings", "position": "13", "team": "Osella Ford", "total_points": "3"}
 {"year": "1982 Constructor Standings", "position": "14", "team": "Fittipaldi Ford", "total_points": "1"}
-{"year": "1985 Constructor Standings", "position": "1", "team": "McLaren TAG", "total_points": "90"}
-{"year": "1985 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "82"}
-{"year": "1985 Constructor Standings", "position": "3", "team": "Lotus Renault", "total_points": "71"}
-{"year": "1985 Constructor Standings", "position": "4", "team": "Williams Honda", "total_points": "71"}
-{"year": "1985 Constructor Standings", "position": "5", "team": "Brabham BMW", "total_points": "26"}
-{"year": "1985 Constructor Standings", "position": "6", "team": "Ligier Renault", "total_points": "23"}
-{"year": "1985 Constructor Standings", "position": "7", "team": "Renault", "total_points": "16"}
-{"year": "1985 Constructor Standings", "position": "8", "team": "Arrows BMW", "total_points": "14"}
-{"year": "1985 Constructor Standings", "position": "9", "team": "Tyrrell Ford", "total_points": "4"}
-{"year": "1985 Constructor Standings", "position": "10", "team": "Tyrrell Renault", "total_points": "3"}
-{"year": "1984 Constructor Standings", "position": "1", "team": "McLaren TAG", "total_points": "143.5"}
-{"year": "1984 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "57.5"}
-{"year": "1984 Constructor Standings", "position": "3", "team": "Lotus Renault", "total_points": "47"}
-{"year": "1984 Constructor Standings", "position": "4", "team": "Brabham BMW", "total_points": "38"}
-{"year": "1984 Constructor Standings", "position": "5", "team": "Renault", "total_points": "34"}
-{"year": "1984 Constructor Standings", "position": "6", "team": "Williams Honda", "total_points": "25.5"}
-{"year": "1984 Constructor Standings", "position": "7", "team": "Toleman Hart", "total_points": "16"}
-{"year": "1984 Constructor Standings", "position": "8", "team": "Alfa Romeo", "total_points": "11"}
-{"year": "1984 Constructor Standings", "position": "9", "team": "Arrows BMW", "total_points": "3"}
-{"year": "1984 Constructor Standings", "position": "10", "team": "Ligier Renault", "total_points": "3"}
-{"year": "1984 Constructor Standings", "position": "11", "team": "Arrows Ford", "total_points": "3"}
-{"year": "1984 Constructor Standings", "position": "12", "team": "Osella Alfa Romeo", "total_points": "2"}
-{"year": "1983 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "89"}
-{"year": "1983 Constructor Standings", "position": "2", "team": "Renault", "total_points": "79"}
-{"year": "1983 Constructor Standings", "position": "3", "team": "Brabham BMW", "total_points": "72"}
-{"year": "1983 Constructor Standings", "position": "4", "team": "Williams Ford", "total_points": "36"}
-{"year": "1983 Constructor Standings", "position": "5", "team": "McLaren Ford", "total_points": "34"}
-{"year": "1983 Constructor Standings", "position": "6", "team": "Alfa Romeo", "total_points": "18"}
-{"year": "1983 Constructor Standings", "position": "7", "team": "Tyrrell Ford", "total_points": "12"}
-{"year": "1983 Constructor Standings", "position": "8", "team": "Lotus Renault", "total_points": "11"}
-{"year": "1983 Constructor Standings", "position": "9", "team": "Toleman Hart", "total_points": "10"}
-{"year": "1983 Constructor Standings", "position": "10", "team": "Arrows Ford", "total_points": "4"}
-{"year": "1983 Constructor Standings", "position": "11", "team": "Williams Honda", "total_points": "2"}
-{"year": "1983 Constructor Standings", "position": "12", "team": "Theodore Ford", "total_points": "1"}
-{"year": "1983 Constructor Standings", "position": "13", "team": "Lotus Ford", "total_points": "1"}
 {"year": "1981 Constructor Standings", "position": "1", "team": "Williams Ford", "total_points": "95"}
 {"year": "1981 Constructor Standings", "position": "2", "team": "Brabham Ford", "total_points": "61"}
 {"year": "1981 Constructor Standings", "position": "3", "team": "Renault", "total_points": "54"}
@@ -364,111 +508,56 @@
 {"year": "1980 Constructor Standings", "position": "7", "team": "McLaren Ford", "total_points": "11"}
 {"year": "1980 Constructor Standings", "position": "10", "team": "Ferrari", "total_points": "8"}
 {"year": "1980 Constructor Standings", "position": "11", "team": "Alfa Romeo", "total_points": "4"}
-{"year": "1974 Constructor Standings", "position": "1", "team": "McLaren Ford", "total_points": "73"}
-{"year": "1974 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "65"}
-{"year": "1974 Constructor Standings", "position": "3", "team": "Tyrrell Ford", "total_points": "52"}
-{"year": "1974 Constructor Standings", "position": "4", "team": "Lotus Ford", "total_points": "42"}
-{"year": "1974 Constructor Standings", "position": "5", "team": "Brabham Ford", "total_points": "35"}
-{"year": "1974 Constructor Standings", "position": "6", "team": "Hesketh Ford", "total_points": "15"}
-{"year": "1974 Constructor Standings", "position": "7", "team": "BRM", "total_points": "10"}
-{"year": "1974 Constructor Standings", "position": "8", "team": "Shadow Ford", "total_points": "7"}
-{"year": "1974 Constructor Standings", "position": "9", "team": "March Ford", "total_points": "6"}
-{"year": "1974 Constructor Standings", "position": "10", "team": "Iso Marlboro Ford", "total_points": "4"}
-{"year": "1974 Constructor Standings", "position": "11", "team": "Surtees Ford", "total_points": "3"}
-{"year": "1974 Constructor Standings", "position": "12", "team": "Lola Ford", "total_points": "1"}
-{"year": "1977 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "95"}
-{"year": "1977 Constructor Standings", "position": "2", "team": "Lotus Ford", "total_points": "62"}
-{"year": "1977 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "60"}
-{"year": "1977 Constructor Standings", "position": "4", "team": "Wolf Ford", "total_points": "55"}
-{"year": "1977 Constructor Standings", "position": "5", "team": "Brabham Alfa Romeo", "total_points": "27"}
-{"year": "1977 Constructor Standings", "position": "5", "team": "Tyrrell Ford", "total_points": "27"}
-{"year": "1977 Constructor Standings", "position": "7", "team": "Shadow Ford", "total_points": "23"}
-{"year": "1977 Constructor Standings", "position": "8", "team": "Ligier Matra", "total_points": "18"}
-{"year": "1977 Constructor Standings", "position": "9", "team": "Fittipaldi Ford", "total_points": "11"}
-{"year": "1977 Constructor Standings", "position": "10", "team": "Ensign Ford", "total_points": "10"}
-{"year": "1977 Constructor Standings", "position": "11", "team": "Surtees Ford", "total_points": "6"}
-{"year": "1977 Constructor Standings", "position": "12", "team": "Penske Ford", "total_points": "1"}
-{"year": "1975 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "72.5"}
-{"year": "1975 Constructor Standings", "position": "2", "team": "Brabham Ford", "total_points": "54"}
-{"year": "1975 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "53"}
-{"year": "1975 Constructor Standings", "position": "4", "team": "Hesketh Ford", "total_points": "33"}
-{"year": "1975 Constructor Standings", "position": "5", "team": "Tyrrell Ford", "total_points": "25"}
-{"year": "1975 Constructor Standings", "position": "6", "team": "Shadow Ford", "total_points": "9.5"}
-{"year": "1975 Constructor Standings", "position": "7", "team": "Lotus Ford", "total_points": "9"}
-{"year": "1975 Constructor Standings", "position": "8", "team": "March Ford", "total_points": "7.5"}
-{"year": "1975 Constructor Standings", "position": "9", "team": "Frank Williams Racing Cars/Williams", "total_points": "6"}
-{"year": "1975 Constructor Standings", "position": "10", "team": "Parnelli Ford", "total_points": "5"}
-{"year": "1975 Constructor Standings", "position": "11", "team": "Hill Ford", "total_points": "3"}
-{"year": "1975 Constructor Standings", "position": "12", "team": "Penske Ford", "total_points": "2"}
-{"year": "1975 Constructor Standings", "position": "13", "team": "Ensign Ford", "total_points": "1"}
-{"year": "1976 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "83"}
-{"year": "1976 Constructor Standings", "position": "2", "team": "McLaren Ford", "total_points": "74"}
-{"year": "1976 Constructor Standings", "position": "3", "team": "Tyrrell Ford", "total_points": "71"}
-{"year": "1976 Constructor Standings", "position": "4", "team": "Lotus Ford", "total_points": "29"}
-{"year": "1976 Constructor Standings", "position": "5", "team": "Penske Ford", "total_points": "20"}
-{"year": "1976 Constructor Standings", "position": "5", "team": "Ligier Matra", "total_points": "20"}
-{"year": "1976 Constructor Standings", "position": "7", "team": "March Ford", "total_points": "19"}
-{"year": "1976 Constructor Standings", "position": "8", "team": "Shadow Ford", "total_points": "10"}
-{"year": "1976 Constructor Standings", "position": "9", "team": "Brabham Alfa Romeo", "total_points": "9"}
-{"year": "1976 Constructor Standings", "position": "10", "team": "Surtees Ford", "total_points": "7"}
-{"year": "1976 Constructor Standings", "position": "11", "team": "Fittipaldi Ford", "total_points": "3"}
-{"year": "1976 Constructor Standings", "position": "12", "team": "Ensign Ford", "total_points": "2"}
-{"year": "1976 Constructor Standings", "position": "13", "team": "Parnelli Ford", "total_points": "1"}
-{"year": "1979 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "113"}
-{"year": "1979 Constructor Standings", "position": "2", "team": "Williams Ford", "total_points": "75"}
-{"year": "1979 Constructor Standings", "position": "3", "team": "Ligier Ford", "total_points": "61"}
-{"year": "1979 Constructor Standings", "position": "4", "team": "Lotus Ford", "total_points": "39"}
-{"year": "1979 Constructor Standings", "position": "5", "team": "Tyrrell Ford", "total_points": "28"}
-{"year": "1979 Constructor Standings", "position": "6", "team": "Renault", "total_points": "26"}
-{"year": "1979 Constructor Standings", "position": "7", "team": "McLaren Ford", "total_points": "15"}
-{"year": "1979 Constructor Standings", "position": "8", "team": "Brabham Ford", "total_points": "7"}
-{"year": "1979 Constructor Standings", "position": "9", "team": "Arrows Ford", "total_points": "5"}
-{"year": "1979 Constructor Standings", "position": "10", "team": "Shadow Ford", "total_points": "3"}
-{"year": "1979 Constructor Standings", "position": "11", "team": "ATS Ford", "total_points": "2"}
-{"year": "1979 Constructor Standings", "position": "12", "team": "Fittipaldi Ford", "total_points": "1"}
-{"year": "1973 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "92"}
-{"year": "1973 Constructor Standings", "position": "2", "team": "Tyrrell Ford", "total_points": "82"}
-{"year": "1973 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "58"}
-{"year": "1973 Constructor Standings", "position": "4", "team": "Brabham Ford", "total_points": "22"}
-{"year": "1973 Constructor Standings", "position": "5", "team": "March Ford", "total_points": "14"}
-{"year": "1973 Constructor Standings", "position": "6", "team": "Ferrari", "total_points": "12"}
-{"year": "1973 Constructor Standings", "position": "6", "team": "BRM", "total_points": "12"}
-{"year": "1973 Constructor Standings", "position": "8", "team": "Shadow Ford", "total_points": "9"}
-{"year": "1973 Constructor Standings", "position": "9", "team": "Surtees Ford", "total_points": "7"}
-{"year": "1973 Constructor Standings", "position": "10", "team": "Iso Marlboro Ford", "total_points": "2"}
-{"year": "1973 Constructor Standings", "position": "11", "team": "Tecno", "total_points": "1"}
-{"year": "1972 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "61"}
-{"year": "1972 Constructor Standings", "position": "2", "team": "Tyrrell Ford", "total_points": "51"}
-{"year": "1972 Constructor Standings", "position": "3", "team": "McLaren Ford", "total_points": "47"}
-{"year": "1972 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "33"}
-{"year": "1972 Constructor Standings", "position": "5", "team": "Surtees Ford", "total_points": "18"}
-{"year": "1972 Constructor Standings", "position": "6", "team": "March Ford", "total_points": "15"}
-{"year": "1972 Constructor Standings", "position": "7", "team": "BRM", "total_points": "14"}
-{"year": "1972 Constructor Standings", "position": "8", "team": "Matra", "total_points": "12"}
-{"year": "1972 Constructor Standings", "position": "9", "team": "Brabham Ford", "total_points": "7"}
-{"year": "1971 Constructor Standings", "position": "1", "team": "Tyrrell Ford", "total_points": "73"}
-{"year": "1971 Constructor Standings", "position": "2", "team": "BRM", "total_points": "36"}
-{"year": "1971 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "33"}
-{"year": "1971 Constructor Standings", "position": "3", "team": "March Ford", "total_points": "33"}
-{"year": "1971 Constructor Standings", "position": "5", "team": "Lotus Ford", "total_points": "21"}
-{"year": "1971 Constructor Standings", "position": "6", "team": "McLaren Ford", "total_points": "10"}
-{"year": "1971 Constructor Standings", "position": "7", "team": "Matra", "total_points": "9"}
-{"year": "1971 Constructor Standings", "position": "8", "team": "Surtees Ford", "total_points": "8"}
-{"year": "1971 Constructor Standings", "position": "9", "team": "Brabham Ford", "total_points": "5"}
-{"year": "1969 Constructor Standings", "position": "1", "team": "Matra Ford", "total_points": "66"}
-{"year": "1969 Constructor Standings", "position": "2", "team": "Brabham Ford", "total_points": "49"}
-{"year": "1969 Constructor Standings", "position": "3", "team": "Lotus Ford", "total_points": "47"}
-{"year": "1969 Constructor Standings", "position": "4", "team": "McLaren Ford", "total_points": "38"}
-{"year": "1969 Constructor Standings", "position": "5", "team": "Ferrari", "total_points": "7"}
-{"year": "1969 Constructor Standings", "position": "5", "team": "BRM", "total_points": "7"}
-{"year": "1970 Constructor Standings", "position": "1", "team": "Lotus Ford", "total_points": "59"}
-{"year": "1970 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "52"}
-{"year": "1970 Constructor Standings", "position": "3", "team": "March Ford", "total_points": "48"}
-{"year": "1970 Constructor Standings", "position": "4", "team": "Brabham Ford", "total_points": "35"}
-{"year": "1970 Constructor Standings", "position": "4", "team": "McLaren Ford", "total_points": "35"}
-{"year": "1970 Constructor Standings", "position": "6", "team": "BRM", "total_points": "23"}
-{"year": "1970 Constructor Standings", "position": "6", "team": "Matra", "total_points": "23"}
-{"year": "1970 Constructor Standings", "position": "8", "team": "Surtees Ford", "total_points": "3"}
+{"year": "1993 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "168"}
+{"year": "1993 Constructor Standings", "position": "2", "team": "McLaren Ford", "total_points": "84"}
+{"year": "1993 Constructor Standings", "position": "3", "team": "Benetton Ford", "total_points": "72"}
+{"year": "1993 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "28"}
+{"year": "1993 Constructor Standings", "position": "5", "team": "Ligier Renault", "total_points": "23"}
+{"year": "1995 Constructor Standings", "position": "1", "team": "Benetton Renault", "total_points": "137"}
+{"year": "1995 Constructor Standings", "position": "2", "team": "Williams Renault", "total_points": "112"}
+{"year": "2001 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "179"}
+{"year": "2001 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "102"}
+{"year": "2000 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "170"}
+{"year": "2000 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "152"}
+{"year": "1993 Constructor Standings", "position": "6", "team": "Lotus Ford", "total_points": "12"}
+{"year": "1993 Constructor Standings", "position": "6", "team": "Sauber", "total_points": "12"}
+{"year": "1993 Constructor Standings", "position": "8", "team": "Minardi Ford", "total_points": "7"}
+{"year": "1995 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "73"}
+{"year": "1995 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "30"}
+{"year": "1995 Constructor Standings", "position": "5", "team": "Ligier Mugen Honda", "total_points": "24"}
+{"year": "1995 Constructor Standings", "position": "6", "team": "Jordan Peugeot", "total_points": "21"}
+{"year": "1995 Constructor Standings", "position": "7", "team": "Sauber Ford", "total_points": "18"}
+{"year": "2001 Constructor Standings", "position": "3", "team": "Williams BMW", "total_points": "80"}
+{"year": "2001 Constructor Standings", "position": "4", "team": "Sauber Petronas", "total_points": "21"}
+{"year": "2001 Constructor Standings", "position": "5", "team": "Jordan Honda", "total_points": "19"}
+{"year": "2001 Constructor Standings", "position": "6", "team": "BAR Honda", "total_points": "17"}
+{"year": "2001 Constructor Standings", "position": "7", "team": "Benetton Renault", "total_points": "10"}
+{"year": "2001 Constructor Standings", "position": "8", "team": "Jaguar Cosworth", "total_points": "9"}
+{"year": "2000 Constructor Standings", "position": "3", "team": "Williams BMW", "total_points": "36"}
+{"year": "2000 Constructor Standings", "position": "4", "team": "Benetton Playlife", "total_points": "20"}
+{"year": "2000 Constructor Standings", "position": "5", "team": "BAR Honda", "total_points": "20"}
+{"year": "2000 Constructor Standings", "position": "6", "team": "Jordan Mugen Honda", "total_points": "17"}
+{"year": "1993 Constructor Standings", "position": "9", "team": "Footwork Mugen Honda", "total_points": "4"}
+{"year": "1993 Constructor Standings", "position": "10", "team": "Larrousse Lamborghini", "total_points": "3"}
+{"year": "1993 Constructor Standings", "position": "10", "team": "Jordan Hart", "total_points": "3"}
+{"year": "1995 Constructor Standings", "position": "8", "team": "Footwork Hart", "total_points": "5"}
+{"year": "1995 Constructor Standings", "position": "9", "team": "Tyrrell Yamaha", "total_points": "5"}
+{"year": "1995 Constructor Standings", "position": "10", "team": "Minardi Ford", "total_points": "1"}
+{"year": "2001 Constructor Standings", "position": "9", "team": "Prost Acer", "total_points": "4"}
+{"year": "2001 Constructor Standings", "position": "10", "team": "Arrows Asiatech", "total_points": "1"}
+{"year": "2000 Constructor Standings", "position": "7", "team": "Arrows Supertec", "total_points": "7"}
+{"year": "2000 Constructor Standings", "position": "8", "team": "Sauber Petronas", "total_points": "6"}
+{"year": "2000 Constructor Standings", "position": "9", "team": "Jaguar Cosworth", "total_points": "4"}
+{"year": "2003 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "158"}
+{"year": "2003 Constructor Standings", "position": "2", "team": "Williams BMW", "total_points": "144"}
+{"year": "2003 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "142"}
+{"year": "2003 Constructor Standings", "position": "4", "team": "Renault", "total_points": "88"}
+{"year": "2003 Constructor Standings", "position": "5", "team": "BAR Honda", "total_points": "26"}
+{"year": "2003 Constructor Standings", "position": "6", "team": "Sauber Petronas", "total_points": "19"}
+{"year": "2003 Constructor Standings", "position": "7", "team": "Jaguar Cosworth", "total_points": "18"}
+{"year": "2003 Constructor Standings", "position": "8", "team": "Toyota", "total_points": "16"}
+{"year": "2003 Constructor Standings", "position": "9", "team": "Jordan Ford", "total_points": "13"}
+{"year": "2003 Constructor Standings", "position": "10", "team": "Minardi Cosworth", "total_points": "0"}
 {"year": "2002 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "221"}
 {"year": "2002 Constructor Standings", "position": "2", "team": "Williams BMW", "total_points": "92"}
 {"year": "2002 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "65"}
@@ -480,17 +569,110 @@
 {"year": "2002 Constructor Standings", "position": "9", "team": "Minardi Asiatech", "total_points": "2"}
 {"year": "2002 Constructor Standings", "position": "10", "team": "Toyota", "total_points": "2"}
 {"year": "2002 Constructor Standings", "position": "11", "team": "Arrows Cosworth", "total_points": "2"}
-{"year": "2007 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "204"}
-{"year": "2007 Constructor Standings", "position": "2", "team": "Sauber BMW", "total_points": "101"}
-{"year": "2007 Constructor Standings", "position": "3", "team": "Renault", "total_points": "51"}
-{"year": "2007 Constructor Standings", "position": "4", "team": "Williams Toyota", "total_points": "33"}
-{"year": "2007 Constructor Standings", "position": "5", "team": "Red Bull Renault", "total_points": "24"}
-{"year": "2007 Constructor Standings", "position": "6", "team": "Toyota", "total_points": "13"}
-{"year": "2007 Constructor Standings", "position": "7", "team": "STR Ferrari", "total_points": "8"}
-{"year": "2007 Constructor Standings", "position": "8", "team": "Honda", "total_points": "6"}
-{"year": "2007 Constructor Standings", "position": "9", "team": "Super Aguri Honda", "total_points": "4"}
-{"year": "2007 Constructor Standings", "position": "10", "team": "Spyker Ferrari", "total_points": "1"}
-{"year": "2007 Constructor Standings", "position": "EX", "team": "McLaren Mercedes", "total_points": "0"}
+{"year": "1999 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "128"}
+{"year": "1999 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "124"}
+{"year": "1999 Constructor Standings", "position": "3", "team": "Jordan Mugen Honda", "total_points": "61"}
+{"year": "1999 Constructor Standings", "position": "4", "team": "Stewart Ford", "total_points": "36"}
+{"year": "1999 Constructor Standings", "position": "5", "team": "Williams Supertec", "total_points": "35"}
+{"year": "1999 Constructor Standings", "position": "6", "team": "Benetton Playlife", "total_points": "16"}
+{"year": "1999 Constructor Standings", "position": "7", "team": "Prost Peugeot", "total_points": "9"}
+{"year": "1999 Constructor Standings", "position": "8", "team": "Sauber Petronas", "total_points": "5"}
+{"year": "1999 Constructor Standings", "position": "9", "team": "Minardi Ford", "total_points": "1"}
+{"year": "1999 Constructor Standings", "position": "10", "team": "Arrows", "total_points": "1"}
+{"year": "1998 Constructor Standings", "position": "1", "team": "McLaren Mercedes", "total_points": "156"}
+{"year": "1998 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "133"}
+{"year": "1998 Constructor Standings", "position": "3", "team": "Williams Mecachrome", "total_points": "38"}
+{"year": "1998 Constructor Standings", "position": "4", "team": "Jordan Mugen Honda", "total_points": "34"}
+{"year": "1998 Constructor Standings", "position": "5", "team": "Benetton Playlife", "total_points": "33"}
+{"year": "1998 Constructor Standings", "position": "6", "team": "Sauber Petronas", "total_points": "10"}
+{"year": "1998 Constructor Standings", "position": "7", "team": "Arrows", "total_points": "6"}
+{"year": "1998 Constructor Standings", "position": "8", "team": "Stewart Ford", "total_points": "5"}
+{"year": "1998 Constructor Standings", "position": "9", "team": "Prost Peugeot", "total_points": "1"}
+{"year": "1996 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "175"}
+{"year": "1996 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "70"}
+{"year": "1996 Constructor Standings", "position": "3", "team": "Benetton Renault", "total_points": "68"}
+{"year": "1996 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "49"}
+{"year": "1996 Constructor Standings", "position": "5", "team": "Jordan Peugeot", "total_points": "22"}
+{"year": "1996 Constructor Standings", "position": "6", "team": "Ligier Mugen Honda", "total_points": "15"}
+{"year": "1996 Constructor Standings", "position": "7", "team": "Sauber Ford", "total_points": "11"}
+{"year": "1996 Constructor Standings", "position": "8", "team": "Tyrrell Yamaha", "total_points": "5"}
+{"year": "1996 Constructor Standings", "position": "9", "team": "Footwork Hart", "total_points": "1"}
+{"year": "1997 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "123"}
+{"year": "1997 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "102"}
+{"year": "1997 Constructor Standings", "position": "3", "team": "Benetton Renault", "total_points": "67"}
+{"year": "1997 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "63"}
+{"year": "1997 Constructor Standings", "position": "5", "team": "Jordan Peugeot", "total_points": "33"}
+{"year": "1997 Constructor Standings", "position": "6", "team": "Prost Mugen Honda", "total_points": "21"}
+{"year": "1997 Constructor Standings", "position": "7", "team": "Sauber Petronas", "total_points": "16"}
+{"year": "1997 Constructor Standings", "position": "8", "team": "Arrows Yamaha", "total_points": "9"}
+{"year": "1997 Constructor Standings", "position": "9", "team": "Stewart Ford", "total_points": "6"}
+{"year": "1997 Constructor Standings", "position": "10", "team": "Tyrrell Ford", "total_points": "2"}
+{"year": "1994 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "118"}
+{"year": "1994 Constructor Standings", "position": "2", "team": "Benetton Ford", "total_points": "103"}
+{"year": "1994 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "71"}
+{"year": "1994 Constructor Standings", "position": "4", "team": "McLaren Peugeot", "total_points": "42"}
+{"year": "1994 Constructor Standings", "position": "5", "team": "Jordan Hart", "total_points": "28"}
+{"year": "1994 Constructor Standings", "position": "6", "team": "Ligier Renault", "total_points": "13"}
+{"year": "1994 Constructor Standings", "position": "6", "team": "Tyrrell Yamaha", "total_points": "13"}
+{"year": "1994 Constructor Standings", "position": "8", "team": "Sauber Mercedes", "total_points": "12"}
+{"year": "1994 Constructor Standings", "position": "9", "team": "Footwork Ford", "total_points": "9"}
+{"year": "1994 Constructor Standings", "position": "10", "team": "Minardi Ford", "total_points": "5"}
+{"year": "1994 Constructor Standings", "position": "11", "team": "Larrousse Ford", "total_points": "2"}
+{"year": "1992 Constructor Standings", "position": "1", "team": "Williams Renault", "total_points": "164"}
+{"year": "1992 Constructor Standings", "position": "2", "team": "McLaren Honda", "total_points": "99"}
+{"year": "1992 Constructor Standings", "position": "3", "team": "Benetton Ford", "total_points": "91"}
+{"year": "1992 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "21"}
+{"year": "1992 Constructor Standings", "position": "5", "team": "Lotus Ford", "total_points": "13"}
+{"year": "1992 Constructor Standings", "position": "6", "team": "Tyrrell Ilmor", "total_points": "8"}
+{"year": "1992 Constructor Standings", "position": "7", "team": "Footwork Mugen Honda", "total_points": "6"}
+{"year": "1992 Constructor Standings", "position": "8", "team": "Ligier Renault", "total_points": "6"}
+{"year": "1992 Constructor Standings", "position": "9", "team": "March Ilmor", "total_points": "3"}
+{"year": "1992 Constructor Standings", "position": "10", "team": "Dallara Ferrari", "total_points": "2"}
+{"year": "1992 Constructor Standings", "position": "11", "team": "Jordan Yamaha", "total_points": "1"}
+{"year": "1992 Constructor Standings", "position": "12", "team": "Minardi Lamborghini", "total_points": "1"}
+{"year": "1992 Constructor Standings", "position": "13", "team": "Venturi Lamborghini", "total_points": "1"}
+{"year": "1991 Constructor Standings", "position": "1", "team": "McLaren Honda", "total_points": "139"}
+{"year": "1991 Constructor Standings", "position": "2", "team": "Williams Renault", "total_points": "125"}
+{"year": "1991 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "55.5"}
+{"year": "1991 Constructor Standings", "position": "4", "team": "Benetton Ford", "total_points": "38.5"}
+{"year": "1991 Constructor Standings", "position": "5", "team": "Jordan Ford", "total_points": "13"}
+{"year": "1991 Constructor Standings", "position": "6", "team": "Tyrrell Honda", "total_points": "12"}
+{"year": "1991 Constructor Standings", "position": "7", "team": "Minardi Ferrari", "total_points": "6"}
+{"year": "1991 Constructor Standings", "position": "8", "team": "Dallara Judd", "total_points": "5"}
+{"year": "1991 Constructor Standings", "position": "9", "team": "Lotus Judd", "total_points": "3"}
+{"year": "1991 Constructor Standings", "position": "9", "team": "Brabham Yamaha", "total_points": "3"}
+{"year": "1991 Constructor Standings", "position": "11", "team": "Lola Ford", "total_points": "2"}
+{"year": "1991 Constructor Standings", "position": "12", "team": "Leyton House Ilmor", "total_points": "1"}
+{"year": "2021 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "613.5"}
+{"year": "2021 Constructor Standings", "position": "2", "team": "Red Bull Racing Honda", "total_points": "585.5"}
+{"year": "2021 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "323.5"}
+{"year": "2021 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "275"}
+{"year": "2021 Constructor Standings", "position": "5", "team": "Alpine Renault", "total_points": "155"}
+{"year": "2021 Constructor Standings", "position": "6", "team": "AlphaTauri Honda", "total_points": "142"}
+{"year": "2021 Constructor Standings", "position": "7", "team": "Aston Martin Mercedes", "total_points": "77"}
+{"year": "2021 Constructor Standings", "position": "8", "team": "Williams Mercedes", "total_points": "23"}
+{"year": "2021 Constructor Standings", "position": "9", "team": "Alfa Romeo Racing Ferrari", "total_points": "13"}
+{"year": "2021 Constructor Standings", "position": "10", "team": "Haas Ferrari", "total_points": "0"}
+{"year": "2023 Constructor Standings", "position": "1", "team": "Red Bull Racing Honda RBPT", "total_points": "860"}
+{"year": "2023 Constructor Standings", "position": "2", "team": "Mercedes", "total_points": "409"}
+{"year": "2023 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "406"}
+{"year": "2023 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "302"}
+{"year": "2023 Constructor Standings", "position": "5", "team": "Aston Martin Aramco Mercedes", "total_points": "280"}
+{"year": "2023 Constructor Standings", "position": "6", "team": "Alpine Renault", "total_points": "120"}
+{"year": "2023 Constructor Standings", "position": "7", "team": "Williams Mercedes", "total_points": "28"}
+{"year": "2023 Constructor Standings", "position": "8", "team": "AlphaTauri Honda RBPT", "total_points": "25"}
+{"year": "2023 Constructor Standings", "position": "9", "team": "Alfa Romeo Ferrari", "total_points": "16"}
+{"year": "2023 Constructor Standings", "position": "10", "team": "Haas Ferrari", "total_points": "12"}
+{"year": "2022 Constructor Standings", "position": "1", "team": "Red Bull Racing RBPT", "total_points": "759"}
+{"year": "2022 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "554"}
+{"year": "2022 Constructor Standings", "position": "3", "team": "Mercedes", "total_points": "515"}
+{"year": "2022 Constructor Standings", "position": "4", "team": "Alpine Renault", "total_points": "173"}
+{"year": "2022 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "159"}
+{"year": "2022 Constructor Standings", "position": "6", "team": "Alfa Romeo Ferrari", "total_points": "55"}
+{"year": "2022 Constructor Standings", "position": "7", "team": "Aston Martin Aramco Mercedes", "total_points": "55"}
+{"year": "2022 Constructor Standings", "position": "8", "team": "Haas Ferrari", "total_points": "37"}
+{"year": "2022 Constructor Standings", "position": "9", "team": "AlphaTauri RBPT", "total_points": "35"}
+{"year": "2022 Constructor Standings", "position": "10", "team": "Williams Mercedes", "total_points": "8"}
 {"year": "2019 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "739"}
 {"year": "2019 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "504"}
 {"year": "2019 Constructor Standings", "position": "3", "team": "Red Bull Racing Honda", "total_points": "417"}
@@ -501,58 +683,6 @@
 {"year": "2019 Constructor Standings", "position": "8", "team": "Alfa Romeo Racing Ferrari", "total_points": "57"}
 {"year": "2019 Constructor Standings", "position": "9", "team": "Haas Ferrari", "total_points": "28"}
 {"year": "2019 Constructor Standings", "position": "10", "team": "Williams Mercedes", "total_points": "1"}
-{"year": "2016 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "765"}
-{"year": "2022 Constructor Standings", "position": "1", "team": "Red Bull Racing RBPT", "total_points": "759"}
-{"year": "2016 Constructor Standings", "position": "2", "team": "Red Bull Racing TAG Heuer", "total_points": "468"}
-{"year": "2016 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "398"}
-{"year": "2016 Constructor Standings", "position": "4", "team": "Force India Mercedes", "total_points": "173"}
-{"year": "2022 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "554"}
-{"year": "2022 Constructor Standings", "position": "3", "team": "Mercedes", "total_points": "515"}
-{"year": "2022 Constructor Standings", "position": "4", "team": "Alpine Renault", "total_points": "173"}
-{"year": "2021 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "613.5"}
-{"year": "2016 Constructor Standings", "position": "5", "team": "Williams Mercedes", "total_points": "138"}
-{"year": "2016 Constructor Standings", "position": "6", "team": "McLaren Honda", "total_points": "76"}
-{"year": "2016 Constructor Standings", "position": "7", "team": "Toro Rosso Ferrari", "total_points": "63"}
-{"year": "2022 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "159"}
-{"year": "2022 Constructor Standings", "position": "6", "team": "Alfa Romeo Ferrari", "total_points": "55"}
-{"year": "2022 Constructor Standings", "position": "7", "team": "Aston Martin Aramco Mercedes", "total_points": "55"}
-{"year": "2021 Constructor Standings", "position": "2", "team": "Red Bull Racing Honda", "total_points": "585.5"}
-{"year": "2021 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "323.5"}
-{"year": "2021 Constructor Standings", "position": "4", "team": "McLaren Mercedes", "total_points": "275"}
-{"year": "2016 Constructor Standings", "position": "8", "team": "Haas Ferrari", "total_points": "29"}
-{"year": "2016 Constructor Standings", "position": "9", "team": "Renault", "total_points": "8"}
-{"year": "2016 Constructor Standings", "position": "10", "team": "Sauber Ferrari", "total_points": "2"}
-{"year": "2022 Constructor Standings", "position": "8", "team": "Haas Ferrari", "total_points": "37"}
-{"year": "2022 Constructor Standings", "position": "9", "team": "AlphaTauri RBPT", "total_points": "35"}
-{"year": "2022 Constructor Standings", "position": "10", "team": "Williams Mercedes", "total_points": "8"}
-{"year": "2021 Constructor Standings", "position": "5", "team": "Alpine Renault", "total_points": "155"}
-{"year": "2021 Constructor Standings", "position": "6", "team": "AlphaTauri Honda", "total_points": "142"}
-{"year": "2021 Constructor Standings", "position": "7", "team": "Aston Martin Mercedes", "total_points": "77"}
-{"year": "2016 Constructor Standings", "position": "11", "team": "MRT Mercedes", "total_points": "1"}
-{"year": "2021 Constructor Standings", "position": "8", "team": "Williams Mercedes", "total_points": "23"}
-{"year": "2021 Constructor Standings", "position": "9", "team": "Alfa Romeo Racing Ferrari", "total_points": "13"}
-{"year": "2021 Constructor Standings", "position": "10", "team": "Haas Ferrari", "total_points": "0"}
-{"year": "2018 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "655"}
-{"year": "2018 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "571"}
-{"year": "2018 Constructor Standings", "position": "3", "team": "Red Bull Racing TAG Heuer", "total_points": "419"}
-{"year": "2018 Constructor Standings", "position": "4", "team": "Renault", "total_points": "122"}
-{"year": "2018 Constructor Standings", "position": "5", "team": "Haas Ferrari", "total_points": "93"}
-{"year": "2018 Constructor Standings", "position": "6", "team": "McLaren Renault", "total_points": "62"}
-{"year": "2018 Constructor Standings", "position": "7", "team": "Force India Mercedes", "total_points": "52"}
-{"year": "2018 Constructor Standings", "position": "8", "team": "Sauber Ferrari", "total_points": "48"}
-{"year": "2018 Constructor Standings", "position": "9", "team": "Scuderia Toro Rosso Honda", "total_points": "33"}
-{"year": "2018 Constructor Standings", "position": "10", "team": "Williams Mercedes", "total_points": "7"}
-{"year": "2018 Constructor Standings", "position": "EX", "team": "Force India Sahara", "total_points": "0"}
-{"year": "2017 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "668"}
-{"year": "2017 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "522"}
-{"year": "2017 Constructor Standings", "position": "3", "team": "Red Bull Racing TAG Heuer", "total_points": "368"}
-{"year": "2017 Constructor Standings", "position": "4", "team": "Force India Mercedes", "total_points": "187"}
-{"year": "2017 Constructor Standings", "position": "5", "team": "Williams Mercedes", "total_points": "83"}
-{"year": "2017 Constructor Standings", "position": "6", "team": "Renault", "total_points": "57"}
-{"year": "2017 Constructor Standings", "position": "7", "team": "Toro Rosso", "total_points": "53"}
-{"year": "2017 Constructor Standings", "position": "8", "team": "Haas Ferrari", "total_points": "47"}
-{"year": "2017 Constructor Standings", "position": "9", "team": "McLaren Honda", "total_points": "30"}
-{"year": "2017 Constructor Standings", "position": "10", "team": "Sauber Ferrari", "total_points": "5"}
 {"year": "2020 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "573"}
 {"year": "2020 Constructor Standings", "position": "2", "team": "Red Bull Racing Honda", "total_points": "319"}
 {"year": "2020 Constructor Standings", "position": "3", "team": "McLaren Renault", "total_points": "202"}
@@ -563,133 +693,3 @@
 {"year": "2020 Constructor Standings", "position": "8", "team": "Alfa Romeo Racing Ferrari", "total_points": "8"}
 {"year": "2020 Constructor Standings", "position": "9", "team": "Haas Ferrari", "total_points": "3"}
 {"year": "2020 Constructor Standings", "position": "10", "team": "Williams Mercedes", "total_points": "0"}
-{"year": "2012 Constructor Standings", "position": "1", "team": "Red Bull Racing Renault", "total_points": "460"}
-{"year": "2012 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "400"}
-{"year": "2012 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "378"}
-{"year": "2012 Constructor Standings", "position": "4", "team": "Lotus Renault", "total_points": "303"}
-{"year": "2012 Constructor Standings", "position": "5", "team": "Mercedes", "total_points": "142"}
-{"year": "2012 Constructor Standings", "position": "6", "team": "Sauber Ferrari", "total_points": "126"}
-{"year": "2012 Constructor Standings", "position": "7", "team": "Force India Mercedes", "total_points": "109"}
-{"year": "2012 Constructor Standings", "position": "8", "team": "Williams Renault", "total_points": "76"}
-{"year": "2012 Constructor Standings", "position": "9", "team": "STR Ferrari", "total_points": "26"}
-{"year": "2012 Constructor Standings", "position": "10", "team": "Caterham Renault", "total_points": "0"}
-{"year": "2012 Constructor Standings", "position": "11", "team": "Marussia Cosworth", "total_points": "0"}
-{"year": "2012 Constructor Standings", "position": "12", "team": "HRT Cosworth", "total_points": "0"}
-{"year": "2011 Constructor Standings", "position": "1", "team": "Red Bull Racing Renault", "total_points": "650"}
-{"year": "2011 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "497"}
-{"year": "2011 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "375"}
-{"year": "2011 Constructor Standings", "position": "4", "team": "Mercedes", "total_points": "165"}
-{"year": "2011 Constructor Standings", "position": "5", "team": "Renault", "total_points": "73"}
-{"year": "2011 Constructor Standings", "position": "6", "team": "Force India Mercedes", "total_points": "69"}
-{"year": "2011 Constructor Standings", "position": "7", "team": "Sauber Ferrari", "total_points": "44"}
-{"year": "2011 Constructor Standings", "position": "8", "team": "STR Ferrari", "total_points": "41"}
-{"year": "2011 Constructor Standings", "position": "9", "team": "Williams Cosworth", "total_points": "5"}
-{"year": "2011 Constructor Standings", "position": "10", "team": "Lotus Renault", "total_points": "0"}
-{"year": "2011 Constructor Standings", "position": "11", "team": "HRT Cosworth", "total_points": "0"}
-{"year": "2011 Constructor Standings", "position": "12", "team": "Virgin Cosworth", "total_points": "0"}
-{"year": "2014 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "701"}
-{"year": "2014 Constructor Standings", "position": "2", "team": "Red Bull Racing Renault", "total_points": "405"}
-{"year": "2014 Constructor Standings", "position": "3", "team": "Williams Mercedes", "total_points": "320"}
-{"year": "2014 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "216"}
-{"year": "2014 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "181"}
-{"year": "2014 Constructor Standings", "position": "6", "team": "Force India Mercedes", "total_points": "155"}
-{"year": "2014 Constructor Standings", "position": "7", "team": "STR Renault", "total_points": "30"}
-{"year": "2014 Constructor Standings", "position": "8", "team": "Lotus Renault", "total_points": "10"}
-{"year": "2014 Constructor Standings", "position": "9", "team": "Marussia Ferrari", "total_points": "2"}
-{"year": "2014 Constructor Standings", "position": "10", "team": "Sauber Ferrari", "total_points": "0"}
-{"year": "2014 Constructor Standings", "position": "11", "team": "Caterham Renault", "total_points": "0"}
-{"year": "2015 Constructor Standings", "position": "1", "team": "Mercedes", "total_points": "703"}
-{"year": "2015 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "428"}
-{"year": "2015 Constructor Standings", "position": "3", "team": "Williams Mercedes", "total_points": "257"}
-{"year": "2015 Constructor Standings", "position": "4", "team": "Red Bull Racing Renault", "total_points": "187"}
-{"year": "2015 Constructor Standings", "position": "5", "team": "Force India Mercedes", "total_points": "136"}
-{"year": "2015 Constructor Standings", "position": "6", "team": "Lotus Mercedes", "total_points": "78"}
-{"year": "2015 Constructor Standings", "position": "7", "team": "STR Renault", "total_points": "67"}
-{"year": "2015 Constructor Standings", "position": "8", "team": "Sauber Ferrari", "total_points": "36"}
-{"year": "2015 Constructor Standings", "position": "9", "team": "McLaren Honda", "total_points": "27"}
-{"year": "2015 Constructor Standings", "position": "10", "team": "Marussia Ferrari", "total_points": "0"}
-{"year": "2013 Constructor Standings", "position": "1", "team": "Red Bull Racing Renault", "total_points": "596"}
-{"year": "2013 Constructor Standings", "position": "2", "team": "Mercedes", "total_points": "360"}
-{"year": "2013 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "354"}
-{"year": "2013 Constructor Standings", "position": "4", "team": "Lotus Renault", "total_points": "315"}
-{"year": "2013 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "122"}
-{"year": "2013 Constructor Standings", "position": "6", "team": "Force India Mercedes", "total_points": "77"}
-{"year": "2013 Constructor Standings", "position": "7", "team": "Sauber Ferrari", "total_points": "57"}
-{"year": "2013 Constructor Standings", "position": "8", "team": "STR Ferrari", "total_points": "33"}
-{"year": "2013 Constructor Standings", "position": "9", "team": "Williams Renault", "total_points": "5"}
-{"year": "2013 Constructor Standings", "position": "10", "team": "Marussia Cosworth", "total_points": "0"}
-{"year": "2013 Constructor Standings", "position": "11", "team": "Caterham Renault", "total_points": "0"}
-{"year": "2010 Constructor Standings", "position": "1", "team": "RBR Renault", "total_points": "498"}
-{"year": "2010 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "454"}
-{"year": "2010 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "396"}
-{"year": "2010 Constructor Standings", "position": "4", "team": "Mercedes", "total_points": "214"}
-{"year": "2010 Constructor Standings", "position": "5", "team": "Renault", "total_points": "163"}
-{"year": "2010 Constructor Standings", "position": "6", "team": "Williams Cosworth", "total_points": "69"}
-{"year": "2010 Constructor Standings", "position": "7", "team": "Force India Mercedes", "total_points": "68"}
-{"year": "2010 Constructor Standings", "position": "8", "team": "Sauber Ferrari", "total_points": "44"}
-{"year": "2010 Constructor Standings", "position": "9", "team": "STR Ferrari", "total_points": "13"}
-{"year": "2010 Constructor Standings", "position": "10", "team": "Lotus Cosworth", "total_points": "0"}
-{"year": "2010 Constructor Standings", "position": "11", "team": "HRT Cosworth", "total_points": "0"}
-{"year": "2010 Constructor Standings", "position": "12", "team": "Virgin Cosworth", "total_points": "0"}
-{"year": "2009 Constructor Standings", "position": "1", "team": "Brawn Mercedes", "total_points": "172"}
-{"year": "2009 Constructor Standings", "position": "2", "team": "RBR Renault", "total_points": "153.5"}
-{"year": "2009 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "71"}
-{"year": "2009 Constructor Standings", "position": "4", "team": "Ferrari", "total_points": "70"}
-{"year": "2009 Constructor Standings", "position": "5", "team": "Toyota", "total_points": "59.5"}
-{"year": "2009 Constructor Standings", "position": "6", "team": "Sauber BMW", "total_points": "36"}
-{"year": "2009 Constructor Standings", "position": "7", "team": "Williams Toyota", "total_points": "34.5"}
-{"year": "2009 Constructor Standings", "position": "8", "team": "Renault", "total_points": "26"}
-{"year": "2009 Constructor Standings", "position": "9", "team": "Force India Mercedes", "total_points": "13"}
-{"year": "2009 Constructor Standings", "position": "10", "team": "STR Ferrari", "total_points": "8"}
-{"year": "2008 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "172"}
-{"year": "2008 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "151"}
-{"year": "2008 Constructor Standings", "position": "3", "team": "Sauber BMW", "total_points": "135"}
-{"year": "2008 Constructor Standings", "position": "4", "team": "Renault", "total_points": "80"}
-{"year": "2008 Constructor Standings", "position": "5", "team": "Toyota", "total_points": "56"}
-{"year": "2008 Constructor Standings", "position": "6", "team": "STR Ferrari", "total_points": "39"}
-{"year": "2008 Constructor Standings", "position": "7", "team": "Red Bull Renault", "total_points": "29"}
-{"year": "2008 Constructor Standings", "position": "8", "team": "Williams Toyota", "total_points": "26"}
-{"year": "2008 Constructor Standings", "position": "9", "team": "Honda", "total_points": "14"}
-{"year": "2008 Constructor Standings", "position": "10", "team": "Force India Ferrari", "total_points": "0"}
-{"year": "2008 Constructor Standings", "position": "11", "team": "Super Aguri Honda", "total_points": "0"}
-{"year": "2005 Constructor Standings", "position": "1", "team": "Renault", "total_points": "191"}
-{"year": "2005 Constructor Standings", "position": "2", "team": "McLaren Mercedes", "total_points": "182"}
-{"year": "2005 Constructor Standings", "position": "3", "team": "Ferrari", "total_points": "100"}
-{"year": "2005 Constructor Standings", "position": "4", "team": "Toyota", "total_points": "88"}
-{"year": "2005 Constructor Standings", "position": "5", "team": "Williams BMW", "total_points": "66"}
-{"year": "2005 Constructor Standings", "position": "6", "team": "BAR Honda", "total_points": "38"}
-{"year": "2005 Constructor Standings", "position": "7", "team": "RBR Cosworth", "total_points": "34"}
-{"year": "2005 Constructor Standings", "position": "8", "team": "Sauber Petronas", "total_points": "20"}
-{"year": "2005 Constructor Standings", "position": "9", "team": "Jordan Toyota", "total_points": "12"}
-{"year": "2005 Constructor Standings", "position": "10", "team": "Minardi Cosworth", "total_points": "7"}
-{"year": "2004 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "262"}
-{"year": "2004 Constructor Standings", "position": "2", "team": "BAR Honda", "total_points": "119"}
-{"year": "2004 Constructor Standings", "position": "3", "team": "Renault", "total_points": "105"}
-{"year": "2004 Constructor Standings", "position": "4", "team": "Williams BMW", "total_points": "88"}
-{"year": "2004 Constructor Standings", "position": "5", "team": "McLaren Mercedes", "total_points": "69"}
-{"year": "2004 Constructor Standings", "position": "6", "team": "Sauber Petronas", "total_points": "34"}
-{"year": "2004 Constructor Standings", "position": "7", "team": "Jaguar Cosworth", "total_points": "10"}
-{"year": "2004 Constructor Standings", "position": "8", "team": "Toyota", "total_points": "9"}
-{"year": "2004 Constructor Standings", "position": "9", "team": "Jordan Ford", "total_points": "5"}
-{"year": "2004 Constructor Standings", "position": "10", "team": "Minardi Cosworth", "total_points": "1"}
-{"year": "2006 Constructor Standings", "position": "1", "team": "Renault", "total_points": "206"}
-{"year": "2006 Constructor Standings", "position": "2", "team": "Ferrari", "total_points": "201"}
-{"year": "2006 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "110"}
-{"year": "2006 Constructor Standings", "position": "4", "team": "Honda", "total_points": "86"}
-{"year": "2006 Constructor Standings", "position": "5", "team": "Sauber BMW", "total_points": "36"}
-{"year": "2006 Constructor Standings", "position": "6", "team": "Toyota", "total_points": "35"}
-{"year": "2006 Constructor Standings", "position": "7", "team": "RBR Ferrari", "total_points": "16"}
-{"year": "2006 Constructor Standings", "position": "8", "team": "Williams Cosworth", "total_points": "11"}
-{"year": "2006 Constructor Standings", "position": "9", "team": "STR Cosworth", "total_points": "1"}
-{"year": "2006 Constructor Standings", "position": "10", "team": "MF1 Toyota", "total_points": "0"}
-{"year": "2006 Constructor Standings", "position": "11", "team": "Super Aguri Honda", "total_points": "0"}
-{"year": "2003 Constructor Standings", "position": "1", "team": "Ferrari", "total_points": "158"}
-{"year": "2003 Constructor Standings", "position": "2", "team": "Williams BMW", "total_points": "144"}
-{"year": "2003 Constructor Standings", "position": "3", "team": "McLaren Mercedes", "total_points": "142"}
-{"year": "2003 Constructor Standings", "position": "4", "team": "Renault", "total_points": "88"}
-{"year": "2003 Constructor Standings", "position": "5", "team": "BAR Honda", "total_points": "26"}
-{"year": "2003 Constructor Standings", "position": "6", "team": "Sauber Petronas", "total_points": "19"}
-{"year": "2003 Constructor Standings", "position": "7", "team": "Jaguar Cosworth", "total_points": "18"}
-{"year": "2003 Constructor Standings", "position": "8", "team": "Toyota", "total_points": "16"}
-{"year": "2003 Constructor Standings", "position": "9", "team": "Jordan Ford", "total_points": "13"}
-{"year": "2003 Constructor Standings", "position": "10", "team": "Minardi Cosworth", "total_points": "0"}
