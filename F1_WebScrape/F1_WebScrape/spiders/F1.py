@@ -624,23 +624,25 @@ class F1Spider(scrapy.Spider):
             qualification_results['car_number'] = stats_filtered_list[1]
             qualification_results['driver'] = stats_filtered_list[2] + " " + stats_filtered_list[3]
             qualification_results['car'] = stats_filtered_list[5]
-            qualification_results['total_laps_completed'] = stats_filtered_list[-1]
             
             if len(stats_filtered_list) == 8: 
                 qualification_results['Q1_time'] = stats_filtered_list[-2]
                 qualification_results['Q2_time'] = None
                 qualification_results['Q3_time'] = None
                 qualification_results['Final_Qualifying_time'] = stats_filtered_list[-2]
+                qualification_results['total_laps_completed'] = stats_filtered_list[-1]
             elif len(stats_filtered_list) == 9: 
                 qualification_results['Q1_time'] = stats_filtered_list[-3]
                 qualification_results['Q2_time'] = stats_filtered_list[-2]
                 qualification_results['Q3_time'] = None
                 qualification_results['Final_Qualifying_time'] = stats_filtered_list[-2]
+                qualification_results['total_laps_completed'] = stats_filtered_list[-1]
             elif len(stats_filtered_list) == 10:
                 qualification_results['Q1_time'] = stats_filtered_list[-4]
                 qualification_results['Q2_time'] = stats_filtered_list[-3]
                 qualification_results['Q3_time'] = stats_filtered_list[-2]
                 qualification_results['Final_Qualifying_time'] = stats_filtered_list[-2]
+                qualification_results['total_laps_completed'] = stats_filtered_list[-1]
             yield qualification_results
     
     # Current Logic only checks for "qualifying", does not check for "qualifying/0", "qualifying/1", etc. from older seasons hence all data points may appear duplicated, unless we do a check in this function for the explicit qualifying
